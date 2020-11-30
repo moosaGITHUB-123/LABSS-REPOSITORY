@@ -33,11 +33,6 @@
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.bunifuVSlider1 = new Bunifu.UI.WinForms.BunifuVSlider();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
-            this.bunifuDatePicker1 = new Bunifu.UI.WinForms.BunifuDatePicker();
-            this.tabControl1 = new System.Windows.Forms.TabControl();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
-            this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.tabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -59,7 +54,7 @@
             this.bunifuVSlider1.AllowShrinkingOnFocusLost = false;
             this.bunifuVSlider1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVSlider1.BackgroundImage")));
             this.bunifuVSlider1.BindingContainer = null;
-            this.bunifuVSlider1.BorderRadius = 1;
+            this.bunifuVSlider1.BorderRadius = 2;
             this.bunifuVSlider1.BorderThickness = 1;
             this.bunifuVSlider1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuVSlider1.DirectionalScroll = Utilities.BunifuSlider.BunifuVScrollBar.DirectionalMovements.BottomUp;
@@ -67,7 +62,7 @@
             this.bunifuVSlider1.DurationBeforeShrink = 2000;
             this.bunifuVSlider1.ElapsedColor = System.Drawing.Color.DodgerBlue;
             this.bunifuVSlider1.LargeChange = 10;
-            this.bunifuVSlider1.Location = new System.Drawing.Point(699, 34);
+            this.bunifuVSlider1.Location = new System.Drawing.Point(699, 12);
             this.bunifuVSlider1.Maximum = 100;
             this.bunifuVSlider1.Minimum = 0;
             this.bunifuVSlider1.MinimumSize = new System.Drawing.Size(31, 0);
@@ -135,67 +130,15 @@
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
-            // bunifuDatePicker1
-            // 
-            this.bunifuDatePicker1.BorderRadius = 1;
-            this.bunifuDatePicker1.DateBorderThickness = Bunifu.UI.WinForms.BunifuDatePicker.BorderThickness.Thick;
-            this.bunifuDatePicker1.DateTextAlign = Bunifu.UI.WinForms.BunifuDatePicker.TextAlign.Left;
-            this.bunifuDatePicker1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuDatePicker1.DisplayWeekNumbers = false;
-            this.bunifuDatePicker1.DPHeight = 0;
-            this.bunifuDatePicker1.FillDatePicker = false;
-            this.bunifuDatePicker1.ForeColor = System.Drawing.Color.Purple;
-            this.bunifuDatePicker1.Icon = ((System.Drawing.Image)(resources.GetObject("bunifuDatePicker1.Icon")));
-            this.bunifuDatePicker1.IconColor = System.Drawing.Color.Purple;
-            this.bunifuDatePicker1.IconLocation = Bunifu.UI.WinForms.BunifuDatePicker.Indicator.Right;
-            this.bunifuDatePicker1.Location = new System.Drawing.Point(184, 60);
-            this.bunifuDatePicker1.MinimumSize = new System.Drawing.Size(235, 32);
-            this.bunifuDatePicker1.Name = "bunifuDatePicker1";
-            this.bunifuDatePicker1.Size = new System.Drawing.Size(235, 32);
-            this.bunifuDatePicker1.TabIndex = 26;
-            // 
-            // tabControl1
-            // 
-            this.tabControl1.Controls.Add(this.tabPage1);
-            this.tabControl1.Controls.Add(this.tabPage2);
-            this.tabControl1.Location = new System.Drawing.Point(184, 121);
-            this.tabControl1.Name = "tabControl1";
-            this.tabControl1.SelectedIndex = 0;
-            this.tabControl1.Size = new System.Drawing.Size(392, 187);
-            this.tabControl1.TabIndex = 27;
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(384, 161);
-            this.tabPage1.TabIndex = 0;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
-            // 
-            // tabPage2
-            // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(192, 74);
-            this.tabPage2.TabIndex = 1;
-            this.tabPage2.Text = "tabPage2";
-            this.tabPage2.UseVisualStyleBackColor = true;
-            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 410);
-            this.Controls.Add(this.tabControl1);
-            this.Controls.Add(this.bunifuDatePicker1);
             this.Controls.Add(this.bunifuVSlider1);
             this.Name = "frmMain";
             this.Text = "5";
             this.Load += new System.EventHandler(this.frmMain_Load);
-            this.tabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -204,10 +147,6 @@
         private System.Windows.Forms.ImageList imageList1;
         private Bunifu.UI.WinForms.BunifuVSlider bunifuVSlider1;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
-        private Bunifu.UI.WinForms.BunifuDatePicker bunifuDatePicker1;
-        private System.Windows.Forms.TabControl tabControl1;
-        private System.Windows.Forms.TabPage tabPage1;
-        private System.Windows.Forms.TabPage tabPage2;
     }
 }
 
