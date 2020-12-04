@@ -84,3 +84,4 @@ D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABS
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.csproj.CopyComplete
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.exe
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.pdb
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.fldrCompany.frmCompany.resources
