@@ -29,10 +29,12 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
-            this.bunifuVSlider1 = new Bunifu.UI.WinForms.BunifuVSlider();
             this.bunifuFormDock1 = new Bunifu.UI.WinForms.BunifuFormDock();
+            this.metroTabControl1 = new MetroFramework.Controls.MetroTabControl();
+            this.metroTabPage1 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabPage2 = new MetroFramework.Controls.MetroTabPage();
+            this.metroTabControl1.SuspendLayout();
             this.SuspendLayout();
             // 
             // imageList1
@@ -40,55 +42,6 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
-            // 
-            // bunifuVSlider1
-            // 
-            this.bunifuVSlider1.AllowCursorChanges = true;
-            this.bunifuVSlider1.AllowHomeEndKeysDetection = false;
-            this.bunifuVSlider1.AllowIncrementalClickMoves = true;
-            this.bunifuVSlider1.AllowMouseDownEffects = false;
-            this.bunifuVSlider1.AllowMouseHoverEffects = false;
-            this.bunifuVSlider1.AllowScrollingAnimations = true;
-            this.bunifuVSlider1.AllowScrollKeysDetection = true;
-            this.bunifuVSlider1.AllowScrollOptionsMenu = true;
-            this.bunifuVSlider1.AllowShrinkingOnFocusLost = false;
-            this.bunifuVSlider1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuVSlider1.BackgroundImage")));
-            this.bunifuVSlider1.BindingContainer = null;
-            this.bunifuVSlider1.BorderRadius = 2;
-            this.bunifuVSlider1.BorderThickness = 1;
-            this.bunifuVSlider1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuVSlider1.DirectionalScroll = Utilities.BunifuSlider.BunifuVScrollBar.DirectionalMovements.BottomUp;
-            this.bunifuVSlider1.DrawThickBorder = false;
-            this.bunifuVSlider1.DurationBeforeShrink = 2000;
-            this.bunifuVSlider1.ElapsedColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuVSlider1.LargeChange = 10;
-            this.bunifuVSlider1.Location = new System.Drawing.Point(699, 12);
-            this.bunifuVSlider1.Maximum = 100;
-            this.bunifuVSlider1.Minimum = 0;
-            this.bunifuVSlider1.MinimumSize = new System.Drawing.Size(31, 0);
-            this.bunifuVSlider1.MinimumThumbLength = 18;
-            this.bunifuVSlider1.Name = "bunifuVSlider1";
-            this.bunifuVSlider1.OnDisable.ScrollBarBorderColor = System.Drawing.Color.Silver;
-            this.bunifuVSlider1.OnDisable.ScrollBarColor = System.Drawing.Color.Transparent;
-            this.bunifuVSlider1.OnDisable.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVSlider1.OnDisableSlider.ElapsedColor = System.Drawing.Color.Silver;
-            this.bunifuVSlider1.OnDisableSlider.SliderColor = System.Drawing.Color.Gainsboro;
-            this.bunifuVSlider1.OnDisableSlider.ThumbColor = System.Drawing.Color.Silver;
-            this.bunifuVSlider1.ScrollBarBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuVSlider1.ScrollBarColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuVSlider1.ShrinkSizeLimit = 3;
-            this.bunifuVSlider1.Size = new System.Drawing.Size(31, 200);
-            this.bunifuVSlider1.SliderColor = System.Drawing.Color.FromArgb(((int)(((byte)(210)))), ((int)(((byte)(232)))), ((int)(((byte)(255)))));
-            this.bunifuVSlider1.SliderStyle = Bunifu.UI.WinForms.BunifuVSlider.SliderStyles.Thin;
-            this.bunifuVSlider1.SliderThumbStyle = Utilities.BunifuSlider.BunifuVScrollBar.SliderThumbStyles.Circular;
-            this.bunifuVSlider1.SmallChange = 1;
-            this.bunifuVSlider1.TabIndex = 25;
-            this.bunifuVSlider1.ThumbColor = System.Drawing.Color.DodgerBlue;
-            this.bunifuVSlider1.ThumbFillColor = System.Drawing.SystemColors.Control;
-            this.bunifuVSlider1.ThumbLength = 19;
-            this.bunifuVSlider1.ThumbMargin = 1;
-            this.bunifuVSlider1.ThumbStyle = Bunifu.UI.WinForms.BunifuVSlider.ThumbStyles.Outline;
-            this.bunifuVSlider1.Value = 50;
             // 
             // bunifuFormDock1
             // 
@@ -130,23 +83,65 @@
             this.bunifuFormDock1.TitleBarOptions.TitleBarControl = null;
             this.bunifuFormDock1.TitleBarOptions.UseBackColorOnDockingIndicators = false;
             // 
+            // metroTabControl1
+            // 
+            this.metroTabControl1.Controls.Add(this.metroTabPage1);
+            this.metroTabControl1.Controls.Add(this.metroTabPage2);
+            this.metroTabControl1.Location = new System.Drawing.Point(2, 1);
+            this.metroTabControl1.Name = "metroTabControl1";
+            this.metroTabControl1.SelectedIndex = 0;
+            this.metroTabControl1.Size = new System.Drawing.Size(741, 186);
+            this.metroTabControl1.TabIndex = 0;
+            this.metroTabControl1.UseSelectable = true;
+            // 
+            // metroTabPage1
+            // 
+            this.metroTabPage1.HorizontalScrollbarBarColor = true;
+            this.metroTabPage1.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.HorizontalScrollbarSize = 10;
+            this.metroTabPage1.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage1.Name = "metroTabPage1";
+            this.metroTabPage1.Size = new System.Drawing.Size(733, 144);
+            this.metroTabPage1.TabIndex = 0;
+            this.metroTabPage1.Text = "metroTabPage1";
+            this.metroTabPage1.VerticalScrollbarBarColor = true;
+            this.metroTabPage1.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage1.VerticalScrollbarSize = 10;
+            // 
+            // metroTabPage2
+            // 
+            this.metroTabPage2.HorizontalScrollbarBarColor = true;
+            this.metroTabPage2.HorizontalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.HorizontalScrollbarSize = 10;
+            this.metroTabPage2.Location = new System.Drawing.Point(4, 38);
+            this.metroTabPage2.Name = "metroTabPage2";
+            this.metroTabPage2.Size = new System.Drawing.Size(498, 141);
+            this.metroTabPage2.TabIndex = 1;
+            this.metroTabPage2.Text = "metroTabPage2";
+            this.metroTabPage2.VerticalScrollbarBarColor = true;
+            this.metroTabPage2.VerticalScrollbarHighlightOnWheel = false;
+            this.metroTabPage2.VerticalScrollbarSize = 10;
+            // 
             // frmMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(742, 410);
-            this.Controls.Add(this.bunifuVSlider1);
+            this.Controls.Add(this.metroTabControl1);
             this.Name = "frmMain";
-            this.Text = "5";
+            this.Text = "LABSS HOME SCREEN";
             this.Load += new System.EventHandler(this.frmMain_Load);
+            this.metroTabControl1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
         private System.Windows.Forms.ImageList imageList1;
-        private Bunifu.UI.WinForms.BunifuVSlider bunifuVSlider1;
         private Bunifu.UI.WinForms.BunifuFormDock bunifuFormDock1;
+        private MetroFramework.Controls.MetroTabControl metroTabControl1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage1;
+        private MetroFramework.Controls.MetroTabPage metroTabPage2;
     }
 }
 

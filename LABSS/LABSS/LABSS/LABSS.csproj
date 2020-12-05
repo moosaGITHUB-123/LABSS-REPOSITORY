@@ -81,6 +81,12 @@
     <Reference Include="MetroFramework">
       <HintPath>C:\Users\KHIZAR PC\Downloads\Compressed\MetroFramework.ModernUI.Version.1.4.0. pass = [ wfdenricdenisewf ]\MetroFramework.dll</HintPath>
     </Reference>
+    <Reference Include="MetroFramework.Design">
+      <HintPath>C:\Users\KHIZAR PC\Downloads\Compressed\MetroFramework.ModernUI.Version.1.4.0. pass = [ wfdenricdenisewf ]\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts">
+      <HintPath>C:\Users\KHIZAR PC\Downloads\Compressed\MetroFramework.ModernUI.Version.1.4.0. pass = [ wfdenricdenisewf ]\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Design" />
