@@ -16,7 +16,7 @@ namespace LABSS
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new fldrCompany.frmCompany());
+            Application.Run(new frmMainScreen());
         }
     }
 }

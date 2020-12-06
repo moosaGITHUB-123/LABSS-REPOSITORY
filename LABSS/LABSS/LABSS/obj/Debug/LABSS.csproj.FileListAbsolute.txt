@@ -77,7 +77,6 @@ D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABS
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu_UI_v1.5.3.xml
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.csprojAssemblyReference.cache
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.exe.config
-D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.frmMain.resources
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.Properties.Resources.resources
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.csproj.GenerateResource.cache
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.csproj.CoreCompileInputs.cache
@@ -87,3 +86,24 @@ D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABS
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.fldrCompany.frmCompany.resources
 D:\--MY DATA\Projects\DESKTOP_PROJECT_(GIT SHARED)\LABSS-REPOSITORY\LABSS\LABSS\LABSS\bin\Debug\MetroFramework.dll
 D:\--MY DATA\Projects\DESKTOP_PROJECT_(GIT SHARED)\LABSS-REPOSITORY\LABSS\LABSS\LABSS\obj\Debug\LABSS.fldrCompany.frmCompany.resources
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuPages.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\MetroFramework.Design.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\MetroFramework.Fonts.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuColorTransition.xml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuLabel.xml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuPages.xml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuPictureBox.xml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuProgressBar.xml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuScrollBar.xml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuToolTip.xml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuTransition.xml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\bin\Debug\Bunifu.UI.WinForms.BunifuUserControl.xml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\LABSS\LABSS\LABSS\obj\Debug\LABSS.frmMainScreen.resources
