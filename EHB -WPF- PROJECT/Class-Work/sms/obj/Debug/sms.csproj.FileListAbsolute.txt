@@ -13,3 +13,18 @@ C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.csproj.GenerateResource.cache
 C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.csproj.CoreCompileInputs.cache
 C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.exe
 C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.pdb
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\bin\Debug\sms.exe.config
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\bin\Debug\sms.exe
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\bin\Debug\sms.pdb
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\sms.csprojAssemblyReference.cache
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\MainWindow.g.cs
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\App.g.cs
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\sms_MarkupCompile.cache
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\sms_MarkupCompile.lref
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\MainWindow.baml
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\sms.g.resources
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\sms.Properties.Resources.resources
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\sms.csproj.GenerateResource.cache
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\sms.csproj.CoreCompileInputs.cache
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\sms.exe
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\Class-Work\sms\obj\Debug\sms.pdb

@@ -59,6 +59,7 @@
                 </LinearGradientBrush>
             </TextBox.Background>
         </TextBox>
+        <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="460" Margin="72,38,0,0"/>
 
     </Grid>
 </Window>
