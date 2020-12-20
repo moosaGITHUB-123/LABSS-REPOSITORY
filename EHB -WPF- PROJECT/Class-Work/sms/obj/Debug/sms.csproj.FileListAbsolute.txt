@@ -1,0 +1,15 @@
+C:\Users\MOOSA\source\repos\sms\sms\bin\Debug\sms.exe.config
+C:\Users\MOOSA\source\repos\sms\sms\bin\Debug\sms.exe
+C:\Users\MOOSA\source\repos\sms\sms\bin\Debug\sms.pdb
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.csprojAssemblyReference.cache
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\MainWindow.g.cs
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\App.g.cs
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms_MarkupCompile.cache
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms_MarkupCompile.lref
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\MainWindow.baml
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.g.resources
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.Properties.Resources.resources
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.csproj.GenerateResource.cache
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.csproj.CoreCompileInputs.cache
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.exe
+C:\Users\MOOSA\source\repos\sms\sms\obj\Debug\sms.pdb
