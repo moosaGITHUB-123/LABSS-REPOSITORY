@@ -107,5 +107,8 @@
   <ItemGroup>
     <Resource Include="24_HOURS.gif" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="loginLock.gif" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

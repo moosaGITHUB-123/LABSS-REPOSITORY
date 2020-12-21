@@ -6,55 +6,78 @@
         xmlns:local="clr-namespace:POS"
         xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="POS.MainWindow"
         mc:Ignorable="d"
-        Title="MainWindow" Height="682" Width="1086">
+        Title="MainWindow" Height="682" Width="1086" WindowState="Maximized">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="185*" />
-            <ColumnDefinition Width="13*"/>
-
-        </Grid.ColumnDefinitions>
-        <Grid Grid.Column="0" Grid.ColumnSpan="2">
-            <Grid.Background >
+        <!--<Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100*"/>
+        </Grid.ColumnDefinitions>-->
+        <!--<Grid Grid.Column="0" Margin="0,0,-583,-352">
+            -->
+        <!--<Grid.Background >
                 <VisualBrush>
                     <VisualBrush.Visual >
 
-                        <MediaElement HorizontalAlignment="Left" MinHeight="200"  VerticalAlignment="Top" MinWidth="200" Source="C:\Users\MOOSA\Desktop\New folder\LoginBackgroundBrown_New.jpg"/>
+                        <MediaElement HorizontalAlignment="Left" VerticalAlignment="Top" Source="C:\Users\MOOSA\Desktop\New folder\LoginBackgroundBrown_New.jpg"/>
 
                     </VisualBrush.Visual>
                 </VisualBrush>
-            </Grid.Background>
-            <GroupBox x:Name="groupBox1" Header="L O G I N   H E R E .  .  ." HorizontalAlignment="Left" Height="381" Margin="351,128,0,0" VerticalAlignment="Top" Width="379" Background="White" Opacity="0.9" OpacityMask="Black"/>
+            </Grid.Background>-->
+        <!--</Grid>-->
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="2.5*">
+
+            </ColumnDefinition>
+            <ColumnDefinition Width="5*"></ColumnDefinition>
+            <ColumnDefinition Width="2.5*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="1">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="333"></RowDefinition>
+                <RowDefinition Height="333"></RowDefinition>
+                <RowDefinition Height="333"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+        </Grid>
+        <Grid Grid.Row="1">
 
         </Grid>
+
+        <Image Source="C:\Users\MOOSA\Desktop\New folder\LoginBackgroundBrown_New.jpg" HorizontalAlignment="left" VerticalAlignment="top" Margin="0,-120,-808,-498" Width="1886" Height="1269" Grid.ColumnSpan="3" />
         <Grid Margin="0,0,3,0"/>
-        <TextBox HorizontalAlignment="Left" Height="42"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="284" Padding="10" Margin="412,325,0,0">
-
-            <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.75">
-                    <GradientStop Color="#FFE8E8E8" Offset="1"/>
-                    <GradientStop Color="White"/>
-                </LinearGradientBrush>
-            </TextBox.Background>
-        </TextBox>
-        <TextBox HorizontalAlignment="Left" Height="42"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="284" Padding="10" Margin="412,378,0,0">
-
-            <TextBox.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.75">
-                    <GradientStop Color="#FFE8E8E8" Offset="1"/>
-                    <GradientStop Color="White"/>
-                </LinearGradientBrush>
-            </TextBox.Background>
-        </TextBox>
 
 
+        <StackPanel Grid.Column="1">
+            <StackPanel Grid.Row="1" Background="#BFFFFFFF" Width="350" VerticalAlignment="Center" Margin="0 150 0 0 ">
 
-        <Label Content="LOGIN INTO PROJECT 1.1" HorizontalAlignment="Left" Height="28" Margin="412,273,0,0" VerticalAlignment="Top" Width="266" FontSize="15" Foreground="#FF999999" FontWeight="Bold"/>
-        <Label Content="__________________________________________________________________________________________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="412,288,0,0" Width="318" Foreground="#FFBFBFBF"/>
-        <Image x:Name="image" HorizontalAlignment="Left" Height="37" Margin="366,327,0,0" VerticalAlignment="Top" Width="38" Source="{dx:DXImage SvgImages/Business Objects/BO_MyDetails.svg}"/>
-        <Image x:Name="image1" HorizontalAlignment="Left" Height="37" Margin="366,380,0,0" VerticalAlignment="Top" Width="38" Source="{dx:DXImage SvgImages/Business Objects/BO_User.svg}"/>
-        <Button x:Name="LOGINButton" Content="LOGIN" HorizontalAlignment="Left" Height="42" Margin="412,430,0,0" VerticalAlignment="Top" Width="246" Background="#FF1177D7" Foreground="white"/>
-        <Image x:Name="image1_Copy" HorizontalAlignment="Left" Height="37" Margin="662,433,0,0" VerticalAlignment="Top" Width="38" Source="{dx:DXImage SvgImages/Icon Builder/Electronics_Keyboard.svg}"/>
-        <Image x:Name="image_Copy" HorizontalAlignment="Left" Height="84" Margin="506,175,0,0" VerticalAlignment="Top" Width="84" Source="{dx:DXImage SvgImages/Business Objects/BO_MyDetails.svg}"/>
+                <Image x:Name="image_Copy" HorizontalAlignment="center" Height="84" VerticalAlignment="Top" Width="84" Source="{dx:DXImage SvgImages/Business Objects/BO_Lead.svg}"/>
+                <Image x:Name="loginLock_gif" Source="C:\Users\MOOSA\Desktop\New folder\loginLock.gif" Stretch="Fill"  Width="45" Height="45"/>
+                <Label Content="LOGIN INTO PROJECT 1.1" HorizontalAlignment="Left" Height="28"  VerticalAlignment="Top" Width="266" FontSize="18" Foreground="#FF999999" FontWeight="Bold"/>
+                <Label Content="__________________________________________________________________________________________________________________" HorizontalAlignment="Left" VerticalAlignment="Top"  Width="318" Foreground="#FFBFBFBF" Height="31"/>
+                <TextBox HorizontalAlignment="center" Height="42"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="284" Padding="10" Margin="33,0" >
 
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.75">
+                            <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                            <GradientStop Color="White"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <Image x:Name="image" HorizontalAlignment="Left" Height="37" Width="38" Source="{dx:DXImage SvgImages/Business Objects/BO_MyDetails.svg}"/>
+                <TextBox HorizontalAlignment="center" Height="42"  TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="284" Padding="10">
+
+                    <TextBox.Background>
+                        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0" Opacity="0.75">
+                            <GradientStop Color="#FFE8E8E8" Offset="1"/>
+                            <GradientStop Color="White"/>
+                        </LinearGradientBrush>
+                    </TextBox.Background>
+                </TextBox>
+                <Image x:Name="image1" HorizontalAlignment="Left" Height="37" VerticalAlignment="Center" Width="38" Source="{dx:DXImage SvgImages/Business Objects/BO_User.svg}"/>
+
+                <Button x:Name="LOGINButton" Content="LOGIN" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="225" Background="#FF1177D7" Foreground="white"/>
+
+                <Button x:Name="LOGINButton_Copy" Content="KEYB......" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="54" Background="#FF747678" Foreground="white" RenderTransformOrigin="0.5,0.5" FontSize="10"/>
+            </StackPanel>
+        </StackPanel>
     </Grid>
 </Window>
