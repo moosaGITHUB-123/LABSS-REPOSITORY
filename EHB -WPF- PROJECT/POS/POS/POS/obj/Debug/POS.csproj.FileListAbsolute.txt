@@ -52,3 +52,5 @@ D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJEC
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\POS\POS\POS\obj\Debug\POS.exe.licenses
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\POS\POS\POS\obj\Debug\POS.csproj.CopyComplete
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\POS\POS\POS\bin\Debug\DevExpress.Images.v20.1.dll
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\POS\POS\POS\obj\Debug\Window1.g.cs
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\POS\POS\POS\obj\Debug\Window1.baml
