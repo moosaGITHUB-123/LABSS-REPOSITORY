@@ -106,7 +106,7 @@
                     </TextBox>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="right"  Margin="0 15 67 0">
-                    <Button x:Name="btnLogin" Content="LOGIN" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="209" Background="#FF1177D7" Foreground="white" Click="BtnLogin_Click" />
+                    <Button x:Name="btnLogin" Content="LOGIN" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="209" Background="#FFC34646" Foreground="white" Click="BtnLogin_Click" />
 
                     <Button x:Name="LOGINButton_Copy" Content="KEYPAD" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="109" Background="#FF747678" Foreground="white" RenderTransformOrigin="0.5,0.5" FontSize="10" Click="LOGINButton_Copy_Click"/>
                 </StackPanel>
