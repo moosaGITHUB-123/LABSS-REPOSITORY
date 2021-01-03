@@ -1,0 +1,65 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PROJECT_1._1"
+        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="PROJECT_1._1.MainWindow"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="768" Width="1024">
+    <Grid>
+        <TextBox HorizontalAlignment="Left" Height="42" Margin="622,396,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="284" Padding="10">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE2E2E2" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <Label Content="LOGIN INTO PROJECT 1.1" HorizontalAlignment="Left" Height="47" Margin="622,344,0,0" VerticalAlignment="Top" Width="265" FontSize="20" Foreground="#FF999999" FontWeight="Bold"/>
+        <Label Content="__________________________________________________________________________________________________________________" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="622,364,0,0" Width="317" Foreground="#FFBFBFBF"/>
+
+        <Image HorizontalAlignment="Left" Height="39" Margin="563,398,0,0" VerticalAlignment="Top" Width="39" Source="{dx:DXImage SvgImages/Business Objects/BO_MyDetails.svg}"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="563,452,0,0" VerticalAlignment="Top" Width="39" Source="{dx:DXImage SvgImages/XAF/Action_ResetPassword.svg}"/>
+        <Image HorizontalAlignment="Left" Height="104" Margin="700,225,0,0" VerticalAlignment="Top" Width="102" Source="{dx:DXImage SvgImages/Business Objects/BO_MyDetails.svg}"/>
+        <Label Content="_______________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________________" HorizontalAlignment="center" VerticalAlignment="top" Margin="259,350,242,0" Width="515" Foreground="#FFD8D8D8" RenderTransformOrigin="0.5,0.5" Height="45" FontSize="14" MaxWidth="515" MaxHeight="45" MinWidth="515" MinHeight="45" Visibility="Hidden">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Image Margin="3,198,0,3" Source="Image2.png" Stretch="Fill" RenderTransformOrigin="0.5,0.5" HorizontalAlignment="Left" MaxWidth="495" MinHeight="537" MinWidth="495" MaxHeight="537" Height="535"  >
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform ScaleX="-1"/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <Label Content="COMPANY 1.1" HorizontalAlignment="Left" Height="47" Margin="177,339,0,0" VerticalAlignment="Top" Width="179" FontSize="22" FontWeight="Bold" Foreground="#FF4371EA"/>
+        <Image HorizontalAlignment="Left" Height="97" Margin="195,232,0,0" VerticalAlignment="Top" Width="97" RenderTransformOrigin="0.5,0.5" Source="{dx:DXImage SvgImages/Icon Builder/Actions_Send.svg}"/>
+        <Label Content="ADVANCE SYSTEM MANAGMENT SOFTWARE" HorizontalAlignment="Left" Height="47" Margin="97,372,0,0" VerticalAlignment="Top" Width="345" FontSize="15" Foreground="#7F4371EA" FontStyle="Italic"/>
+        <Label Content="CURRENT EXE 1.1" HorizontalAlignment="Left" Height="20" Margin="903,650,0,0" VerticalAlignment="Top" Width="101" Foreground="#FFA4A4A4" FontStyle="Italic"/>
+        <Label Content="LAST UPDATED ON" HorizontalAlignment="Left" Height="20" Margin="893,669,0,0" VerticalAlignment="Top" Width="112" Foreground="#FFA4A4A4" FontStyle="Italic"/>
+        <Label Content="DETAIL 1" HorizontalAlignment="Left" Height="19" Margin="948,685,0,0" VerticalAlignment="Top" Width="56" Foreground="#FFA4A4A4" FontStyle="Italic"/>
+        <Label Content="DETAIL 2" HorizontalAlignment="Left" Height="19" Margin="948,704,0,0" VerticalAlignment="Top" Width="56" Foreground="#FFA4A4A4" FontStyle="Italic"/>
+        <dx:SimpleButton Content="LOGIN" HorizontalAlignment="Left" Height="40" Margin="622,504,0,0" VerticalAlignment="Top" Width="241" Background="#FF1177D7" Foreground="White"/>
+        <Image HorizontalAlignment="Left" Height="39" Margin="869,507,0,0" VerticalAlignment="Top" Width="38" Source="{dx:DXImage SvgImages/Icon Builder/Electronics_Keyboard.svg}"/>
+        <TextBox HorizontalAlignment="Left" Height="42" Margin="622,450,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="284" Padding="10">
+            <TextBox.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="#FFE2E2E2" Offset="1"/>
+                    <GradientStop Color="White"/>
+                </LinearGradientBrush>
+            </TextBox.Background>
+        </TextBox>
+        <GroupBox x:Name="groupBox" Header="GroupBox" HorizontalAlignment="Left" Height="409" VerticalAlignment="Top" Width="460" Margin="72,38,0,0"/>
+
+    </Grid>
+</Window>
