@@ -226,3 +226,5 @@ D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJEC
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\ERP\POS\POS\obj\Debug\POS.exe.licenses
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\ERP\POS\POS\obj\Debug\POS.csproj.CoreCompileInputs.cache
 D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\ERP\POS\POS\obj\Debug\POS.csproj.CopyComplete
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\ERP\POS\POS\obj\Debug\Home.g.cs
+D:\--- My DATA  ---\DESKTOP_PROJECT (GITHUB-SHARED)\New Project\EHB -WPF- PROJECT\ERP\POS\POS\obj\Debug\Home.baml
