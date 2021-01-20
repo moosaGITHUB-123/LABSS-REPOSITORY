@@ -29,13 +29,69 @@ namespace POS
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            lblUserName.Content = logginusername;
-            lblUserType.Content = logginusertype;
+            //lblUserName.Content = logginusername;
+            //lblUserType.Content = logginusertype;
+            btnEdgeLine1.Visibility = Visibility.Collapsed;
+            btnEdgeLine2.Visibility = Visibility.Collapsed;
+            btnEdgeLine3.Visibility = Visibility.Collapsed;
+            btnEdgeLine4.Visibility = Visibility.Collapsed;
+            btnEdgeLine5.Visibility = Visibility.Collapsed;
+
+        
+
+
+
         }
 
         private void Window_ContentRendered(object sender, EventArgs e)
         {
 
+        }
+
+        private void BtnQuickAccess1_MouseEnter(object sender, MouseEventArgs e)
+        {
+            btnEdgeLine1.Visibility = Visibility.Visible;
+            btnEdgeLine2.Visibility = Visibility.Collapsed;
+            btnEdgeLine3.Visibility = Visibility.Collapsed;
+            btnEdgeLine4.Visibility = Visibility.Collapsed;
+            btnEdgeLine5.Visibility = Visibility.Collapsed;
+         
+        }
+
+        private void BtnQuickAccess2_MouseEnter(object sender, MouseEventArgs e)
+        {
+            btnEdgeLine2.Visibility = Visibility.Visible;
+            btnEdgeLine1.Visibility = Visibility.Collapsed;
+            btnEdgeLine3.Visibility = Visibility.Collapsed;
+            btnEdgeLine4.Visibility = Visibility.Collapsed;
+            btnEdgeLine5.Visibility = Visibility.Collapsed;
+        }
+
+        private void BtnQuickAccess3_MouseEnter(object sender, MouseEventArgs e)
+        {
+            btnEdgeLine3.Visibility = Visibility.Visible;
+            btnEdgeLine2.Visibility = Visibility.Collapsed;
+            btnEdgeLine1.Visibility = Visibility.Collapsed;
+            btnEdgeLine4.Visibility = Visibility.Collapsed;
+            btnEdgeLine5.Visibility = Visibility.Collapsed;
+        }
+
+        private void BtnQuickAccess4_MouseEnter(object sender, MouseEventArgs e)
+        {
+            btnEdgeLine4.Visibility = Visibility.Visible;
+            btnEdgeLine2.Visibility = Visibility.Collapsed;
+            btnEdgeLine3.Visibility = Visibility.Collapsed;
+            btnEdgeLine1.Visibility = Visibility.Collapsed;
+            btnEdgeLine5.Visibility = Visibility.Collapsed;
+        }
+
+        private void BtnQuickAccess5_MouseEnter(object sender, MouseEventArgs e)
+        {
+            btnEdgeLine5.Visibility = Visibility.Visible;
+            btnEdgeLine2.Visibility = Visibility.Collapsed;
+            btnEdgeLine3.Visibility = Visibility.Collapsed;
+            btnEdgeLine4.Visibility = Visibility.Collapsed;
+            btnEdgeLine1.Visibility = Visibility.Collapsed;
         }
     }
 }
