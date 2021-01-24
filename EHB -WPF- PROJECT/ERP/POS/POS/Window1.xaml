@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POS"
-        xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dxca="http://schemas.devexpress.com/winfx/2008/xaml/carousel" x:Class="POS.Window1"
+        xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dxca="http://schemas.devexpress.com/winfx/2008/xaml/carousel" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxdiag="http://schemas.devexpress.com/winfx/2008/xaml/diagram" xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges" x:Class="POS.Window1"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
     <Grid>
@@ -45,20 +45,12 @@
             <dxnav:TileNavCategory Content="TileNavCategory"/>
             <dxnav:TileNavCategory Content="TileNavCategory"/>
         </dxnav:TileNavPane>
-        <dxn:NavBarControl HorizontalAlignment="Left" Height="198" Margin="247,182,0,0" VerticalAlignment="Top" Width="394">
-            <dxn:NavBarControl.View>
-                <dxn:ExplorerBarView Orientation="Horizontal" ItemsPanelOrientation="Vertical"/>
-            </dxn:NavBarControl.View>
-            <dxn:NavBarGroup x:Name="navBarGroup1" Header="navBarGroup1">
-                <dxn:NavBarItem x:Name="navBarItem1" Content="navBarItem1"/>
-            </dxn:NavBarGroup>
-        </dxn:NavBarControl>
-        <Expander x:Name="expander" Header="Expander" HorizontalAlignment="Left" Height="50" Margin="291,218,0,0" VerticalAlignment="Top" Width="178">
-            <Grid Background="#FFE5E5E5"/>
-        </Expander>
+        <Expander x:Name="expander" Header="Expander" HorizontalAlignment="Left" Height="50" Margin="247,158,0,0" VerticalAlignment="Top" Width="178" IsExpanded="True"/>
         <dx:SimpleButton x:Name="simpleButton" Content="SimpleButton" HorizontalAlignment="Left" Height="34" Margin="137,234,0,0" VerticalAlignment="Top" Width="68"/>
         <dx:SplitButton x:Name="splitButton" Content="SplitButton" HorizontalAlignment="Left" Height="21" Margin="97,311,0,0" VerticalAlignment="Top" Width="55"/>
         <dx:SimpleButton x:Name="simpleButton1" Content="SimpleButton" HorizontalAlignment="Left" Height="28" Margin="281,87,0,0" VerticalAlignment="Top" Width="127" Glyph="images/icons/307-archive.png" BorderThickness="0"/>
+
+        <dxdiag:DiagramControl SelectedStencils="BasicShapes, BasicFlowchartShapes" Margin="505,178,68,101"/>
 
     </Grid>
 </Window>

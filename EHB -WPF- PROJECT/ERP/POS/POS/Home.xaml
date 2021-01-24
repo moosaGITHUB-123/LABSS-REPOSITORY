@@ -4,10 +4,10 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POS"
-        xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" x:Class="POS.Home"
+        xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxco="http://schemas.devexpress.com/winfx/2008/xaml/controls" xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges" x:Class="POS.Home"
         Loaded="Window_Loaded" ContentRendered="Window_ContentRendered"
         mc:Ignorable="d"
-        Title="Home" Height="768" Width="1024" WindowState="Maximized">
+        Title="Home" Height="900" Width="1600" WindowState="Maximized">
 
 
     <Grid>
@@ -17,99 +17,478 @@
 
         <dxdo:DockLayoutManager Background="WhiteSmoke" >
             <dxdo:LayoutGroup Caption="LayoutRoot">
-                <dxdo:LayoutPanel Background="#FFE2E2E2" Caption="USER AND QUICK ACESS " ItemWidth="0.91*">
-                    <StackPanel Background="#FFE2E2E2" Height="1000" Margin=" 10 0 10 0 " >
-                        <StackPanel Name="stpQuickAccess1" Background="WhiteSmoke" Height="300" Margin="0 10 0 10">
+                <dxdo:LayoutPanel Background="#FFE2E2E2" Caption="USER AND QUICK ACESS " ItemWidth=".55*" MinWidth="230">
+                    <StackPanel Background="#FFE2E2E2" Height="1000" Margin=" 7 0 7 0 " >
+                        <StackPanel x:Name="stpQuickAccess1" Background="WhiteSmoke" Height="300" Margin="0 10 0 10">
                             <Image Source="images/icons/364-user.png" Width="70" Margin="5" />
-                            <Label Name="lblUserName" Content="USER - NAME" Foreground="#FF009C95" HorizontalContentAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"></Label>
-                            <Label Name="lblUserDetail" Content="SOME USER TEXT HERE"  Foreground="#FF9EA1B2" HorizontalContentAlignment="Center"  FontFamily="Segoe UI" FontWeight="Bold" FontSize="11" ></Label>
-                            <Label  HorizontalContentAlignment="Center" Foreground="#FF9EA1B2"  Padding="0" Margin="0 -5 " Height="30" >_________________________________________________________________________________</Label>
-                           <!--//////    Quick access buttons below      ////////>-->
-                           
-                            
+                            <Label x:Name="lblUserName" Content="USER - NAME" Foreground="#FF009C95" HorizontalContentAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"/>
+                            <Label x:Name="lblUserDetail" Content="SOME USER TEXT HERE"  Foreground="#FF9EA1B2" HorizontalContentAlignment="Center"  FontFamily="Segoe UI" FontWeight="Bold" FontSize="11" />
+                            <Label  HorizontalContentAlignment="Center" Foreground="#FF9EA1B2"  Padding="0" Margin="0 -5 " Height="30" Content="_________________________________________________________________________________" />
+                            <!--//////    Quick access buttons below      ////////>-->
+
+
                             <StackPanel Orientation="Horizontal" Margin="10 0" >
-                                <StackPanel Name="btnEdgeLine1" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left" />
+                                <StackPanel x:Name="btnEdgeLine1" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left" />
 
-                                <dx:SimpleButton Glyph="images/icons/358-paper plane.png" Name="btnQuickAccess1" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderThickness="0" Padding="4" BorderBrush="Transparent"  MouseEnter="BtnQuickAccess1_MouseEnter">VIEW SALES PANEL</dx:SimpleButton>
+                                <dx:SimpleButton Glyph="images/icons/358-paper plane.png" x:Name="btnQuickAccess1" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderThickness="0" Padding="4" BorderBrush="Transparent"  MouseEnter="BtnQuickAccess1_MouseEnter" Content="VIEW SALES PANEL"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine2" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <StackPanel x:Name="btnEdgeLine2" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
 
-                                <dx:SimpleButton Glyph="images/icons/307-archive.png" Name="btnQuickAccess2" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter">VIEW COLLECTION BY USERS</dx:SimpleButton>
+                                <dx:SimpleButton Glyph="images/icons/307-archive.png" x:Name="btnQuickAccess2" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW COLLECTION BY USERS"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine3" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <StackPanel x:Name="btnEdgeLine3" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
 
-                                <dx:SimpleButton Glyph="images/icons/250-folder.png" Name="btnQuickAccess3" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess3_MouseEnter">REPORTS AND CHARTS</dx:SimpleButton>
+                                <dx:SimpleButton Glyph="images/icons/250-folder.png" x:Name="btnQuickAccess3" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess3_MouseEnter" Content="REPORTS AND CHARTS"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine4" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <StackPanel x:Name="btnEdgeLine4" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
 
-                                <dx:SimpleButton Glyph="images/icons/372-locked.png" Name ="btnQuickAccess4" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess4_MouseEnter">VIEW ADMIN CONTROLS</dx:SimpleButton>
+                                <dx:SimpleButton Glyph="images/icons/372-locked.png" x:Name ="btnQuickAccess4" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess4_MouseEnter" Content="VIEW ADMIN CONTROLS"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine5" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <StackPanel x:Name="btnEdgeLine5" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
 
-                                <dx:SimpleButton Glyph="images/icons/359-users.png" Name="btnQuickAccess5" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter">ADMIN PANEL / ACTIVE USERS</dx:SimpleButton>
+                                <dx:SimpleButton Glyph="images/icons/359-users.png" x:Name="btnQuickAccess5" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="ADMIN PANEL / ACTIVE USERS"/>
                             </StackPanel>
+
+                        </StackPanel>
+                        <Label Foreground="Blue" Content="RECENT ACTIVITES" />
+                        <StackPanel Background="WhiteSmoke" x:Name="stpQuickAccess2" Height="220" Margin="0 10 0 10" >
+                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                <StackPanel x:Name="btnEdgeLine6" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
+                                <Button x:Name="btnQuickAccess6" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                <StackPanel x:Name="btnEdgeLine7" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
+                                <Button x:Name="btnQuickAccess7" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                <StackPanel x:Name="btnEdgeLine8" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
+                                <Button x:Name="btnQuickAccess8" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                <StackPanel x:Name="btnEdgeLine9" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
+                                <Button x:Name="btnQuickAccess9" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                <StackPanel x:Name="btnEdgeLine10" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
+                                <Button x:Name="btnQuickAccess10" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                <StackPanel x:Name="btnEdgeLine11" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
+                                <Button x:Name="btnQuickAccess11" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                            </StackPanel>
+                            <StackPanel Orientation="Horizontal" Margin="10 0">
+                                <StackPanel x:Name="btnEdgeLine12" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
+                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
+                                <Button x:Name="btnQuickAccess12" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                            </StackPanel>
+
+                        </StackPanel>
+
+
+                        <StackPanel x:Name="stpQuickAccess3" Background="WhiteSmoke" Height="120"  Margin="0 10 0 10"/>
+                    </StackPanel>
+
+                </dxdo:LayoutPanel>
+                <dxdo:LayoutPanel Background="WhiteSmoke" Caption="MENU" ItemWidth="2.02*" MinWidth="950" >
+                    <!--<StackPanel Background="#FFE2E2E2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="1000" >
+                    </StackPanel>-->
+                    <StackPanel x:Name="stpMainSection" Orientation="Vertical" >
+
+                        <StackPanel>
+                            <Menu Background="Transparent">
+                            <MenuItem Header="_File">
+                                <MenuItem Header="_New..." >
+                                    <MenuItem Header="STYLE 1"/>
+                                    <MenuItem Header="STYLE 2"/>
+                                    <MenuItem Header="STYLE 3"/>
+                                    <MenuItem Header="STYLE 4"/>
+                                </MenuItem>
+                               
+                                   <MenuItem Header="_Open..." />
+                                   <MenuItem Header="_Save" />
+                                   <MenuItem Header="_Save As..." />
+                             
+                                <MenuItem Header="_Exit" />
+                            </MenuItem>
+                                
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 1">
+                                   
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 2">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 3">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 4">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 5">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 6">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 7">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 8">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 9">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 10">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 11">
+
+                                </MenuItem>
+                                <!--  Item Menu -->
+                                <MenuItem Header="_Menu 12">
+
+                                </MenuItem>
+                                
+
+
+                            </Menu>
+                        </StackPanel>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
+                            <Label FontFamily="Nirmala UI" FontSize="21" Foreground="#FF476E95" Margin="10 20 20 20" Content="DASHBOARD VIEW" FontWeight="Thin"/>
+                            <TextBox x:Name="textBox" Height="24" Width="300" TextWrapping="Wrap" Text="Search for something . . . " BorderBrush="Transparent" Background="White" FontSize="12" Foreground="Gray"/>
+                     </StackPanel>
+                        <StackPanel x:Name="StpPanelContainer1" Orientation="Horizontal" Margin="0 20">
+                            <!--/////////////     Panel 1 Below    ////////////////////-->
+                            <Border Margin="10 00 00 0">
+                                <Border.Effect >
+                                    <DropShadowEffect Color="Gainsboro" />
+                                </Border.Effect>
+                                <StackPanel x:Name="stpPanel1" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
+
+                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+
+
+                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="WhiteSmoke">
+                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+
+                                                <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Earnings" Width="200"/>
+                                            </Border>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
+                                            <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
+                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                                <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
+                                            </Border>
+
+                                        </StackPanel>
+                                    </Border>
+                                    <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
+                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                            <Image Source="images/icons/380-MoneyBag.png" Width="100"/>
+                                        </Border>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                            <!--/////////////     Panel 2 Below    ////////////////////-->
+                            <Border Margin="10 00 00 0">
+                                <Border.Effect >
+                                    <DropShadowEffect Color="Gainsboro" />
+                                </Border.Effect>
+                                <StackPanel x:Name="stpPanel2" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
+
+                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+
+
+                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="WhiteSmoke">
+                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+
+                                                <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="SALES" Width="200"/>
+                                            </Border>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
+                                            <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
+                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                                <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
+                                            </Border>
+
+                                        </StackPanel>
+                                    </Border>
+                                    <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
+                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                            <Image Source="images/icons/308-price tag.png" Width="100"/>
+                                        </Border>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                            <!--/////////////     Panel 3 Below    ////////////////////-->
+                            <Border Margin="10 00 00 0">
+                                <Border.Effect >
+                                    <DropShadowEffect Color="Gainsboro" />
+                                </Border.Effect>
+                                <StackPanel x:Name="stpPanel3" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
+
+                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+
+
+                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
+                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+
+                                                <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Inventory" Width="200"/>
+                                            </Border>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
+                                            <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
+                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                                <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
+                                            </Border>
+
+                                        </StackPanel>
+                                    </Border>
+                                    <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
+                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                            <Image Source="images/icons/324-search.png" Width="100"/>
+                                        </Border>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+
+                        </StackPanel>
+                        <StackPanel x:Name="StpPanelContainer2" Orientation="Horizontal" >
+                            <!--/////////////     Panel 4 Below    ////////////////////-->
+                            <Border Margin="10 00 00 0">
+                                <Border.Effect >
+                                    <DropShadowEffect Color="Gainsboro" />
+                                </Border.Effect>
+                                <StackPanel x:Name="stpPanel4" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
+
+                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+
+
+                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="WhiteSmoke">
+                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+
+                                                <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Vendors" Width="200"/>
+                                            </Border>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
+                                            <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
+                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                                <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
+                                            </Border>
+
+                                        </StackPanel>
+                                    </Border>
+                                    <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
+                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                            <Image Source="images/icons/304-archive.png" Width="100"/>
+                                        </Border>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                            <!--/////////////     Panel 5 Below    ////////////////////-->
+                            <Border Margin="10 00 00 0">
+                                 <Border.Effect >
+                                    <DropShadowEffect Color="Gainsboro" />
+                                </Border.Effect>
+                                <StackPanel x:Name="stpPanel5" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
+
+                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+                                       
+                                   
+                                    <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
+                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+                                           
+                                            <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Human Resourse" Width="200"/></Border>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                        <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
+                                        <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
+                                        <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                            <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
+                                        </Border>
+
+                                        </StackPanel>
+                                    </Border>
+                                    <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
+                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                            <Image Source="images/icons/360-users.png" Width="100"/>
+                                        </Border>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Border>
+                            <!--/////////////     Panel 6 Below    ////////////////////-->
+                            <StackPanel x:Name="stpPanel6" Orientation="Horizontal" Width="310" HorizontalAlignment="Left">
+                                <StackPanel Width="200" Height="142" HorizontalAlignment="Left" Margin="10 0 0 0"  Background="Gainsboro">
+                                    <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Navy" Foreground="White" Content="Accounts And Ledgers"/>
+                                    <Label Padding="5" FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                    <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
+                                    <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
+                                    <dx:SimpleButton  Background="WhiteSmoke" Foreground="#FF007EF9" Height="30" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
+
+
+                                </StackPanel>
+                                <StackPanel Orientation="Horizontal" Width="100" Background="LightGray" >
+                                    <Image Source="images/icons/277-newspaper.png" Width="100"/>
+                                </StackPanel>
+                            </StackPanel>
+                           </StackPanel>
+                        <StackPanel/>
+
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="15" >
+
+                            <dxc:Chart3DControl HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="380" BorderBrush="Transparent" Background="LightGray">
+                                <dxc:Chart3DControl.Legends>
+                                    <dxc:Legend BorderBrush="Transparent" Background="Transparent"/>
+                                </dxc:Chart3DControl.Legends>
+                                <dxc:Series3DStorage>
+                                    <dxc:Series3D DisplayName="Series 1">
+                                        <dxc:Series3D.View>
+                                            <dxc:SurfaceSeriesView>
+                                                <dxc:SurfaceSeriesView.FillStyle>
+                                                    <dxc:GradientFillStyle/>
+                                                </dxc:SurfaceSeriesView.FillStyle>
+                                            </dxc:SurfaceSeriesView>
+                                        </dxc:Series3D.View>
+
+                                        <dxc:SeriesPoint3DStorage>
+                                            <dxc:SeriesPoint3D Value="0" XArgument="0" YArgument="0"/>
+                                            <dxc:SeriesPoint3D Value="0" XArgument="0" YArgument="1"/>
+                                            <dxc:SeriesPoint3D Value="1" XArgument="1" YArgument="0"/>
+                                            <dxc:SeriesPoint3D Value="1" XArgument="1" YArgument="1"/>
+                                            <dxc:SeriesPoint3D Value="0" XArgument="2" YArgument="0"/>
+                                            <dxc:SeriesPoint3D Value="0" XArgument="2" YArgument="1"/>
+                                            <dxc:SeriesPoint3D Value="1" XArgument="3" YArgument="0"/>
+                                            <dxc:SeriesPoint3D Value="1" XArgument="3" YArgument="1"/>
+                                        </dxc:SeriesPoint3DStorage>
+                                    </dxc:Series3D>
+                                </dxc:Series3DStorage>
+                            </dxc:Chart3DControl>
+
+                            <dxc:ChartControl Height="370"  Width="515" Margin="20 0 0 0" BorderBrush="Transparent" Background="LightGray">
+                                <dxc:ChartControl.Legends >
+                                    <dxc:Legend/>
+                                   
+                                </dxc:ChartControl.Legends>
+                                
+                                <dxc:XYDiagram2D>
+                                    <dxc:BarSideBySideSeries2D DisplayName="Sales This Week 1200"/>
+
+                                    <dxc:BarSideBySideSeries2D DisplayName="Human Resource Joins 12"/>
+                                    <dxc:BarSideBySideSeries2D DisplayName="Vendors Pending"/>
+                                    <dxc:BarSideBySideSeries2D DisplayName="Incomming Stock 4"/>
+                                    <dxc:BarSideBySideSeries2D DisplayName="Ledger Balances 31200/-"/>
+                                    <dxc:BarSideBySideSeries2D DisplayName="Active Users 7"/>
+                                    <dxc:BarSideBySideSeries2D DisplayName="Achivements Weekly 74%"/>
+                                </dxc:XYDiagram2D>
+                            </dxc:ChartControl>
+                        </StackPanel>
+
+                    </StackPanel>
+
+                </dxdo:LayoutPanel>
+                <dxdo:LayoutPanel Background="WhiteSmoke" Caption="NEWS AND NOTICES" ItemWidth="0.69*" VerticalScrollBarVisibility="Visible">
+                    <ScrollViewer>
+                    <StackPanel Name="StpNewsContainer"  CanVerticallyScroll="True">
+                        <StackPanel Name="StpNews1" Margin="10" >
+                            <TextBlock TextWrapping="WrapWithOverflow" Foreground="Navy" FontWeight="DemiBold" FontSize="18" Padding="0">LAST WEEK UPDATES</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0">Software Developmernt in 2021 and beyond</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
+                             <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
+                        </StackPanel>
+                        <StackPanel Name="StpNews2" Margin="10" >
+                                <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0 0 0" >Software Developmernt in 2021 and beyond</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
+                        </StackPanel>
+                        <StackPanel Name="StpNews3" Margin="10" >
+                           
+                           
+                            <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0">Software Developmernt in 2021 and beyond</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
+                        </StackPanel>
+                        <StackPanel Name="StpNews4" Margin="10" >
                             
+                            
+                            <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0">Software Developmernt in 2021 and beyond</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
+
+
+                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
                         </StackPanel>
-                        <Label Foreground="Blue" >RECENT ACTIVITES</Label>
-                        <StackPanel Background="WhiteSmoke" Name="stpQuickAccess2" Height="220" Margin="0 10 0 10" >
-                            <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine6" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
-                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button Name="btnQuickAccess6" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter">RECENT WINDOW 1</Button>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine7" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
-                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button Name="btnQuickAccess7" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter">RECENT WINDOW 1</Button>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine8" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
-                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button Name="btnQuickAccess8" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter">RECENT WINDOW 1</Button>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine9" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
-                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button Name="btnQuickAccess9" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter">RECENT WINDOW 1</Button>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine10" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
-                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button Name="btnQuickAccess10" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter">RECENT WINDOW 1</Button>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine11" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
-                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button Name="btnQuickAccess11" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter">RECENT WINDOW 1</Button>
-                            </StackPanel>
-                            <StackPanel Orientation="Horizontal" Margin="10 0">
-                                <StackPanel Name="btnEdgeLine12" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
-                                <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button Name="btnQuickAccess12" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter">RECENT WINDOW 1</Button>
-                            </StackPanel>
+                            <StackPanel Name="StpNews5" Margin="10" >
 
+
+                                <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0">Software Developmernt in 2021 and beyond</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
+
+
+                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
+                            </StackPanel>
                         </StackPanel>
-                        
-
-                        <StackPanel Name="stpQuickAccess3" Background="WhiteSmoke" Height="120"  Margin="0 10 0 10"/>
-                    </StackPanel>
-
+                    </ScrollViewer>
                 </dxdo:LayoutPanel>
-                <dxdo:LayoutPanel Background="#FFE2E2E2" Caption="MENU" ItemWidth="2.02*" >
-                    <StackPanel Background="#FFE2E2E2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="1000" >
-
-                    </StackPanel>
-
-
-                </dxdo:LayoutPanel>
-                <dxdo:LayoutPanel Background="#FFE2E2E2" Caption="NEWS AND NOTICES" ItemWidth="0.69*"/>
+                
             </dxdo:LayoutGroup>
         </dxdo:DockLayoutManager>
-        
+
+
+
+
+
+
+
+        <dxga:LinearGaugeControl HorizontalAlignment="Left" Height="129" Margin="-1447,249,0,0" VerticalAlignment="Top" Width="762">
+            <dxga:LinearGaugeControl.Scales>
+                <dxga:LinearScale LayoutMode="LeftToRight">
+                    <dxga:LinearScale.LevelBars>
+                        <dxga:LinearScaleLevelBar IsInteractive="True" Value="40"/>
+                    </dxga:LinearScale.LevelBars>
+                    <dxga:LinearScale.Layers>
+                        <dxga:LinearScaleLayer/>
+                    </dxga:LinearScale.Layers>
+                    <dxga:LinearScale.Ranges>
+                        <dxga:LinearScaleRange EndValue="33%" StartValue="0"/>
+                        <dxga:LinearScaleRange EndValue="66%" StartValue="33%"/>
+                        <dxga:LinearScaleRange EndValue="100" StartValue="66%"/>
+                    </dxga:LinearScale.Ranges>
+                </dxga:LinearScale>
+            </dxga:LinearGaugeControl.Scales>
+        </dxga:LinearGaugeControl>
+
+
+
+
 
         <!--<Label x:Name="lblUserName" Content="Label"/>
         <Label x:Name="lblUserType" Content="Label"/>
