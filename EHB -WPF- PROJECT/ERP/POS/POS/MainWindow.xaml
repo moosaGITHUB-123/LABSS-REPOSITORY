@@ -4,9 +4,9 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POS"
-        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="POS.MainWindow"
+        xmlns:dxlc="http://schemas.devexpress.com/winfx/2008/xaml/layoutcontrol" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" x:Class="POS.MainWindow"
         mc:Ignorable="d"
-        Title=" >> LOGIN PLEASE .  .  .   .  ." Height="682" Width="1086" WindowState="Maximized" WindowStyle="ToolWindow">
+        Title=" &gt;&gt; LOGIN PLEASE .  .  .   .  ." Height="682" Width="1086" WindowState="Maximized" WindowStyle="ToolWindow">
     <Grid>
         <!--<Grid.ColumnDefinitions>
             <ColumnDefinition Width="100*"/>
@@ -24,9 +24,9 @@
             </Grid.Background>-->
         <!--</Grid>-->
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="2.5*"></ColumnDefinition>
-            <ColumnDefinition Width="2.5*"></ColumnDefinition>
-            <ColumnDefinition Width="500"></ColumnDefinition>
+            <ColumnDefinition Width="2.5*"/>
+            <ColumnDefinition Width="2.5*"/>
+            <ColumnDefinition Width="500"/>
         </Grid.ColumnDefinitions>
         <Image Source="Images\Others\LoginBackgroundBrown_New.jpg" HorizontalAlignment="left" VerticalAlignment="top" Margin="0,-120,-808,-498" Width="1886" Height="1269" Grid.ColumnSpan="3" >
             <Image.OpacityMask>
@@ -42,7 +42,7 @@
                 <RowDefinition Height="10"/>
                 <RowDefinition Height="10"/>
                 <RowDefinition Height="480"/>
-                <RowDefinition Height="300"></RowDefinition>
+                <RowDefinition Height="300"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
         </Grid>
@@ -110,8 +110,11 @@
 
                     <Button x:Name="LOGINButton_Copy" Content="KEYPAD" HorizontalAlignment="Left" Height="42" VerticalAlignment="Top" Width="109" Background="#FF747678" Foreground="white" RenderTransformOrigin="0.5,0.5" FontSize="10" Click="LOGINButton_Copy_Click"/>
                 </StackPanel>
-                <Button x:Name="LOGINButton_Copy1" Content="&gt;&gt; TEST CONNECTIVITY" HorizontalAlignment="right" Height="29" VerticalAlignment="Top" Width="135" Background="#FF5A8059" Foreground="white" RenderTransformOrigin="0.5,0.5" FontSize="10" Margin="0,10,66,0" Click="LOGINButton_Copy1_Click"/>
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                    <dxe:ToggleSwitch x:Name="SwitchTheme" Content="ToggleSwitch" Height="29" Margin="10" FontSize="10"/>
+                    <Button x:Name="LOGINButton_Copy1" Content="&gt;&gt; TEST CONNECTIVITY" HorizontalAlignment="Right" Height="29" VerticalAlignment="Top" Width="135" Background="#FF5A8059" Foreground="white" RenderTransformOrigin="0.5,0.5" FontSize="10" Margin="0,10,66,0" Click="LOGINButton_Copy1_Click"/>
                 
+                </StackPanel>
 
 
                 <Grid  Width="135" Height="135" HorizontalAlignment="right" Margin="0,10,66,0">
@@ -126,7 +129,11 @@
                     </Grid.Background>
 
                 </Grid>
-               
+
+
+
+                
+
 
 
             </StackPanel>

@@ -36,10 +36,7 @@ namespace POS
             btnEdgeLine3.Visibility = Visibility.Collapsed;
             btnEdgeLine4.Visibility = Visibility.Collapsed;
             btnEdgeLine5.Visibility = Visibility.Collapsed;
-
-        
-
-
+            
 
         }
 

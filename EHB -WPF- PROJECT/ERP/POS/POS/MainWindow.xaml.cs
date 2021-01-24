@@ -60,6 +60,45 @@ namespace POS
 
                 MessageBox.Show("------ 404 CONNECTION ERROR --------" + exceptions.ToString());
             }
+            //////////   sp Thme Calling Below  ///////////
+            try
+            {
+                if (SwitchTheme.IsChecked == true)
+                {
+                  
+                        con.Open();
+                        MessageBox.Show("Theme Changing Process Is Working");
+
+
+                        string changeThemeColor = "Black";
+                        SqlCommand cmd = new SqlCommand("spThemeControl", con);
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
+                        SqlDataReader rd = cmd.ExecuteReader();
+                        if (rd.Read())
+                        {
+                           // string ThemeControlTypeID = rd.GetString(0); int.Parse(ThemeControlTypeID);
+                            string ThemeControlTypeName = rd.GetString(1);
+                            string ThemeName = rd.GetString(2);
+                            string ForeGroundColor = rd.GetString(3);
+                            string BackGroundColor = rd.GetString(4);
+                            string ShadowColor = rd.GetString(5);
+
+                            MessageBox.Show("THEME COLOR Has been Sucesfully Applied....".ToString());
+                    }
+                        con.Close();
+
+
+
+                    
+                }
+            }
+            catch (Exception exceptions)
+            {
+                string exceptionss = exceptions.ToString();
+                MessageBox.Show("Theme Problem Found kindly Use Current theme" .ToString());
+                con.Close();
+            }
 
         }
 
@@ -78,34 +117,10 @@ namespace POS
         {
             try
             {
-                ///////////////////-------------old condition -------------------///////////////
-
-                //if (TxtLoginID.Text.Trim() != "" && txtLoginPassword.Text.Trim()!="")
-                //{
-                //    using (con)
-                //    {
-                //        con.Open();
-                //        //DataTable dt = new DataTable();
-                //        SqlCommand cmd = new SqlCommand("UserLoginChecking", con);
-                //        cmd.CommandType = CommandType.StoredProcedure;
-                //    //    cmd.Parameters.Add(new SqlParameter("@UserName", UserName));
-                //        using (SqlDataReader rdr = cmd.ExecuteReader()) {
-                //            while (rdr.Read()) {
-                //                MessageBox.Show("Readerssssssssss");
-                //            }
-                //        }
-                //    }
-                //}
-                //else
-                // {
-                //       MessageBox.Show("Information: Invalid login Id and Password!!!!!!!");             
-                // }  
-                //   SqlConnection con= new SqlConnection(POS.Properties.Settings.Default)
-                //  static string constr = ConfigurationManager.ConnectionStrings["POS.Properties.Settings.Setting"].ConnectionString;
-                // using (SqlConnection con = new SqlConnection(constr))
-                //{
+                ///////////  Login  Sp Calling Below   ////////////
+                
                 con.Open();
-
+                
                 SqlCommand cmd = new SqlCommand("spLoginCheck", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@LoginUserName", SqlDbType.VarChar).Value = TxtLoginID.Text.Trim();
@@ -122,78 +137,13 @@ namespace POS
                     hm.Show();
                     this.Close();
 
-
                 }
-                //return 
-                //if 
+
+                
+
             }
-            //-- return dt;
-            //if ( dt =="") 
-            //{
-            //    MessageBox.Show("Login Succuueed");
-            //}
-            //else {
-            //    MessageBox.Show("Login NOT Succesfull");
-
-            //}
 
 
-            //cmd.ExecuteNonQuery();
-
-
-
-            //{
-            //using (SqlConnection con = new SqlConnection(constr))
-            //{
-            //    SqlCommand cmd = new SqlCommand("spLoginCheck", con);
-            //    cmd.CommandType = CommandType.StoredProcedure;
-            //    cmd.Parameters.Add()
-            //    cmd.Parameters.Add("@LoginUserName", SqlDbType.VarChar).Direction = ParameterDirection.ReturnValue;
-            //    con.Open();
-
-
-
-            //}
-
-
-
-
-            //            MessageBox.Show("<---- LOGIN VERIFIED ---->");
-            //        con.Close();
-            //    }
-
-
-            //}
-            //catch(Exception ex)
-            //{
-            //    MessageBox.Show("Error: "+ex.Message);
-            //}
-            //}
-
-            //private void SimpleButtonMove_Click(object sender, RoutedEventArgs e)
-            //{
-
-            //}
-
-            //private void SimpleButtonMove_Click_1(object sender, RoutedEventArgs e)
-            //{
-            //    //WindowChangeDatabase wcd1 = new WindowChangeDatabase();
-            //    //wcd1.ShowDialog();
-            //}
-
-            //private void SimpleButtonMove_Click_2(object sender, RoutedEventArgs e)
-            //{
-            //    WindowChangeDatabase wcd1 = new WindowChangeDatabase();
-            //    wcd1.ShowDialog();
-            //}
-
-            //        //private void LOGINButton_Copy_Click(object sender, RoutedEventArgs e)
-            //        ////*/{*/
-
-            //        //}
-            //    }
-            //}
-            
             catch (Exception) { }
 
         }
@@ -208,6 +158,29 @@ namespace POS
             Home fm = new Home();
             fm.Show();
 
+            ///////////  Theme  Sp Calling Below   ////////////
+
+            con.Open();
+
+            //SqlCommand cmd = new SqlCommand("spLoginCheck", con);
+            //cmd.CommandType = CommandType.StoredProcedure;
+            //cmd.Parameters.AddWithValue("@LoginUserName", SqlDbType.VarChar).Value = TxtLoginID.Text.Trim();
+            //cmd.Parameters.AddWithValue("@LoginUserPass", SqlDbType.VarChar).Value = txtLoginPassword.Text.Trim();
+            //SqlDataReader rd = cmd.ExecuteReader();
+            //if (rd.Read())
+            //{
+            //    string username = rd.GetString(0);
+            //    int usertype = rd.GetInt32(2);
+            //    string userType = rd.GetString(3);
+            //    Home hm = new Home();
+            //    hm.logginusername = username;
+            //    hm.logginusertype = userType;
+            //    hm.Show();
+            //    this.Close();
+
+            //}
+
           
+
         }
     } } 

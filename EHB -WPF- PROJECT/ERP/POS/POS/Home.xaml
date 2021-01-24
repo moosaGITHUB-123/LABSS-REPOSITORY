@@ -99,13 +99,13 @@
                     </StackPanel>
 
                 </dxdo:LayoutPanel>
-                <dxdo:LayoutPanel Background="WhiteSmoke" Caption="MENU" ItemWidth="2.02*" MinWidth="950" >
+                <dxdo:LayoutPanel Background="##FFE2E2E2" Caption="MENU" ItemWidth="2.02*" MinWidth="950" >
                     <!--<StackPanel Background="#FFE2E2E2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="1000" >
                     </StackPanel>-->
                     <StackPanel x:Name="stpMainSection" Orientation="Vertical" >
 
                         <StackPanel>
-                            <Menu Background="Transparent">
+                            <Menu Background="#FFE2E2E2" >
                             <MenuItem Header="_File">
                                 <MenuItem Header="_New..." >
                                     <MenuItem Header="STYLE 1"/>
@@ -175,8 +175,8 @@
                             </Menu>
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
-                            <Label FontFamily="Nirmala UI" FontSize="21" Foreground="#FF476E95" Margin="10 20 20 20" Content="DASHBOARD VIEW" FontWeight="Thin"/>
-                            <TextBox x:Name="textBox" Height="24" Width="300" TextWrapping="Wrap" Text="Search for something . . . " BorderBrush="Transparent" Background="White" FontSize="12" Foreground="Gray"/>
+                            <Label FontFamily="Nirmala UI" FontSize="21" Foreground="Navy" Margin="10 20 20 20" Content="DASHBOARD VIEW" FontWeight="Thin"/>
+                            <TextBox x:Name="textBox" Height="24" Width="300" TextWrapping="Wrap" Text="Search for something . . . " BorderBrush="Transparent" Background="White" FontSize="12" Foreground="Navy"/>
                      </StackPanel>
                         <StackPanel x:Name="StpPanelContainer1" Orientation="Horizontal" Margin="0 20">
                             <!--/////////////     Panel 1 Below    ////////////////////-->
@@ -228,7 +228,7 @@
                                             <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
                                             <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
                                             <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
-                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                            <Border BorderBrush="Transparent"   BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
                                                 <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
                                             </Border>
 
@@ -236,7 +236,7 @@
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
                                         <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
-                                            <Image Source="images/icons/308-price tag.png" Width="100"/>
+                                            <Image Source="images/icons/384-Tag.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
                                 </StackPanel>
@@ -248,7 +248,7 @@
                                 </Border.Effect>
                                 <StackPanel x:Name="stpPanel3" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
 
-                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="10 0 0 10"  >
 
 
                                         <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
@@ -266,8 +266,8 @@
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
-                                            <Image Source="images/icons/324-search.png" Width="100"/>
+                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                            <Image Source="images/icons/385-InventoryCheck.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
                                 </StackPanel>
@@ -301,7 +301,7 @@
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
                                         <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
-                                            <Image Source="images/icons/304-archive.png" Width="100"/>
+                                            <Image Source="images/icons/382-Truck.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
                                 </StackPanel>
@@ -313,7 +313,7 @@
                                 </Border.Effect>
                                 <StackPanel x:Name="stpPanel5" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
 
-                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="10 0 0 10"  >
                                        
                                    
                                     <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
@@ -330,28 +330,44 @@
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
-                                            <Image Source="images/icons/360-users.png" Width="100"/>
+                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                            <Image Source="images/icons/381-HumansICON.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
                                 </StackPanel>
                             </Border>
                             <!--/////////////     Panel 6 Below    ////////////////////-->
-                            <StackPanel x:Name="stpPanel6" Orientation="Horizontal" Width="310" HorizontalAlignment="Left">
-                                <StackPanel Width="200" Height="142" HorizontalAlignment="Left" Margin="10 0 0 0"  Background="Gainsboro">
-                                    <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Navy" Foreground="White" Content="Accounts And Ledgers"/>
-                                    <Label Padding="5" FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
-                                    <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
-                                    <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
-                                    <dx:SimpleButton  Background="WhiteSmoke" Foreground="#FF007EF9" Height="30" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
+                            <Border Margin="10 00 00 0">
+                                <Border.Effect >
+                                    <DropShadowEffect Color="Gainsboro" />
+                                </Border.Effect>
+                                <StackPanel x:Name="stpPanel6" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
+
+                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="10 0 0 10"  >
 
 
+                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
+                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+
+                                                <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Accounts And Ledgers" Width="200"/>
+                                            </Border>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
+                                            <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
+                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                                <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
+                                            </Border>
+
+                                        </StackPanel>
+                                    </Border>
+                                    <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
+                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                            <Image Source="images/icons/383-Clipboard.png" Width="100"/>
+                                        </Border>
+                                    </StackPanel>
                                 </StackPanel>
-                                <StackPanel Orientation="Horizontal" Width="100" Background="LightGray" >
-                                    <Image Source="images/icons/277-newspaper.png" Width="100"/>
-                                </StackPanel>
-                            </StackPanel>
-                           </StackPanel>
+                            </Border>
+                        </StackPanel>
                         <StackPanel/>
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="15" >
@@ -384,7 +400,7 @@
                                 </dxc:Series3DStorage>
                             </dxc:Chart3DControl>
 
-                            <dxc:ChartControl Height="370"  Width="515" Margin="20 0 0 0" BorderBrush="Transparent" Background="LightGray">
+                            <dxc:ChartControl Height="370"  Width="530" Margin="15 0 0 0" BorderBrush="Transparent" Background="LightGray">
                                 <dxc:ChartControl.Legends >
                                     <dxc:Legend/>
                                    
