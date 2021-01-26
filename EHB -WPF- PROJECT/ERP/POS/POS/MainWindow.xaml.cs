@@ -74,23 +74,20 @@ namespace POS
                         SqlCommand cmd = new SqlCommand("spThemeControl", con);
                         cmd.CommandType = CommandType.StoredProcedure;
                         cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
-                        SqlDataReader rd = cmd.ExecuteReader();
-                        if (rd.Read())
-                        {
-                           // string ThemeControlTypeID = rd.GetString(0); int.Parse(ThemeControlTypeID);
-                            string ThemeControlTypeName = rd.GetString(1);
-                            string ThemeName = rd.GetString(2);
-                            string ForeGroundColor = rd.GetString(3);
-                            string BackGroundColor = rd.GetString(4);
-                            string ShadowColor = rd.GetString(5);
+                    SqlDataAdapter sqlDa = new SqlDataAdapter("EXEC spThemeControl @ThemeName='"+ changeThemeColor+"'", con);
 
-                            MessageBox.Show("THEME COLOR Has been Sucesfully Applied....".ToString());
-                    }
+                    DataTable dtbl = new DataTable();
+                    sqlDa.Fill(dtbl);
+                 
                         con.Close();
+                    var converter = new System.Windows.Media.BrushConverter();
+                    var brush = (Brush)converter.ConvertFromString(dtbl.Rows[0]["ForeGroundColor"].ToString());
+                    foreach (Button tb in FindVisualChildren<Button>(this))
+                    {
+                        tb.Foreground = brush;
+                    }
 
 
-
-                    
                 }
             }
             catch (Exception exceptions)
@@ -100,6 +97,25 @@ namespace POS
                 con.Close();
             }
 
+        }
+        public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+        {
+            if (depObj != null)
+            {
+                for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                {
+                    DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                    if (child != null && child is T)
+                    {
+                        yield return (T)child;
+                    }
+
+                    foreach (T childOfChild in FindVisualChildren<T>(child))
+                    {
+                        yield return childOfChild;
+                    }
+                }
+            }
         }
 
         private void SimpleButton4_Click(object sender, RoutedEventArgs e)

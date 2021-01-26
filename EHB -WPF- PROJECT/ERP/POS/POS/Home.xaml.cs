@@ -11,6 +11,10 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using System.Configuration;
+using System.Data.SqlClient;
+using System.Data;
+
 
 namespace POS
 {
@@ -24,6 +28,7 @@ namespace POS
             InitializeComponent();
         }
 
+        static string constr = ConfigurationManager.ConnectionStrings["POS.Properties.Settings.Setting"].ConnectionString;
         public string logginusername = "";
         public string logginusertype = "";
 
@@ -42,10 +47,51 @@ namespace POS
 
         private void Window_ContentRendered(object sender, EventArgs e)
         {
+            using (SqlConnection con = new SqlConnection(constr))
+            {
 
+                con.Open();
+                MessageBox.Show("Theme Changing Process Is Working");
+
+
+                string changeThemeColor = "Black";
+                SqlCommand cmd = new SqlCommand("spThemeControl", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
+                SqlDataAdapter sqlDa = new SqlDataAdapter("EXEC spThemeControl @ThemeName='" + changeThemeColor + "'", con);
+
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+                con.Close();
+                var converter = new System.Windows.Media.BrushConverter();
+                var brush = (Brush)converter.ConvertFromString(dtbl.Rows[0]["ForeGroundColor"].ToString());
+                foreach (Button tb in FindVisualChildren<Button>(this))
+                {
+                    tb.Foreground = brush;
+                }
+            }
         }
+            public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
+            {
+                if (depObj != null)
+                {
+                    for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
+                    {
+                        DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                        if (child != null && child is T)
+                        {
+                            yield return (T)child;
+                        }
 
-        private void BtnQuickAccess1_MouseEnter(object sender, MouseEventArgs e)
+                        foreach (T childOfChild in FindVisualChildren<T>(child))
+                        {
+                            yield return childOfChild;
+                        }
+                    }
+                }
+            }
+            private void BtnQuickAccess1_MouseEnter(object sender, MouseEventArgs e)
         {
             btnEdgeLine1.Visibility = Visibility.Visible;
             btnEdgeLine2.Visibility = Visibility.Collapsed;
