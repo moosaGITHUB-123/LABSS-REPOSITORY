@@ -15,11 +15,11 @@
 
 
 
-        <dxdo:DockLayoutManager Background="WhiteSmoke" >
+        <dxdo:DockLayoutManager Background="LightGray" >
             <dxdo:LayoutGroup Caption="LayoutRoot">
-                <dxdo:LayoutPanel Background="#FFE2E2E2" Caption="USER AND QUICK ACESS " ItemWidth=".55*" MinWidth="230">
-                    <StackPanel Background="#FFE2E2E2" Height="1000" Margin=" 7 0 7 0 " >
-                        <StackPanel x:Name="stpQuickAccess1" Background="WhiteSmoke" Height="300" Margin="0 10 0 10">
+                <dxdo:LayoutPanel Background="#292929" Caption="USER AND QUICK ACESS " ItemWidth=".55*" MinWidth="230">
+                    <StackPanel Background="#292929" Height="1000" Margin=" 7 0 7 0 " >
+                        <StackPanel x:Name="stpQuickAccess1" Background="#3c3c3c" Height="300" Margin="0 7 0 10">
                             <Image Source="images/icons/364-user.png" Width="70" Margin="5" />
                             <Label x:Name="lblUserName" Content="USER - NAME" Foreground="#FF009C95" HorizontalContentAlignment="Center" FontFamily="Segoe UI" FontWeight="Bold"/>
                             <Label x:Name="lblUserDetail" Content="SOME USER TEXT HERE"  Foreground="#FF9EA1B2" HorizontalContentAlignment="Center"  FontFamily="Segoe UI" FontWeight="Bold" FontSize="11" />
@@ -30,82 +30,82 @@
                             <StackPanel Orientation="Horizontal" Margin="10 0" >
                                 <StackPanel x:Name="btnEdgeLine1" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left" />
 
-                                <dx:SimpleButton Glyph="images/icons/358-paper plane.png" x:Name="btnQuickAccess1" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderThickness="0" Padding="4" BorderBrush="Transparent"  MouseEnter="BtnQuickAccess1_MouseEnter" Content="VIEW SALES PANEL"/>
+                                <dx:SimpleButton Glyph="images/icons/358-paper plane.png" x:Name="btnQuickAccess1" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderThickness="0" Padding="4" BorderBrush="Transparent"  MouseEnter="BtnQuickAccess1_MouseEnter" Content="VIEW SALES PANEL"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine2" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
 
-                                <dx:SimpleButton Glyph="images/icons/307-archive.png" x:Name="btnQuickAccess2" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW COLLECTION BY USERS"/>
+                                <dx:SimpleButton Glyph="images/icons/307-archive.png" x:Name="btnQuickAccess2" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW COLLECTION BY USERS"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine3" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
 
-                                <dx:SimpleButton Glyph="images/icons/250-folder.png" x:Name="btnQuickAccess3" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess3_MouseEnter" Content="REPORTS AND CHARTS"/>
+                                <dx:SimpleButton Glyph="images/icons/250-folder.png" x:Name="btnQuickAccess3" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess3_MouseEnter" Content="REPORTS AND CHARTS"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine4" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
 
-                                <dx:SimpleButton Glyph="images/icons/372-locked.png" x:Name ="btnQuickAccess4" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess4_MouseEnter" Content="VIEW ADMIN CONTROLS"/>
+                                <dx:SimpleButton Glyph="images/icons/372-locked.png" x:Name ="btnQuickAccess4" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess4_MouseEnter" Content="VIEW ADMIN CONTROLS"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine5" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
 
-                                <dx:SimpleButton Glyph="images/icons/359-users.png" x:Name="btnQuickAccess5" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="ADMIN PANEL / ACTIVE USERS"/>
+                                <dx:SimpleButton Glyph="images/icons/359-users.png" x:Name="btnQuickAccess5" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" Padding="4" BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="ADMIN PANEL / ACTIVE USERS"/>
                             </StackPanel>
 
                         </StackPanel>
-                        <Label Foreground="Blue" Content="RECENT ACTIVITES" />
-                        <StackPanel Background="WhiteSmoke" x:Name="stpQuickAccess2" Height="220" Margin="0 10 0 10" >
+                        <Label Foreground="Silver" HorizontalAlignment="Center" Content="- RECENT ACTIVITES -" />
+                        <StackPanel Background="#3c3c3c" x:Name="stpQuickAccess2" Height="220" Margin="0 10 0 10" >
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine6" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
                                 <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button x:Name="btnQuickAccess6" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <Button x:Name="btnQuickAccess6" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine7" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
                                 <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button x:Name="btnQuickAccess7" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <Button x:Name="btnQuickAccess7" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine8" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
                                 <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button x:Name="btnQuickAccess8" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <Button x:Name="btnQuickAccess8" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine9" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
                                 <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button x:Name="btnQuickAccess9" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <Button x:Name="btnQuickAccess9" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine10" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
                                 <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button x:Name="btnQuickAccess10" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <Button x:Name="btnQuickAccess10" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine11" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
                                 <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button x:Name="btnQuickAccess11" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <Button x:Name="btnQuickAccess11" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine12" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
                                 <Image Source="images/icons/233-stopwatch.png" Width="20" Margin="5 0 0 0"/>
-                                <Button x:Name="btnQuickAccess12" Background="Transparent" Foreground="#FF007EF9" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <Button x:Name="btnQuickAccess12" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
                             </StackPanel>
 
                         </StackPanel>
 
 
-                        <StackPanel x:Name="stpQuickAccess3" Background="WhiteSmoke" Height="210"  Margin="0 10 0 10"/>
+                        <StackPanel x:Name="stpQuickAccess3" Background="#3c3c3c" Height="210"  Margin="0 10 0 10"/>
                     </StackPanel>
 
                 </dxdo:LayoutPanel>
-                <dxdo:LayoutPanel Background="#FFE2E2E2" Caption="MENU" ItemWidth="2.02*" MinWidth="950" >
+                <dxdo:LayoutPanel Background="LightGray" Caption="MENU" ItemWidth="2.02*" MinWidth="950" >
                     <!--<StackPanel Background="#FFE2E2E2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="1000" >
                     </StackPanel>-->
                     <StackPanel x:Name="stpMainSection" Orientation="Vertical" >
 
                         <StackPanel>
-                            <Menu Background="#FFE2E2E2" >
+                            <Menu Background="#151B54" Foreground="WhiteSmoke" Height="33" Padding="0 5">
                             <MenuItem Header="_File">
                                 <MenuItem Header="_New..." >
                                     <MenuItem Header="STYLE 1"/>
@@ -176,7 +176,7 @@
                         </StackPanel>
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
                             <Label FontFamily="Nirmala UI" FontSize="21" Foreground="Navy" Margin="10 20 20 20" Content="DASHBOARD VIEW" FontWeight="Thin"/>
-                            <TextBox x:Name="textBox" Height="24" Width="300" TextWrapping="Wrap" Text="Search for something . . . " BorderBrush="Transparent" Background="White" FontSize="12" Foreground="Navy"/>
+                            <TextBox x:Name="textBox" Padding="5" Margin="0 2 0 0" Height="30" Width="300" TextWrapping="Wrap" Text="Search for something . . . " BorderBrush="Transparent" Background="Silver" FontSize="13" Foreground="White"/>
                      </StackPanel>
                         <StackPanel x:Name="StpPanelContainer1" Orientation="Horizontal" Margin="0 20">
                             <!--/////////////     Panel 1 Below    ////////////////////-->
@@ -186,25 +186,25 @@
                                 </Border.Effect>
                                 <StackPanel x:Name="stpPanel1" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
 
-                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0"  >
 
 
-                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="WhiteSmoke">
-                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
+                                            <Border BorderBrush="#FF476E95" Background="#151B54"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
 
                                                 <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Earnings" Width="200"/>
                                             </Border>
-                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#C0C0C0" Foreground="#444444" Content="$ 123342 / -"/>
                                             <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
                                             <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
-                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
                                                 <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
                                             </Border>
 
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/380-MoneyBag.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -217,25 +217,25 @@
                                 </Border.Effect>
                                 <StackPanel x:Name="stpPanel2" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
 
-                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0   0 0 0"  >
 
 
-                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="WhiteSmoke">
-                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
+                                            <Border BorderBrush="#FF476E95" Background="#151B54"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
 
                                                 <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="SALES" Width="200"/>
                                             </Border>
-                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#C0C0C0" Foreground="#444444" Content="$ 123342 / -"/>
                                             <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
                                             <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
-                                            <Border BorderBrush="Transparent"   BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                            <Border BorderBrush="Transparent"   BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
                                                 <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
                                             </Border>
 
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/384-Tag.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -248,25 +248,25 @@
                                 </Border.Effect>
                                 <StackPanel x:Name="stpPanel3" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
 
-                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0"  >
 
 
                                         <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
-                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+                                            <Border BorderBrush="#FF476E95" Background="#151B54"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
 
                                                 <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Inventory" Width="200"/>
                                             </Border>
-                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#C0C0C0" Foreground="#444444" Content="$ 123342 / -"/>
                                             <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
                                             <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
-                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
                                                 <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
                                             </Border>
 
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/385-InventoryCheck.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -282,25 +282,25 @@
                                 </Border.Effect>
                                 <StackPanel x:Name="stpPanel4" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
 
-                                    <Border BorderBrush="Transparent" Background="Gainsboro"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0"  >
 
 
-                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="WhiteSmoke">
-                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
+                                            <Border BorderBrush="#FF476E95" Background="#151B54"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
 
                                                 <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Vendors" Width="200"/>
                                             </Border>
-                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#C0C0C0" Foreground="#444444" Content="$ 123342 / -"/>
                                             <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
                                             <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
-                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
                                                 <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
                                             </Border>
 
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/382-Truck.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -313,24 +313,24 @@
                                 </Border.Effect>
                                 <StackPanel x:Name="stpPanel5" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
 
-                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="10 0 0 10"  >
-                                       
-                                   
-                                    <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
-                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0"  >
+
+
+                                        <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
+                                            <Border BorderBrush="#FF476E95" Background="#151B54"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
                                            
                                             <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Human Resourse" Width="200"/></Border>
-                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#C0C0C0" Foreground="#444444" Content="$ 123342 / -"/>
                                         <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
                                         <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
-                                        <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                        <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
                                             <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
                                         </Border>
 
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/381-HumansICON.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -343,25 +343,25 @@
                                 </Border.Effect>
                                 <StackPanel x:Name="stpPanel6" Orientation="Horizontal" Width="300" HorizontalAlignment="Left">
 
-                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="10 0 0 10"  >
+                                    <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0"  >
 
 
                                         <StackPanel Width="200" Height="140" HorizontalAlignment="Left" Margin="0 0 0 0"  Background="Transparent">
-                                            <Border BorderBrush="#FF476E95" Background="Navy"  BorderThickness="0" CornerRadius="10 0 0 0" HorizontalAlignment="Left" >
+                                            <Border BorderBrush="#FF476E95" Background="#151B54"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
 
                                                 <Label Padding="5" FontStyle="Italic" FontSize="15" Background="Transparent" Foreground="White" Content="Accounts And Ledgers" Width="200"/>
                                             </Border>
-                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#FF007EF9" Foreground="White" Content="$ 123342 / -"/>
+                                            <Label Padding="5"  FontStyle="Italic" FontSize="15" Background="#C0C0C0" Foreground="#444444" Content="$ 123342 / -"/>
                                             <Label Padding="5"  Foreground="Gray" Content="Showing Detail of Last 28 Days"/>
                                             <Label Padding="5" Foreground="Gray" Content="Show User / Counter Wise ▽"/>
-                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 10" HorizontalAlignment="Left" >
+                                            <Border BorderBrush="Transparent" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
                                                 <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
                                             </Border>
 
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                        <Border BorderBrush="LightGray" Background="WhiteSmoke"  BorderThickness="0" CornerRadius="00 10 10 0" HorizontalAlignment="Left" >
+                                        <Border BorderBrush="LightGray" Background="LightGray"  BorderThickness="0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/383-Clipboard.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -372,7 +372,7 @@
 
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="15" >
 
-                            <dxc:Chart3DControl HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="380" BorderBrush="Transparent" Background="LightGray">
+                            <dxc:Chart3DControl HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Width="380" BorderBrush="Transparent" Background="Gainsboro">
                                 <dxc:Chart3DControl.Legends>
                                     <dxc:Legend BorderBrush="Transparent" Background="Transparent"/>
                                 </dxc:Chart3DControl.Legends>
@@ -400,7 +400,7 @@
                                 </dxc:Series3DStorage>
                             </dxc:Chart3DControl>
 
-                            <dxc:ChartControl Height="370"  Width="530" Margin="12 0 0 0" BorderBrush="Transparent" Background="LightGray">
+                            <dxc:ChartControl Height="370"  Width="530" Margin="12 0 0 0" BorderBrush="Transparent" Background="Gainsboro">
                                 <dxc:ChartControl.Legends >
                                     <dxc:Legend/>
                                    
@@ -422,53 +422,48 @@
                     </StackPanel>
 
                 </dxdo:LayoutPanel>
-                <dxdo:LayoutPanel Background="WhiteSmoke" Caption="NEWS AND NOTICES" ItemWidth="0.69*" VerticalScrollBarVisibility="Visible">
+                <dxdo:LayoutPanel Background="LightGray" Caption="NEWS AND NOTICES" ItemWidth="0.69*" VerticalScrollBarVisibility="Visible"  >
                     <ScrollViewer>
                     <StackPanel Name="StpNewsContainer"  CanVerticallyScroll="True">
                         <StackPanel Name="StpNews1" Margin="10" >
-                            <TextBlock TextWrapping="WrapWithOverflow" Foreground="Navy" FontWeight="DemiBold" FontSize="18" Padding="0">LAST WEEK UPDATES</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0">Software Developmernt in 2021 and beyond</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
-                             <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" Foreground="WhiteSmoke" FontWeight="DemiBold" FontSize="18" Padding="0 5" VerticalAlignment="Top" Background="#151B54" Margin="0 -10 0 0">>> LAST WEEK UPDATES </TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow"  Foreground="White" Padding="0 5" Margin="0 5 0 0" TextAlignment="Center" Background="#151B54">Software Developmernt in 2021 and beyond</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" Foreground="Black" FontFamily="Nirmala" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
+                            <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="White"  FontWeight="Bold">Now Availbe in Version 1.023</TextBlock>
                             <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
                         </StackPanel>
                         <StackPanel Name="StpNews2" Margin="10" >
-                                <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0 0 0" >Software Developmernt in 2021 and beyond</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
-                        </StackPanel>
+                               
+                                <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 " FontSize="13" >Software Developmernt in 2021 and beyond</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" Foreground="Black" FontFamily="Nirmala" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="White"  FontWeight="Bold">Now Availbe in Version 1.023</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
+                            </StackPanel>
                         <StackPanel Name="StpNews3" Margin="10" >
-                           
-                           
-                            <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0">Software Developmernt in 2021 and beyond</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
-                        </StackPanel>
+
+
+                                <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 " FontSize="13" >Software Developmernt in 2021 and beyond</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" Foreground="Black" FontFamily="Nirmala" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="White"  FontWeight="Bold">Now Availbe in Version 1.023</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
+                            </StackPanel>
                         <StackPanel Name="StpNews4" Margin="10" >
-                            
-                            
-                            <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0">Software Developmernt in 2021 and beyond</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
 
-
-                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
-                            <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
-                        </StackPanel>
+                                <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 " FontSize="13" >Software Developmernt in 2021 and beyond</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" Foreground="Black" FontFamily="Nirmala" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="White"  FontWeight="Bold">Now Availbe in Version 1.023</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
+                            </StackPanel>
                             <StackPanel Name="StpNews5" Margin="10" >
 
-
-                                <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 0">Software Developmernt in 2021 and beyond</TextBlock>
-                                <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
-
-
+                                <TextBlock TextWrapping="WrapWithOverflow"  Foreground="Navy" Padding="0 " FontSize="13" >Software Developmernt in 2021 and beyond</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow"  FontWeight="Thin" Padding="0 10" Foreground="Black" FontFamily="Nirmala" >Software Development in 2021 and Beyond An Article by Amnada Directory gateway Silver on How we Can Comethogether to Growand Support Developer Talent in 20210</TextBlock>
                                 <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Bold" Foreground="Orange" FontSize="14">NEW</TextBlock>
-                                <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="Blue">Now Availbe in Version 1.023</TextBlock>
+                                <TextBlock TextWrapping="WrapWithOverflow" FontStyle="Italic" Foreground="White"  FontWeight="Bold">Now Availbe in Version 1.023</TextBlock>
                                 <TextBlock TextWrapping="WrapWithOverflow" FontWeight="Thin" Foreground="Silver">______________________________________________________________________________________________</TextBlock>
                             </StackPanel>
                         </StackPanel>
