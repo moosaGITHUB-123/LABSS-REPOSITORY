@@ -99,7 +99,7 @@
                     </StackPanel>
 
                 </dxdo:LayoutPanel>
-                <dxdo:LayoutPanel Background="LightGray" Caption="MENU" ItemWidth="2.02*" MinWidth="950" >
+                <dxdo:LayoutPanel Background="#" Caption="MENU" ItemWidth="2.02*" MinWidth="950" >
                     <!--<StackPanel Background="#FFE2E2E2" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="1000" >
                     </StackPanel>-->
                     <StackPanel x:Name="stpMainSection" Orientation="Vertical" >
