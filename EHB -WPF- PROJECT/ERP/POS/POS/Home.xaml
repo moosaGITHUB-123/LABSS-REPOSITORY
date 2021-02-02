@@ -15,7 +15,7 @@
 
 
 
-        <dxdo:DockLayoutManager Background="Gray" >
+        <dxdo:DockLayoutManager Background="Gray"  >
             <dxdo:LayoutGroup Caption="LayoutRoot" Background="WhiteSmoke">
                 <dxdo:LayoutPanel Background="#292929" Caption="USER AND QUICK ACESS " ItemWidth=".55*" MinWidth="230">
                     <StackPanel Background="#292929" Height="1000" Margin=" 7 0 7 0 " >
