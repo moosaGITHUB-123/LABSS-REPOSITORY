@@ -37,9 +37,13 @@ namespace POS
         public string logginusername = "";
         public string logginusertype = "";
 
+        public DateTime recordLastModifiedDate { get; private set; }
+        public int recordEntrydBy { get; private set; }
+        public DateTime recordEntryDate { get; private set; }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
+
             //lblUserName.Content = logginusername;
             //lblUserType.Content = logginusertype;
             btnEdgeLine1.Visibility = Visibility.Collapsed;
@@ -57,68 +61,52 @@ namespace POS
             {
 
                 con.Open();
-                MessageBox.Show("Theme Menu Making Process Is Working");
+                MessageBox.Show("APPLICATION Menu Making Process Is Working");
 
 
-                string changeThemeColor = "White";
-                SqlCommand cmd = new SqlCommand("spThemeControl", con);
+                // string Module = "White";
+                SqlCommand cmd = new SqlCommand("spMenuGenerator", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
-                SqlDataAdapter sqlDa = new SqlDataAdapter("EXEC spThemeControl @ThemeName='" + changeThemeColor + "'", con);
+                //cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
+                SqlDataAdapter sqlDa = new SqlDataAdapter("EXEC spMenuGenerator" , con);
 
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
 
-                if (dtbl != null && dtbl.Rows.Count > 0)
-                {
-                    ObservableCollection<ThemeControl> test = new ObservableCollection<ThemeControl>();
-                    int i = 0;
-                    foreach (var row in dtbl.Rows)
-                    {
-
-                        var obj = new ThemeControl()
-                        {
-                            ThemeControlTypeID = Convert.ToInt32(dtbl.Rows[i]["ThemeControlTypeId"]),
-                            ThemecontrolTypeName = (string)dtbl.Rows[i]["ThemecontrolTypeName"],
-                            ThemeName = (string)dtbl.Rows[i]["ThemeName"],
-                            ForegroundColor = (string)dtbl.Rows[i]["ForeGroundColor"],
-                            BackgroundColor = (string)dtbl.Rows[i]["BackGroundColor"],
-                            ShadowColor = (string)dtbl.Rows[i]["ShadowColor"],
-
-                        };
-                        test.Add(obj);
-                        i++;
-                    }
+              
+                con.Close();
+            }
+        } 
 
 
-                    con.Close();
+                  
 
 
                     ///=================================================
-                    ////////  Button Color  /////////
+                    ////////  Module  /////////
 
-                    ThemeControl ButtonColors = test.Where(x => x.ThemecontrolTypeName == "Button").FirstOrDefault();
-                    var converter = new System.Windows.Media.BrushConverter();
-                    if (ButtonColors != null)
-                    {
-                        var brushFore = (Brush)converter.ConvertFromString(ButtonColors.ForegroundColor.ToString());
-                        var brushBack = (Brush)converter.ConvertFromString(ButtonColors.BackgroundColor.ToString());
-                        //var brushShade = (Brush)converter.ConvertFromString(ButtonColors.ShadowColor.ToString());
-                        foreach (Button tb in FindVisualChildren<Button>(this))
-                        {
-                            tb.Foreground = brushFore;
-                            tb.Background = brushBack;
+                    //Menu MenuWords = test.Where(x => x.MenuWords == "Button").FirstOrDefault();
+                    //var converter = new System.Windows.Media.BrushConverter();
+                    //if (ButtonColors != null)
+                    //{
+                    //    var brushFore = (Brush)converter.ConvertFromString(ButtonColors.ForegroundColor.ToString());
+                    //    var brushBack = (Brush)converter.ConvertFromString(ButtonColors.BackgroundColor.ToString());
+                    //    //var brushShade = (Brush)converter.ConvertFromString(ButtonColors.ShadowColor.ToString());
+                    //    foreach (Button tb in FindVisualChildren<Button>(this))
+                    //    {
+                    //        tb.Foreground = brushFore;
+                    //        tb.Background = brushBack;
 
-                        }
-                    }
+                    //    }
+                    //}
                     
                     
-                }
-            }
+                
+            
 
 
 
-        }
+        
 
         private void Window_ContentRendered(object sender, EventArgs e)
         {
