@@ -101,7 +101,7 @@
                     <StackPanel x:Name="stpMainSection" Orientation="Vertical" >
 
                        
-                            <Menu Background="#151B54" Foreground="WhiteSmoke" Height="33" Padding="0 5">
+                            <Menu Background="#151B54" Foreground="WhiteSmoke" Name="HomeWindowMenu"  Height="33" Padding="0 5">
                                 <MenuItem Header="_File" >
                                 <MenuItem Header="_New..." >
                                     <MenuItem Header="STYLE 1"/>
@@ -204,7 +204,7 @@
                                             </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                            <Border BorderBrush="LightGray" Background="DimGray"  BorderThickness="0 2 0 0"  CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
+                                            <Border BorderBrush="LightGray" Background="#191919"  BorderThickness="0 2 0 0"  CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <!-- last Used Border brush #191919 -->
                                             <Image Source="images/icons/380-MoneyBag.png" Width="100"/>
                                         </Border>
@@ -240,7 +240,7 @@
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                            <Border  BorderBrush="LightGray" Background="DimGray"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
+                                            <Border  BorderBrush="LightGray" Background="#191919"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/384-Tag.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -275,7 +275,7 @@
                                         </StackPanel>
                                     </Border>
                                         <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                            <Border  BorderBrush="LightGray" Background="DimGray"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
+                                            <Border  BorderBrush="LightGray" Background="#191919"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/385-InventoryCheck.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -312,7 +312,7 @@
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                            <Border  BorderBrush="LightGray" Background="DimGray"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
+                                            <Border  BorderBrush="LightGray" Background="#191919"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/382-Truck.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -346,7 +346,7 @@
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                            <Border  BorderBrush="LightGray" Background="DimGray"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
+                                            <Border  BorderBrush="LightGray" Background="#191919"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/381-HumansICON.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -381,7 +381,7 @@
                                         </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
-                                            <Border  BorderBrush="LightGray" Background="DimGray"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
+                                            <Border  BorderBrush="LightGray" Background="#191919"  BorderThickness="0 2 0 0" CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
                                             <Image Source="images/icons/383-Clipboard.png" Width="100"/>
                                         </Border>
                                     </StackPanel>

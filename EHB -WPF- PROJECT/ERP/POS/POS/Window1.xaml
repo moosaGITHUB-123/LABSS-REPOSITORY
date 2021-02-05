@@ -6,10 +6,10 @@
         xmlns:local="clr-namespace:POS"
         xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dxca="http://schemas.devexpress.com/winfx/2008/xaml/carousel" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxdiag="http://schemas.devexpress.com/winfx/2008/xaml/diagram" xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges" x:Class="POS.Window1"
         mc:Ignorable="d"
-        Title="Window1" Height="450" Width="800">
+        Title="Window1" Height="900" Width="1600" WindowState="Maximized" WindowStartupLocation="CenterScreen" ContentRendered="Window_ContentRendered">
     <Grid>
 
-        <dxwui:HamburgerMenu Margin="0,0,587,0">
+        <dxwui:HamburgerMenu Margin="0,0,587,0" >
             <dxwui:HamburgerMenu.BottomBarItems>
                 <dxwui:HamburgerMenuBottomBarNavigationButton Content="Settings" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Setup/Properties_16x16.png}" GlyphHeight="16"/>
                 <dxwui:HamburgerMenuBottomBarNavigationButton Content="About" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Support/Info_16x16.png}" GlyphHeight="16"/>
@@ -17,40 +17,34 @@
             <dxwui:HamburgerMenu.Content>
                 <dxwui:NavigationFrame/>
             </dxwui:HamburgerMenu.Content>
-            <dxwui:HamburgerMenuNavigationButton Content="Home" GlyphWidth="16" Glyph="{dx:DXImage}" GlyphHeight="10" IsSelected="True" Click="HamburgerMenuNavigationButton_Click"  />
+            <dxwui:HamburgerMenuNavigationButton Content="Home" GlyphWidth="16" Glyph="{dx:DXImage}" GlyphHeight="10" IsSelected="True"  />
             <dxwui:HamburgerMenuNavigationButton Content="New Page" GlyphWidth="16" Glyph="{dx:DXImage}" GlyphHeight="16"/>
             <dxwui:HamburgerMenuHyperlinkButton Content="Support" NavigateUri="https://www.devexpress.com/Support/"/>
         </dxwui:HamburgerMenu>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="35" Margin="247,22,0,0" VerticalAlignment="Top" Width="394"/>
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="35" Margin="205,10,0,0" VerticalAlignment="Top" Width="394"/>
+        <Expander x:Name="expander" Header="Expander" HorizontalAlignment="Left" Height="19" Margin="16,256,0,0" VerticalAlignment="Top" Width="127" IsExpanded="True"/>
+        <dx:SimpleButton x:Name="simpleButton" Content="SimpleButton" HorizontalAlignment="Left" Height="34" Margin="16,158,0,0" VerticalAlignment="Top" Width="68"/>
+        <dx:SplitButton x:Name="splitButton" Content="SplitButton" HorizontalAlignment="Left" Height="21" Margin="16,197,0,0" VerticalAlignment="Top" Width="55"/>
+        <dx:SimpleButton x:Name="simpleButton1" Content="SimpleButton" HorizontalAlignment="Left" Height="28" Margin="16,223,0,0" VerticalAlignment="Top" Width="127" Glyph="images/icons/307-archive.png" BorderThickness="0"/>
+        <Menu Background="#151B54" Foreground="White" Name="MenuUI"  Height="33" Padding="0 5"  Width="900" HorizontalAlignment="Left" VerticalAlignment="Top">
+            <MenuItem Header="_File" >
+                <MenuItem Header="_New..." >
+                    <MenuItem Header="STYLE 1"/>
+                    <MenuItem Header="STYLE 2"/>
+                    <MenuItem Header="STYLE 3"/>
+                    <MenuItem Header="STYLE 4"/>
+                </MenuItem>
 
-        <dxnav:TileNavPane HorizontalAlignment="Left" Height="22" Margin="247,131,0,0" VerticalAlignment="Top" Width="477" Padding="0">
-            <dxnav:TileNavPane.NavButtons>
-                <dxnav:NavButton Content="NavButton" IsMain="False" Margin="0 -20 0 0 " Padding="0"/>
-                <dxnav:NavButton Content="NavButton" IsMain="False" Margin="0" Padding="0"/>
-                <dxnav:NavButton Content="NavButton" IsMain="False" Margin="0" Padding="0"/>
-                <dxnav:NavButton Content="NavButton" IsMain="False"/>
-            </dxnav:TileNavPane.NavButtons>
-            <dxnav:TileNavCategory Content="TileNavCategory">
-                <dxnav:TileNavItem Content="TileNavItem"/>
-                <dxnav:TileNavItem Content="TileNavItem"/>
-            </dxnav:TileNavCategory>
-            <dxnav:TileNavCategory Content="TileNavCategory">
-                <dxnav:TileNavItem Content="TileNavItem"/>
-                <dxnav:TileNavItem Content="TileNavItem"/>
-            </dxnav:TileNavCategory>
-            <dxnav:TileNavCategory Content="TileNavCategory">
-                <dxnav:TileNavItem Content="TileNavItem"/>
-                <dxnav:TileNavItem Content="TileNavItem"/>
-            </dxnav:TileNavCategory>
-            <dxnav:TileNavCategory Content="TileNavCategory"/>
-            <dxnav:TileNavCategory Content="TileNavCategory"/>
-        </dxnav:TileNavPane>
-        <Expander x:Name="expander" Header="Expander" HorizontalAlignment="Left" Height="50" Margin="247,158,0,0" VerticalAlignment="Top" Width="178" IsExpanded="True"/>
-        <dx:SimpleButton x:Name="simpleButton" Content="SimpleButton" HorizontalAlignment="Left" Height="34" Margin="137,234,0,0" VerticalAlignment="Top" Width="68"/>
-        <dx:SplitButton x:Name="splitButton" Content="SplitButton" HorizontalAlignment="Left" Height="21" Margin="97,311,0,0" VerticalAlignment="Top" Width="55"/>
-        <dx:SimpleButton x:Name="simpleButton1" Content="SimpleButton" HorizontalAlignment="Left" Height="28" Margin="281,87,0,0" VerticalAlignment="Top" Width="127" Glyph="images/icons/307-archive.png" BorderThickness="0"/>
+                <MenuItem Header="_Open..." />
+                <MenuItem Header="_Save" />
+                <MenuItem Header="_Save As..." />
 
-        <dxdiag:DiagramControl SelectedStencils="BasicShapes, BasicFlowchartShapes" Margin="505,178,68,101"/>
+                <MenuItem Header="_Exit" />
+            </MenuItem>
+
+            <!--  Item Menu -->
+
+        </Menu>
 
     </Grid>
 </Window>
