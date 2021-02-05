@@ -26,7 +26,7 @@
         <dx:SimpleButton x:Name="simpleButton" Content="SimpleButton" HorizontalAlignment="Left" Height="34" Margin="16,158,0,0" VerticalAlignment="Top" Width="68"/>
         <dx:SplitButton x:Name="splitButton" Content="SplitButton" HorizontalAlignment="Left" Height="21" Margin="16,197,0,0" VerticalAlignment="Top" Width="55"/>
         <dx:SimpleButton x:Name="simpleButton1" Content="SimpleButton" HorizontalAlignment="Left" Height="28" Margin="16,223,0,0" VerticalAlignment="Top" Width="127" Glyph="images/icons/307-archive.png" BorderThickness="0"/>
-        <Menu Background="#151B54" Foreground="White" Name="MenuUI"  Height="33" Padding="0 5"  Width="900" HorizontalAlignment="Left" VerticalAlignment="Top">
+        <Menu Background="#151B54" Foreground="White" Name="HomeMenu"  Height="33" Padding="0 5"  Width="900" HorizontalAlignment="Left" VerticalAlignment="Top">
             <MenuItem Header="_File" >
                 <MenuItem Header="_New..." >
                     <MenuItem Header="STYLE 1"/>

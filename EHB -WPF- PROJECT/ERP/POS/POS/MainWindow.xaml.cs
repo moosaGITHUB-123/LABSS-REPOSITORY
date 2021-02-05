@@ -49,7 +49,7 @@ namespace POS
             //sqlinst = txtSqlInst.Text;
             //DB = txtDB.Text;
             //DBpass = txtDBPass.Text;
-            var consucessful = "------- Connectivity Succeeded ✅ --------";
+    //         var consucessful = "------- Connectivity Succeeded ✅ --------";    Not in Use temporary
 
 
             try
@@ -59,14 +59,14 @@ namespace POS
 
 
                     con.Open();
-                    MessageBox.Show(consucessful);
+    //              MessageBox.Show(consucessful); Not in Use temporary
                     con.Close();
                 }
 
             }
-            catch (Exception exceptions) {
+            catch (Exception ) {
 
-                MessageBox.Show("------ 404 CONNECTION ERROR --------" + exceptions.ToString());
+                MessageBox.Show("------ 404 CONNECTION ERROR --------" .ToString());
             }
 
             //////////   sp Thme Calling Below  ///////////
