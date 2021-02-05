@@ -15,7 +15,7 @@
 
 
 
-        <dxdo:DockLayoutManager Background="Gray" >
+        <dxdo:DockLayoutManager Background="Gray"  >
             <dxdo:LayoutGroup Caption="LayoutRoot" Background="WhiteSmoke">
                 <dxdo:LayoutPanel Background="#292929" Caption="USER AND QUICK ACESS " ItemWidth=".55*" MinWidth="230">
                     <StackPanel Background="#292929" Height="1000" Margin=" 7 0 7 0 " >
@@ -101,7 +101,7 @@
                     <StackPanel x:Name="stpMainSection" Orientation="Vertical" >
 
                        
-                            <Menu Background="#151B54" Foreground="WhiteSmoke" Height="33" Padding="0 5">
+                            <Menu Background="#151B54" Foreground="WhiteSmoke" Name="HomeWindowMenu"  Height="33" Padding="0 5">
                                 <MenuItem Header="_File" >
                                 <MenuItem Header="_New..." >
                                     <MenuItem Header="STYLE 1"/>
@@ -199,11 +199,13 @@
                                             <Border BorderBrush="Transparent" Background="Transparent"  BorderThickness="0" CornerRadius="0 0 0 0" HorizontalAlignment="Left" >
                                                 <dx:SimpleButton  Background="Transparent"  Foreground="#FF007EF9" Height="28" Width="50" HorizontalAlignment="Left"  BorderThickness="1 0  0 0" BorderBrush="#323232" MouseEnter="BtnQuickAccess2_MouseEnter" Content="VIEW"/>
                                             </Border>
+                                                
 
-                                        </StackPanel>
+                                            </StackPanel>
                                     </Border>
                                     <StackPanel Orientation="Horizontal" Width="100" Background="Transparent" >
                                             <Border BorderBrush="LightGray" Background="#191919"  BorderThickness="0 2 0 0"  CornerRadius="00 0 0 0" HorizontalAlignment="Left" >
+                                            <!-- last Used Border brush #191919 -->
                                             <Image Source="images/icons/380-MoneyBag.png" Width="100"/>
                                         </Border>
                                     </StackPanel>
@@ -390,7 +392,7 @@
 
                         <StackPanel Name="StpCharts2" Orientation="Horizontal" HorizontalAlignment="Left" Margin="10 15 15 15"  >
 
-                            <dxc:Chart3DControl HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Panel.ZIndex="10" Width="380" BorderBrush="Transparent" Background="DimGray">
+                                <dxc:Chart3DControl HorizontalAlignment="Left" Height="370" VerticalAlignment="Top" Panel.ZIndex="10" Width="380" BorderBrush="Transparent" Background="#3c3c3c">
                                 <dxc:Chart3DControl.Legends>
                                     <dxc:Legend BorderBrush="Transparent" Background="Transparent"/>
                                 </dxc:Chart3DControl.Legends>
@@ -418,7 +420,7 @@
                                 </dxc:Series3DStorage>
                             </dxc:Chart3DControl>
 
-                            <dxc:ChartControl Height="370"  Width="530" Margin="12 0 0 0" BorderBrush="Transparent" Background="DimGray">
+                                <dxc:ChartControl Height="370"  Width="530" Margin="12 0 0 0" BorderBrush="Transparent" Background="#3c3c3c">
                                 <dxc:ChartControl.Legends >
                                     <dxc:Legend/>
                                    

@@ -37,8 +37,13 @@ namespace POS
         public string logginusername = "";
         public string logginusertype = "";
 
+        public DateTime recordLastModifiedDate { get; private set; }
+        public int recordEntrydBy { get; private set; }
+        public DateTime recordEntryDate { get; private set; }
+
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+
             //lblUserName.Content = logginusername;
             //lblUserType.Content = logginusertype;
             btnEdgeLine1.Visibility = Visibility.Collapsed;
@@ -46,12 +51,94 @@ namespace POS
             btnEdgeLine3.Visibility = Visibility.Collapsed;
             btnEdgeLine4.Visibility = Visibility.Collapsed;
             btnEdgeLine5.Visibility = Visibility.Collapsed;
+
+            ////////////////////////////////////////////////////////
+            ////////////////////////////////////////////////////////
+            ///
+
+
+            using (SqlConnection con = new SqlConnection(constr))
+            {
+
+                con.Open();
+                MessageBox.Show("APPLICATION Menu Making Process Is Working");
+
+
+                // string Module = "White";
+                SqlCommand cmd = new SqlCommand("spMenuGenerator", con);
+                cmd.CommandType = CommandType.StoredProcedure;
+                //cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
+                SqlDataAdapter sqlDa = new SqlDataAdapter("EXEC spMenuGenerator" , con);
+
+                DataTable dtbl = new DataTable();
+                sqlDa.Fill(dtbl);
+
+              
+               
+
+
+                if (dtbl != null && dtbl.Rows.Count > 0)
+                {
+                    ObservableCollection<MenuGenerator> test = new ObservableCollection<MenuGenerator>();
+                    int i = 0;
+                    foreach (var row in dtbl.Rows)
+                    {
+
+                        var obj = new MenuGenerator()
+                        {
+                            ModuleID = Convert.ToInt32(dtbl.Rows[i]["ModuleID"]),
+                            Parent = (string)dtbl.Rows[i]["Parent"],
+                            ModuleMenuID = Convert.ToInt32(dtbl.Rows[i]["ModuleMenuID"]),
+                            Child = (string)dtbl.Rows[i]["Child"],
+                            ModuleSubMenuID = Convert.ToInt32(dtbl.Rows[i]["ModuleSubMenuID"]),
+                            GrandChild = (string)dtbl.Rows[i]["Child"]
+                        };
+
+                       
+                        test.Add(obj);
+                        i++;
+                    }
+                }
+                con.Close();
+            }
+       } 
+
+        
+          
+
+
+                    ///=================================================
+                    ////////  Module  /////////
+
+                    //Menu MenuWords = test.Where(x => x.MenuWords == "Button").FirstOrDefault();
+                    //var converter = new System.Windows.Media.BrushConverter();
+                    //if (ButtonColors != null)
+                    //{
+                    //    var brushFore = (Brush)converter.ConvertFromString(ButtonColors.ForegroundColor.ToString());
+                    //    var brushBack = (Brush)converter.ConvertFromString(ButtonColors.BackgroundColor.ToString());
+                    //    //var brushShade = (Brush)converter.ConvertFromString(ButtonColors.ShadowColor.ToString());
+                    //    foreach (Button tb in FindVisualChildren<Button>(this))
+                    //    {
+                    //        tb.Foreground = brushFore;
+                    //        tb.Background = brushBack;
+
+                    //    }
+                    //}
+                    
+                    
+                
             
 
-        }
+
+
+        
 
         private void Window_ContentRendered(object sender, EventArgs e)
         {
+            //////////////////////////////////////////////////////////////////
+            ///////////////  THEME COLOR CHANGING BELOW   ////////////////////
+            /////////////////////////////////////////////////////////////////
+            
 
             using (SqlConnection con = new SqlConnection(constr))
             {
@@ -59,7 +146,7 @@ namespace POS
                 con.Open();
                 MessageBox.Show("Theme Changing Process Is Working");
 
-
+               
                 string changeThemeColor = "White";
                 SqlCommand cmd = new SqlCommand("spThemeControl", con);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -91,7 +178,7 @@ namespace POS
                     }
 
 
-                    con.Close();
+                //    con.Close();
 
 
                     ///=================================================
@@ -147,7 +234,7 @@ namespace POS
      //                   }
      //               }
                     ///=================================================
-                  /////////  Menu Colors  //////////  ------> NOt In Use
+                  /////////  Menu Colors  //////////  
                     ThemeControl MenuColors = test.Where(x => x.ThemecontrolTypeName == "Menu").FirstOrDefault();
           
                     if (MenuColors != null)
@@ -334,6 +421,9 @@ namespace POS
                     }
                 }
             }
+
+
+
         }
             public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
             {
@@ -341,7 +431,8 @@ namespace POS
                 {
                     for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
                     {
-                        DependencyObject child = VisualTreeHelper.GetChild(depObj, i);
+                        DependencyObject
+ child = VisualTreeHelper.GetChild(depObj, i);
                         if (child != null && child is T)
                         {
                             yield return (T)child;
@@ -354,7 +445,13 @@ namespace POS
                     }
                 }
             }
-            private void BtnQuickAccess1_MouseEnter(object sender, MouseEventArgs e)
+
+            //////////////////////////////////////////////////////////////////
+            ///////////////  THEME COLOR CHANGING ABOVE   ////////////////////
+            /////////////////////////////////////////////////////////////////
+
+
+        private void BtnQuickAccess1_MouseEnter(object sender, MouseEventArgs e)
         {
             btnEdgeLine1.Visibility = Visibility.Visible;
             btnEdgeLine2.Visibility = Visibility.Collapsed;
@@ -371,6 +468,11 @@ namespace POS
             btnEdgeLine3.Visibility = Visibility.Collapsed;
             btnEdgeLine4.Visibility = Visibility.Collapsed;
             btnEdgeLine5.Visibility = Visibility.Collapsed;
+        }
+
+        void dynamicmenu()
+        {
+
         }
 
         private void BtnQuickAccess3_MouseEnter(object sender, MouseEventArgs e)

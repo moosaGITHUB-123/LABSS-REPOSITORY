@@ -40,6 +40,12 @@ namespace POS
 
         private void LOGINButton_Copy1_Click(object sender, RoutedEventArgs e)
         {
+            /////////   Testing  form  opening   //////
+            Window1 fm = new Window1();
+            fm.Show();
+            /////////   Testing  form  Closed   //////
+
+
             //sqlinst = txtSqlInst.Text;
             //DB = txtDB.Text;
             //DBpass = txtDBPass.Text;
@@ -62,62 +68,63 @@ namespace POS
 
                 MessageBox.Show("------ 404 CONNECTION ERROR --------" + exceptions.ToString());
             }
+
             //////////   sp Thme Calling Below  ///////////
-            try
-            {
-                if (SwitchTheme.IsChecked == true)
-                {
-                  
-                        con.Open();
-                        MessageBox.Show("Theme Changing Process Is Working");
+            //try
+            //{
+            //    if (SwitchTheme.IsChecked == true)
+            //    {
+
+            //        con.Open();
+            //        MessageBox.Show("Theme Changing Process Is Working");
 
 
-                    string changeThemeColor = "White";
-                    SqlCommand cmd = new SqlCommand("spThemeControl", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
-                    SqlDataAdapter sqlDa = new SqlDataAdapter("EXEC spThemeControl @ThemeName='"+ changeThemeColor+"'", con);
+            //        string changeThemeColor = "White";
+            //        SqlCommand cmd = new SqlCommand("spThemeControl", con);
+            //        cmd.CommandType = CommandType.StoredProcedure;
+            //        cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
+            //        SqlDataAdapter sqlDa = new SqlDataAdapter("EXEC spThemeControl @ThemeName='" + changeThemeColor + "'", con);
 
-                    DataTable dtbl = new DataTable();
-                    sqlDa.Fill(dtbl);
+            //        DataTable dtbl = new DataTable();
+            //        sqlDa.Fill(dtbl);
 
-                    if (dtbl!=null && dtbl.Rows.Count > 0)
-                    {
-                    ObservableCollection<ThemeControl> test = new ObservableCollection<ThemeControl>();
-                        int i = 0;
-                    foreach (var row in dtbl.Rows)
-                    {
-                            
-                        var obj = new ThemeControl()
-                        {
-                            ThemeControlTypeID =Convert.ToInt32( dtbl.Rows[i]["ThemeControlTypeId"]),
-                            ThemecontrolTypeName = (string)dtbl.Rows[i]["ThemeControlName"],
-                            ThemeName = (string)dtbl.Rows[i]["ThemeName"],
-                            ForegroundColor=(string)dtbl.Rows[i]["ForeGroundColor"],
-                            BackgroundColor= (string)dtbl.Rows[i]["BackGroundColor"],
-                            ShadowColor= (string)dtbl.Rows[i]["ShadowColor"],
+            //        if (dtbl != null && dtbl.Rows.Count > 0)
+            //        {
+            //            ObservableCollection<ThemeControl> test = new ObservableCollection<ThemeControl>();
+            //            int i = 0;
+            //            foreach (var row in dtbl.Rows)
+            //            {
 
-                        };
-                        test.Add(obj);
-                    }
+            //                var obj = new ThemeControl()
+            //                {
+            //                    ThemeControlTypeID = Convert.ToInt32(dtbl.Rows[i]["ThemeControlTypeId"]),
+            //                    ThemecontrolTypeName = (string)dtbl.Rows[i]["ThemeControlName"],
+            //                    ThemeName = (string)dtbl.Rows[i]["ThemeName"],
+            //                    ForegroundColor = (string)dtbl.Rows[i]["ForeGroundColor"],
+            //                    BackgroundColor = (string)dtbl.Rows[i]["BackGroundColor"],
+            //                    ShadowColor = (string)dtbl.Rows[i]["ShadowColor"],
 
-                    con.Close();
-                    var converter = new System.Windows.Media.BrushConverter();
-                    var brush = (Brush)converter.ConvertFromString(dtbl.Rows[0]["ForeGroundColor"].ToString());
-                    foreach (Button tb in FindVisualChildren<Button>(this))
-                    {
-                        tb.Foreground = brush;
-                    }
+            //                };
+            //                test.Add(obj);
+            //            }
 
-                     }
-                }
-            }
-            catch (Exception exceptions)
-            {
-                string exceptionss = exceptions.ToString();
-                MessageBox.Show("Theme Problem Found kindly Use Current theme" .ToString());
-                con.Close();
-            }
+            //            con.Close();
+            //            var converter = new System.Windows.Media.BrushConverter();
+            //            var brush = (Brush)converter.ConvertFromString(dtbl.Rows[0]["ForeGroundColor"].ToString());
+            //            foreach (Button tb in FindVisualChildren<Button>(this))
+            //            {
+            //                tb.Foreground = brush;
+            //            }
+
+            //        }
+            //    }
+            //}
+            //catch (Exception exceptions)
+            //{
+            //    string exceptionss = exceptions.ToString();
+            //    MessageBox.Show("Theme Problem Found kindly Use Current theme".ToString());
+            //    con.Close();
+            //}
 
         }
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
@@ -156,9 +163,9 @@ namespace POS
             try
             {
                 ///////////  Login  Sp Calling Below   ////////////
-                
+
                 con.Open();
-                
+
                 SqlCommand cmd = new SqlCommand("spLoginCheck", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@LoginUserName", SqlDbType.VarChar).Value = TxtLoginID.Text.Trim();
@@ -166,7 +173,7 @@ namespace POS
                 SqlDataReader rd = cmd.ExecuteReader();
                 if (rd.Read())
                 {
-                   string username= rd.GetString(0);
+                    string username = rd.GetString(0);
                     int usertype = rd.GetInt32(2);
                     string userType = rd.GetString(3);
                     Home hm = new Home();
@@ -177,7 +184,7 @@ namespace POS
 
                 }
 
-                
+
 
             }
 
@@ -196,32 +203,38 @@ namespace POS
             Home fm = new Home();
             fm.Show();
 
-            ///////////  Theme  Sp Calling Below   ////////////
-            if (SwitchTheme.IsChecked == true)
-            {
-                con.Open();
-            }
-            else { };
+         }
 
-            //SqlCommand cmd = new SqlCommand("spLoginCheck", con);
-            //cmd.CommandType = CommandType.StoredProcedure;
-            //cmd.Parameters.AddWithValue("@LoginUserName", SqlDbType.VarChar).Value = TxtLoginID.Text.Trim();
-            //cmd.Parameters.AddWithValue("@LoginUserPass", SqlDbType.VarChar).Value = txtLoginPassword.Text.Trim();
-            //SqlDataReader rd = cmd.ExecuteReader();
-            //if (rd.Read())
-            //{
-            //    string username = rd.GetString(0);
-            //    int usertype = rd.GetInt32(2);
-            //    string userType = rd.GetString(3);
-            //    Home hm = new Home();
-            //    hm.logginusername = username;
-            //    hm.logginusertype = userType;
-            //    hm.Show();
-            //    this.Close();
-
-            //}
+        private void SwitchTheme_Checked(object sender, RoutedEventArgs e)
+        { }
 
 
+              public String ThemeChangeToWhite = "White";
+    }
 
-        }
-    } } 
+        ///////////  Theme  Sp Calling Below   ////////////
+        //if (SwitchTheme.IsChecked == true)
+        //{
+        //    con.Open();
+        //}
+        //else { };
+
+        //SqlCommand cmd = new SqlCommand("spLoginCheck", con);
+        //cmd.CommandType = CommandType.StoredProcedure;
+        //cmd.Parameters.AddWithValue("@LoginUserName", SqlDbType.VarChar).Value = TxtLoginID.Text.Trim();
+        //cmd.Parameters.AddWithValue("@LoginUserPass", SqlDbType.VarChar).Value = txtLoginPassword.Text.Trim();
+        //SqlDataReader rd = cmd.ExecuteReader();
+        //if (rd.Read())
+        //{
+        //    string username = rd.GetString(0);
+        //    int usertype = rd.GetInt32(2);
+        //    string userType = rd.GetString(3);
+        //    Home hm = new Home();
+        //    hm.logginusername = username;
+        //    hm.logginusertype = userType;
+        //    hm.Show();
+        //    this.Close();
+
+        //}
+    }
+

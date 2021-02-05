@@ -22,11 +22,39 @@ namespace POS
         public Window1()
         {
             InitializeComponent();
+
+
+
+
+
         }
 
-        private void HamburgerMenuNavigationButton_Click(object sender, RoutedEventArgs e)
+        private void Window_ContentRendered(object sender, EventArgs e) 
         {
+            //    int startposition = 100;
+            //    int endposition = 10;
+            //Label AddLabel(int i, int Start, int End)
+            //{
+            //    Label I = new Label();
+            //    I.Name = "LabelFromVideo".ToString();
+            //    I.Content = "LabelFromVideo-2".ToString();
+            //    //I.Foreground = Color.Add.Foreground;
+            //    //I.Background = Color.Green;
+            //    //I.Font = new Font("Serif",24, FontStyle.Bold);
+            //    I.Width = 20;
+            //    I.Height = 100;
+            //    //I.Location = new Point(Start, End);
+
+
+            MenuItem MenuD = new MenuItem();
+            MenuD.Header = "POS TOUCH FOR TAB";
+            MenuD.Height = 50;
+            this.MenuUI.Items.Add(MenuD);
 
         }
+
+
+
     }
-}
+    }
+//}

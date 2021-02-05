@@ -92,6 +92,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppSetting.cs" />
+    <Compile Include="DBClasses\MenuGenerator.cs" />
+    <Compile Include="DBClasses\Module.cs" />
     <Compile Include="DBClasses\ThemeControl.cs" />
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
