@@ -94,10 +94,14 @@ namespace POS
                             GrandChild = (string)dtbl.Rows[i]["Child"]
                         };
 
-                       
+                        String ModuleName = "";
+                        String MenuName = "";
+                        String SubMenuName = "";
+                        
                         test.Add(obj);
                         i++;
                     }
+
                 }
                 con.Close();
             }
@@ -136,7 +140,7 @@ namespace POS
         private void Window_ContentRendered(object sender, EventArgs e)
         {
             //////////////////////////////////////////////////////////////////
-            ///////////////  THEME COLOR CHANGING BELOW   ////////////////////
+            ///////////////  THEME COLOR CHANGING START   ////////////////////
             /////////////////////////////////////////////////////////////////
             
 
@@ -447,7 +451,7 @@ namespace POS
             }
 
             //////////////////////////////////////////////////////////////////
-            ///////////////  THEME COLOR CHANGING ABOVE   ////////////////////
+            ///////////////  THEME COLOR CHANGING END   ////////////////////
             /////////////////////////////////////////////////////////////////
 
 

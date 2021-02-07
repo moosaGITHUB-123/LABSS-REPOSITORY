@@ -92,9 +92,22 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="AppSetting.cs" />
+    <Compile Include="DBClasses\CompanyBranch.cs" />
+    <Compile Include="DBClasses\Department.cs" />
+    <Compile Include="DBClasses\Designation.cs" />
     <Compile Include="DBClasses\MenuGenerator.cs" />
     <Compile Include="DBClasses\Module.cs" />
+    <Compile Include="DBClasses\ModuleMenu.cs" />
+    <Compile Include="DBClasses\ModuleSubMenu.cs" />
+    <Compile Include="DBClasses\SoftwareMenu.cs" />
     <Compile Include="DBClasses\ThemeControl.cs" />
+    <Compile Include="DBClasses\ThemeControlType.cs" />
+    <Compile Include="DBClasses\User.cs" />
+    <Compile Include="DBClasses\UserCompanyBranch.cs" />
+    <Compile Include="DBClasses\UserDepartment.cs" />
+    <Compile Include="DBClasses\UserDesignation.cs" />
+    <Compile Include="DBClasses\UserStatus.cs" />
+    <Compile Include="DBClasses\UserType.cs" />
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
@@ -104,6 +117,9 @@
     </Compile>
     <Compile Include="WindowChangeDatabase.xaml.cs">
       <DependentUpon>WindowChangeDatabase.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Window_khizer.xaml.cs">
+      <DependentUpon>Window_khizer.xaml</DependentUpon>
     </Compile>
     <Page Include="Home.xaml">
       <SubType>Designer</SubType>
@@ -126,6 +142,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="WindowChangeDatabase.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Window_khizer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

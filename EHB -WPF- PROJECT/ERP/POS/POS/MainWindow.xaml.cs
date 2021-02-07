@@ -41,7 +41,7 @@ namespace POS
         private void LOGINButton_Copy1_Click(object sender, RoutedEventArgs e)
         {
             /////////   Testing  form  opening   //////
-            Window1 fm = new Window1();
+            Window_khizer fm = new Window_khizer();
             fm.Show();
             /////////   Testing  form  Closed   //////
 
