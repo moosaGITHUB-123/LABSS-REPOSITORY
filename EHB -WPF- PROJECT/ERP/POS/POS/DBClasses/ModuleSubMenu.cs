@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POS.DBClasses
 {
-    public class ModuleSubMenu
+    public class ModuleSubMenuClass
     {
         public int ModuleSubMenuID { get; set; }
 
