@@ -4,47 +4,128 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POS"
-        xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dxca="http://schemas.devexpress.com/winfx/2008/xaml/carousel" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxdiag="http://schemas.devexpress.com/winfx/2008/xaml/diagram" xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges" x:Class="POS.Window1"
+        xmlns:dxwui="http://schemas.devexpress.com/winfx/2008/xaml/windowsui" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxn="http://schemas.devexpress.com/winfx/2008/xaml/navbar" xmlns:dxr="http://schemas.devexpress.com/winfx/2008/xaml/ribbon" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxnav="http://schemas.devexpress.com/winfx/2008/xaml/navigation" xmlns:dxca="http://schemas.devexpress.com/winfx/2008/xaml/carousel" xmlns:dxc="http://schemas.devexpress.com/winfx/2008/xaml/charts" xmlns:dxdiag="http://schemas.devexpress.com/winfx/2008/xaml/diagram" xmlns:dxga="http://schemas.devexpress.com/winfx/2008/xaml/gauges" xmlns:dxscht="http://schemas.devexpress.com/winfx/2008/xaml/scheduling/themekeys" xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion" xmlns:dxco="http://schemas.devexpress.com/winfx/2008/xaml/controls" xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors" xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/scheduling" x:Class="POS.Window1"
         mc:Ignorable="d"
         Title="Window1" Height="900" Width="1600" WindowState="Maximized" WindowStartupLocation="CenterScreen" ContentRendered="Window_ContentRendered">
-    <Grid>
-
-        <dxwui:HamburgerMenu Margin="0,0,587,0" >
-            <dxwui:HamburgerMenu.BottomBarItems>
-                <dxwui:HamburgerMenuBottomBarNavigationButton Content="Settings" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Setup/Properties_16x16.png}" GlyphHeight="16"/>
-                <dxwui:HamburgerMenuBottomBarNavigationButton Content="About" GlyphWidth="16" Glyph="{dx:DXImage Office2013/Support/Info_16x16.png}" GlyphHeight="16"/>
-            </dxwui:HamburgerMenu.BottomBarItems>
-            <dxwui:HamburgerMenu.Content>
-                <dxwui:NavigationFrame/>
-            </dxwui:HamburgerMenu.Content>
-            <dxwui:HamburgerMenuNavigationButton Content="Home" GlyphWidth="16" Glyph="{dx:DXImage}" GlyphHeight="10" IsSelected="True"  />
-            <dxwui:HamburgerMenuNavigationButton Content="New Page" GlyphWidth="16" Glyph="{dx:DXImage}" GlyphHeight="16"/>
-            <dxwui:HamburgerMenuHyperlinkButton Content="Support" NavigateUri="https://www.devexpress.com/Support/"/>
-        </dxwui:HamburgerMenu>
-        <Menu x:Name="menu" HorizontalAlignment="Left" Height="35" Margin="205,10,0,0" VerticalAlignment="Top" Width="394"/>
-        <Expander x:Name="expander" Header="Expander" HorizontalAlignment="Left" Height="19" Margin="16,256,0,0" VerticalAlignment="Top" Width="127" IsExpanded="True"/>
-        <dx:SimpleButton x:Name="simpleButton" Content="SimpleButton" HorizontalAlignment="Left" Height="34" Margin="16,158,0,0" VerticalAlignment="Top" Width="68"/>
-        <dx:SplitButton x:Name="splitButton" Content="SplitButton" HorizontalAlignment="Left" Height="21" Margin="16,197,0,0" VerticalAlignment="Top" Width="55"/>
-        <dx:SimpleButton x:Name="simpleButton1" Content="SimpleButton" HorizontalAlignment="Left" Height="28" Margin="16,223,0,0" VerticalAlignment="Top" Width="127" Glyph="images/icons/307-archive.png" BorderThickness="0"/>
-        <Menu Background="#151B54" Foreground="White" Name="HomeMenu"  Height="33" Padding="0 5"  Width="900" HorizontalAlignment="Left" VerticalAlignment="Top">
-            <MenuItem Header="_File" >
-                <MenuItem Header="_New..." >
-                    <MenuItem Header="STYLE 1"/>
-                    <MenuItem Header="STYLE 2"/>
-                    <MenuItem Header="STYLE 3"/>
-                    <MenuItem Header="STYLE 4"/>
+    <DockPanel>
+        <Grid
+>
+            <Menu
+Width="394" VerticalAlignment="Top" x:Name="menu" Margin="205,10,0,0" Height="35" HorizontalAlignment="Left">
+                <dx:DXTabControl
+Height="45" Width="104">
+                    <dx:DXTabItem
+Header="Tab">
+                        <Grid
+Background="Transparent"/>
+                    </dx:DXTabItem>
+                </dx:DXTabControl>
+            </Menu>
+            <Expander
+Width="127" VerticalAlignment="Top" x:Name="expander" Margin="16,256,0,0" IsExpanded="True" Height="19" HorizontalAlignment="Left" Header="Expander"/>
+            <dx:SimpleButton
+Width="68" VerticalAlignment="Top" x:Name="simpleButton" Margin="16,158,0,0" Height="34" HorizontalAlignment="Left" Content="SimpleButton"/>
+            <dx:SplitButton
+Width="55" VerticalAlignment="Top" x:Name="splitButton" Margin="16,197,0,0" Height="21" HorizontalAlignment="Left" Content="SplitButton"/>
+            <dx:SimpleButton
+Width="127" VerticalAlignment="Top" x:Name="simpleButton1" Margin="16,223,0,0" Height="28" HorizontalAlignment="Left" Glyph="images/icons/307-archive.png" Content="SimpleButton" BorderThickness="0"/>
+            <Menu
+Width="900" VerticalAlignment="Top" Padding="0 5" x:Name="HomeMenu" Height="33" HorizontalAlignment="Left" Foreground="White" Background="#151B54">
+                <MenuItem
+Header="_File">
+                    <MenuItem
+Header="_New...">
+                        <MenuItem
+Header="STYLE 1"/>
+                        <MenuItem
+Header="STYLE 2"/>
+                        <MenuItem
+Header="STYLE 3"/>
+                        <MenuItem
+Header="STYLE 4"/>
+                    </MenuItem>
+                    <MenuItem
+Header="_Open..."/>
+                    <MenuItem
+Header="_Save"/>
+                    <MenuItem
+Header="_Save As..."/>
+                    <MenuItem
+Header="_Exit"/>
                 </MenuItem>
-
-                <MenuItem Header="_Open..." />
-                <MenuItem Header="_Save" />
-                <MenuItem Header="_Save As..." />
-
-                <MenuItem Header="_Exit" />
-            </MenuItem>
-
-            <!--  Item Menu -->
-
-        </Menu>
-
-    </Grid>
+                <!--  Item Menu -->
+            </Menu>
+            <dxa:AccordionControl
+Width="150" VerticalAlignment="Top" Margin="663,130,0,0" Height="200" HorizontalAlignment="Left"/>
+            <dxca:CarouselNavigator
+Width="244" VerticalAlignment="Top" Margin="731,335,0,0" Height="26" HorizontalAlignment="Left"/>
+            <dxco:BreadcrumbControl
+Height="36" Margin="23,55,1334,0"/>
+            <dxnav:TileNavPane
+Width="304" VerticalAlignment="Top" Margin="728,236,0,0" Height="91" HorizontalAlignment="Left">
+                <dxnav:TileNavPane.NavButtons
+>
+                    <dxnav:NavButton
+Content="NavButton" IsMain="False"/>
+                </dxnav:TileNavPane.NavButtons>
+                <dxnav:TileNavCategory
+Content="TileNavCategory">
+                    <dxnav:TileNavItem
+Content="TileNavItem"/>
+                    <dxnav:TileNavItem
+Content="TileNavItem"/>
+                </dxnav:TileNavCategory>
+                <dxnav:TileNavCategory
+Content="TileNavCategory">
+                    <dxnav:TileNavItem
+Content="TileNavItem"/>
+                    <dxnav:TileNavItem
+Content="TileNavItem"/>
+                </dxnav:TileNavCategory>
+                <dxnav:TileNavCategory
+Content="TileNavCategory">
+                    <dxnav:TileNavItem
+Content="TileNavItem"/>
+                    <dxnav:TileNavItem
+Content="TileNavItem"/>
+                </dxnav:TileNavCategory>
+            </dxnav:TileNavPane>
+            <dxb:BarContainerControl
+Width="90" VerticalAlignment="Top" Margin="187,153,0,0" Height="96" HorizontalAlignment="Left"/>
+            <dx:UniformStackPanel
+Width="80" VerticalAlignment="Top" Margin="119,113,0,0" Height="63" HorizontalAlignment="Left"/>
+            <dx:DXTabControl
+Width="91" Margin="136,148,0,0" Height="45">
+                <dx:DXTabItem
+Header="Tab">
+                    <Grid
+Background="Transparent"/>
+                </dx:DXTabItem>
+            </dx:DXTabControl>
+            <dxr:RibbonControl
+Width="400" RibbonStyle="Office2010" Margin="721,43,471,0" Height="211">
+                <dxr:RibbonDefaultPageCategory
+Caption="defaultCategory">
+                    <dxr:RibbonPage
+Caption="Home">
+                        <dxr:RibbonPageGroup
+Caption="Tools"/>
+                    </dxr:RibbonPage>
+                </dxr:RibbonDefaultPageCategory>
+            </dxr:RibbonControl>
+            <dx:DXTabControl
+Width="149" Margin="261,123,0,0" Height="109">
+                <dx:DXTabItem
+Header="Tab">
+                    <Grid
+Background="Transparent"/>
+                </dx:DXTabItem>
+            </dx:DXTabControl>
+            <dxe:MemoEdit
+Width="105" VerticalAlignment="Top" Text="ABCCC" ShowIcon="True" Margin="290,155,0,0" Height="83" HorizontalAlignment="Left"/>
+            <dxsch:SchedulerControl x:Name="scheduler"
+Width="55" VerticalAlignment="Top" Margin="484,218,0,0" Height="56" HorizontalAlignment="Left"/>
+            <Frame x:Name="frame" Content="Frame" HorizontalAlignment="Left" Height="76" Margin="182,256,0,0" VerticalAlignment="Top" Width="100"/>
+        </Grid>
+    </DockPanel>
 </Window>
