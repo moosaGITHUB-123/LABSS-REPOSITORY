@@ -102,72 +102,7 @@
 
                        
                             <Menu Background="#151B54" Foreground="WhiteSmoke" Name="HomeWindowMenu"  Height="33" Padding="0 5">
-                                <MenuItem Header="_File" >
-                                <MenuItem Header="_New..." >
-                                    <MenuItem Header="STYLE 1"/>
-                                    <MenuItem Header="STYLE 2"/>
-                                    <MenuItem Header="STYLE 3"/>
-                                    <MenuItem Header="STYLE 4"/>
-                                </MenuItem>
-                               
-                                   <MenuItem Header="_Open..." />
-                                   <MenuItem Header="_Save" />
-                                   <MenuItem Header="_Save As..." />
-                             
-                                <MenuItem Header="_Exit" />
-                            </MenuItem>
-                                
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 1">
-                                   
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 2">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 3">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 4">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 5">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 6">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 7">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 8">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 9">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 10">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 11">
-
-                                </MenuItem>
-                                <!--  Item Menu -->
-                                <MenuItem Header="_Menu 12">
-
-                                </MenuItem>
-                                
-
-
+                              
                             </Menu>
                         
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" >
