@@ -22,6 +22,27 @@ namespace POS
         public Window_khizer()
         {
             InitializeComponent();
+
+
+
+        } 
+
+        private void Window_khizar_ContentRendered(object sender, EventArgs e)
+        {
+            MessageBox.Show(">> Menu Making Process Started . . . . . ");
+
+            //MenuItem HR = new MenuItem();
+            //HR.Header = "HR";
+            //mainmenu.Items.Add(HR);
+
+            //MenuItem Inventory = new MenuItem;
+            //Inventory = "INVENTORY";
+            //mainmenu.Items.Add(Inventory);
+
+
+
+
+
         }
     }
 }

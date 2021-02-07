@@ -6,10 +6,57 @@
         xmlns:local="clr-namespace:POS"
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" x:Class="POS.Window_khizer"
         mc:Ignorable="d"
-        Title="Window_khizer" Height="450" Width="800">
+        Title="Window_khizer" Height="768" Width="1366" ContentRendered="Window_khizar_ContentRendered">
     <Grid>
 
         <dx:DropDownButton Content="DropDownButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="224" Margin="98,77,0,0" Height="70"/>
+       <Menu HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="1267" Padding="0 10" Margin="33,0,0,0" >
+            <MenuItem Header="HR">
+                <MenuItem Header="SubMenu1"></MenuItem>
+                <MenuItem Header="SubMenu2"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Inventory">
+                <MenuItem Header="SubMenu1"></MenuItem>
+                <MenuItem Header="SubMenu2"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Sales">
+            <MenuItem Header="SubMenu1"></MenuItem>
+            <MenuItem Header="SubMenu2"></MenuItem>
+            </MenuItem>
+                
+            <MenuItem Header="Purchase">
+                <MenuItem Header="SubMenu1"></MenuItem>
+                <MenuItem Header="SubMenu2"></MenuItem>
+            </MenuItem>
+                
+            <MenuItem Header="Account">
+                <MenuItem Header="SubMenu1"></MenuItem>
+                <MenuItem Header="SubMenu2"></MenuItem>
+            </MenuItem>
+                
+            <MenuItem Header="CRM">
+                <MenuItem Header="SubMenu1"></MenuItem>
+                <MenuItem Header="SubMenu2"></MenuItem>
+               </MenuItem>
+                
+            <MenuItem Header="SCM">
+                <MenuItem Header="SubMenu1"></MenuItem>
+                <MenuItem Header="SubMenu2"></MenuItem>
+            </MenuItem>
+
+            <MenuItem Header="Production">
+                <MenuItem Header="SubMenu1"></MenuItem>
+                <MenuItem Header="SubMenu2"></MenuItem>
+            </MenuItem> 
+
+       
+
+
+
+        </Menu>
+
 
     </Grid>
 </Window>
