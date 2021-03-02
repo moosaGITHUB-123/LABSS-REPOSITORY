@@ -45,47 +45,57 @@ namespace POS
                     ///////////  Login  Sp Calling Below   ////////////
 
                     con.Open();
-                    
-                    SqlCommand cmd = new SqlCommand("spProductCategory", con);
-                    cmd.CommandType = CommandType.StoredProcedure;
-                    cmd.Parameters.AddWithValue("@Type", SqlDbType.VarChar).Value = 1;
-                    cmd.Parameters.AddWithValue("@SelectedCategoryID", SqlDbType.VarChar).Value = 0;
-                    cmd.Parameters.AddWithValue("@CategoryFullName", SqlDbType.VarChar).Value = CategoryFullName.Text;
-                    cmd.Parameters.AddWithValue("@CategoryShortName", SqlDbType.VarChar).Value = CategoryShortName.Text;
-                    cmd.Parameters.AddWithValue("@CategoryDescription", SqlDbType.VarChar).Value = CategoryDescription.Text.Trim();
-                    cmd.Parameters.AddWithValue("@CategoryParentID", SqlDbType.VarChar).Value = int.Parse(CategoryParent.Text.Trim());
-//------------------------------------------------------
-                    cmd.Parameters.AddWithValue("@recordStatusID", SqlDbType.VarChar).Value = 1;
-                    cmd.Parameters.AddWithValue("@recordStatusCause", SqlDbType.VarChar).Value = "NO CAUSE";
-                    cmd.Parameters.AddWithValue("@recordLastModifiedBy", SqlDbType.VarChar).Value = 0;
-                    cmd.Parameters.AddWithValue("@recordLastModifiedDate", SqlDbType.VarChar).Value = "2021-01-01 00:00:00.000";
-                    cmd.Parameters.AddWithValue("@recordEntryBy", SqlDbType.VarChar).Value = 0;
-                    cmd.Parameters.AddWithValue("@recordEntryDate", SqlDbType.VarChar).Value = "2021-01-01 00:00:00.000";
-                SqlDataReader rd = cmd.ExecuteReader();
-                    if (rd.Read())
-                    {
-                    
-                    DataTable dt = new DataTable();
-                    DataColumn CategoryID = new DataColumn("id",typeof(int));
-                    DataColumn CategoryFullName = new DataColumn("Full Name",typeof(string));
-                    DataColumn CategoryShortName = new DataColumn("Short Name",typeof(string));
-                    DataColumn CategoryDescription = new DataColumn("Description",typeof(string));
 
-                    dt.Columns.Add(CategoryID);
-                    dt.Columns.Add(CategoryID);
-                    dt.Columns.Add(CategoryFullName);
-                    dt.Columns.Add(CategoryShortName);
-                    dt.Columns.Add(CategoryDescription);
-
-
-                    }
-
+                string querymaster = "Exec spProductCategory @Type=1, @SelectedCategoryID=0,@CategoryFullName='"+ CategoryFullName.Text + "',@CategoryShortName='"+ CategoryShortName.Text + "' ";
+                SqlCommand cmd = new SqlCommand(querymaster, con);
+//                    cmd.CommandType = CommandType.StoredProcedure;
+//                    cmd.Parameters.AddWithValue("@Type", SqlDbType.Int).Value = 1;
+//                    cmd.Parameters.AddWithValue("@SelectedCategoryID", SqlDbType.VarChar).Value = 0;
+//                    cmd.Parameters.AddWithValue("@CategoryFullName", SqlDbType.VarChar).Value = CategoryFullName.Text;
+//                    cmd.Parameters.AddWithValue("@CategoryShortName", SqlDbType.VarChar).Value = CategoryShortName.Text;
+//                    cmd.Parameters.AddWithValue("@CategoryDescription", SqlDbType.VarChar).Value = CategoryDescription.Text.Trim();
+//                    cmd.Parameters.AddWithValue("@CategoryParentID", SqlDbType.VarChar).Value = int.Parse(CategoryParent.Text.Trim());
+////------------------------------------------------------
+//                    cmd.Parameters.AddWithValue("@recordStatusID", SqlDbType.VarChar).Value = 1;
+//                    cmd.Parameters.AddWithValue("@recordStatusCause", SqlDbType.VarChar).Value = "NO CAUSE";
+//                    cmd.Parameters.AddWithValue("@recordLastModifiedBy", SqlDbType.VarChar).Value = 0;
+//                    cmd.Parameters.AddWithValue("@recordLastModifiedDate", SqlDbType.VarChar).Value = "2021-01-01 00:00:00.000";
+//                    cmd.Parameters.AddWithValue("@recordEntryBy", SqlDbType.VarChar).Value = 0;
+//                    cmd.Parameters.AddWithValue("@recordEntryDate", SqlDbType.DateTime).Value = "2021-01-01 00:00:00.000";
+                DataTable dt = new DataTable();
+                SqlDataAdapter da = new SqlDataAdapter(cmd);
+                // this will query your database and return the result to your datatable
+                da.Fill(dt);
                 con.Close();
+                da.Dispose();
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    if (dt.Rows[0][0] != null)
+                    {
+                        using (SqlConnection conn = new SqlConnection(constr))
+                        {
 
+
+                            conn.Open();
+                            string query = "Exec spProductCategory @Type=5, @SelectedCategoryID=" + Convert.ToInt32(dt.Rows[0][0]);
+                            SqlCommand cmd2 = new SqlCommand(query,conn);
+                          
+                            DataTable dt1 = new DataTable();
+                            SqlDataAdapter da1 = new SqlDataAdapter(cmd2);
+                            // this will query your database and return the result to your datatable
+                            da1.Fill(dt1);
+
+                            da1.Dispose();
+                            conn.Close();
+                        }
+                    }
+                }
                 }
 
 
-                catch (Exception ex) { MessageBox.Show(ex.ToString()); }; ;
+                catch (Exception ex) { MessageBox.Show(ex.ToString());
+                con.Close();
+            }
 
             
         }

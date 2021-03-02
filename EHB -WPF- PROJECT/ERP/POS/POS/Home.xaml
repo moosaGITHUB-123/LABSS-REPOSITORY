@@ -59,7 +59,7 @@
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine6" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
                                
-                                <dx:SimpleButton x:Name="btnQuickAccess6" Padding="4 " Glyph="images/icons/233-stopwatch.png" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <dx:SimpleButton x:Name="btnQuickAccess6" Padding="4 " Glyph="images/icons/233-stopwatch.png" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1" Click="btnQuickAccess6_Click"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine7" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>

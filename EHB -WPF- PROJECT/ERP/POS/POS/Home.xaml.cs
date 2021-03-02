@@ -546,5 +546,12 @@ namespace POS
             btnEdgeLine4.Visibility = Visibility.Collapsed;
             btnEdgeLine1.Visibility = Visibility.Collapsed;
         }
+
+        private void btnQuickAccess6_Click(object sender, RoutedEventArgs e)
+        {
+            WindowProductCategory fm = new WindowProductCategory();
+            fm.Show();
+
+        }
     }
 }
