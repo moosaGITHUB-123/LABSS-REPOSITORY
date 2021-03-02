@@ -118,6 +118,9 @@
     <Compile Include="WindowChangeDatabase.xaml.cs">
       <DependentUpon>WindowChangeDatabase.xaml</DependentUpon>
     </Compile>
+    <Compile Include="WindowProductCategory.xaml.cs">
+      <DependentUpon>WindowProductCategory.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Window_khizer.xaml.cs">
       <DependentUpon>Window_khizer.xaml</DependentUpon>
     </Compile>
@@ -144,6 +147,10 @@
     <Page Include="WindowChangeDatabase.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="WindowProductCategory.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Window_khizer.xaml">
       <SubType>Designer</SubType>
