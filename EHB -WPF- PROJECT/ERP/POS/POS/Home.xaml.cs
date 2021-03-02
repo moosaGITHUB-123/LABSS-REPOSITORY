@@ -83,6 +83,25 @@ namespace POS
                     int i = 0;
                     foreach (var row in dtbl.Rows)
                     {
+                        //string parent = ;
+                        //string child = "";
+                        //string grandchild = "";
+
+                        //MenuItem HomeWindowMod = new MenuItem();
+                        //HomeWindowMod.Header = "";
+                        //HomeWindowMod.Height = 30;
+                        //this.HomeWindowMenu.Items.Add(HomeWindowMod);
+                        //int CheckUserType = 1;
+                        //if (CheckUserType == 1)
+
+                        //{
+                        //    MenuItem HomeWindowModMenu = new MenuItem();
+                        //    HomeWindowModMenu.Header = "Employe info";
+                        //    HomeWindowModMenu.Height = 30;
+                        //    HomeWindowMod.Items.Add(HomeWindowModMenu);
+
+                        //}
+
 
                         var obj = new MenuGenerator()
                         {
@@ -91,21 +110,43 @@ namespace POS
                             ModuleMenuID = Convert.ToInt32(dtbl.Rows[i]["ModuleMenuID"]),
                             Child = (string)dtbl.Rows[i]["Child"],
                             ModuleSubMenuID = Convert.ToInt32(dtbl.Rows[i]["ModuleSubMenuID"]),
-                            GrandChild = (string)dtbl.Rows[i]["Child"]
+                            GrandChild = (string)dtbl.Rows[i]["GrandChild"]
                         };
+                         
+                            
+                            //******  Module DropDown Making Started  *****//
+                             MenuItem HomeWindowMod = new MenuItem();
+                             HomeWindowMod.Header ="";
+                             HomeWindowMod.Height = 30;
+                             this.HomeWindowMenu.Items.Add(HomeWindowMod);
+                             int CheckUserType = 1;
+                             if (CheckUserType == 1)
+                                {
+                                    MenuItem HomeWindowModMenu = new MenuItem();
+                                    HomeWindowModMenu.Header = "";
+                                    HomeWindowModMenu.Height = 30;
+                                    HomeWindowMod.Items.Add(HomeWindowModMenu);
 
-                        String ModuleName = "";
-                        String MenuName = "";
-                        String SubMenuName = "";
-                        
+                                }
+                            //******  Module DropDown Making End  *********//
+
                         test.Add(obj);
+
+                        
+
                         i++;
                     }
-
                 }
                 con.Close();
+
+
+
+
+
+
+
             }
-       } 
+        } 
 
         
           
@@ -140,7 +181,7 @@ namespace POS
         private void Window_ContentRendered(object sender, EventArgs e)
         {
             //////////////////////////////////////////////////////////////////
-            ///////////////  THEME COLOR CHANGING START   ////////////////////
+            ///////////////  THEME COLOR CHANGING BELOW   ////////////////////
             /////////////////////////////////////////////////////////////////
             
 
@@ -451,7 +492,7 @@ namespace POS
             }
 
             //////////////////////////////////////////////////////////////////
-            ///////////////  THEME COLOR CHANGING END   ////////////////////
+            ///////////////  THEME COLOR CHANGING ABOVE   ////////////////////
             /////////////////////////////////////////////////////////////////
 
 

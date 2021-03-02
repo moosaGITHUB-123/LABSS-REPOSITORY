@@ -16,7 +16,7 @@ namespace POS.DBClasses
             public int ModuleMenuID { get; set; }
             public string Child { get; set; }
             public int ModuleSubMenuID { get; set; }
-            public string ModuleSubMenuName { get; set; }
+      //    public string ModuleSubMenuName { get; set; }
             public string GrandChild { get; set; }
 
     }

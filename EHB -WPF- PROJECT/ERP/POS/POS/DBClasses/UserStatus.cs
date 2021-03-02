@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace POS.DBClasses
 {
-    public class UserStatus
+    public class UserStatusClass
     {
         public int UserStatusID { get; set; }
 

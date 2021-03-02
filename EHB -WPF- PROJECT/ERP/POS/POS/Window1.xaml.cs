@@ -46,10 +46,30 @@ namespace POS
             //    //I.Location = new Point(Start, End);
 
 
-            MenuItem MenuD = new MenuItem();
-            MenuD.Header = "POS TOUCH FOR TAB";
-            MenuD.Height = 50;
-            this.MenuUI.Items.Add(MenuD);
+                     MenuItem MenuUI = new MenuItem();
+                     MenuUI.Header = "POS TOUCH FOR TAB";
+                     MenuUI.Height = 50;
+                     this.HomeMenu.Items.Add(MenuUI);
+                     int UserTypeId = 1;
+
+             if (UserTypeId == 1)
+
+            {
+                MenuItem MenuSubUI = new MenuItem();
+                MenuSubUI.Header = "Sub Menu Ha YE 1";
+                MenuSubUI.Height = 50;
+                MenuUI.Items.Add(MenuSubUI);
+                MenuItem MenuUIStatus = new MenuItem();
+                MenuUIStatus.Header = 50;
+                MenuUIStatus.Height = 50;
+                MenuUI.Items.Add(MenuUIStatus);
+                
+            };
+
+            
+
+
+           
 
         }
 
