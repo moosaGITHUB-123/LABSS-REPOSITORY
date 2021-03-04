@@ -108,6 +108,7 @@
     <Compile Include="DBClasses\UserDesignation.cs" />
     <Compile Include="DBClasses\UserStatus.cs" />
     <Compile Include="DBClasses\UserType.cs" />
+    <Compile Include="EntityDBClass.cs" />
     <Compile Include="Home.xaml.cs">
       <DependentUpon>Home.xaml</DependentUpon>
     </Compile>
