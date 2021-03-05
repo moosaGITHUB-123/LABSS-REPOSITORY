@@ -116,5 +116,6 @@ namespace POS
             Status.SelectedIndex = 1;
             //-------------
         }
+                       
     }
 }
