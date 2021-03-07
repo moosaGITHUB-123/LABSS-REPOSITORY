@@ -553,5 +553,11 @@ namespace POS
             fm.Show();
 
         }
+
+        private void btnQuickAccess7_Click(object sender, RoutedEventArgs e)
+        {
+            WindowProductCategoryNew fm = new WindowProductCategoryNew();
+            fm.Show();
+        }
     }
 }

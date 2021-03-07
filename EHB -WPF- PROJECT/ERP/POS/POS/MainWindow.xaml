@@ -79,7 +79,7 @@
                 </StackPanel>
 
                 <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
-                    <Image x:Name="image_Copy" HorizontalAlignment="center" Height="180" VerticalAlignment="Top" Width="180" Source="C:\Users\MOOSA\Desktop\New folder\user_icon.png" />
+                    <Image x:Name="image_Copy" HorizontalAlignment="center" Height="180" VerticalAlignment="Top" Width="180"  Source="C:\Users\MOOSA\Desktop\New folder\user_icon.png" />
                     <!--<Image x:Name="loginLock_gif" Source="C:\Users\MOOSA\Desktop\New folder\loginLock.gif" Stretch="Fill"  Width="45" Height="45" VerticalAlignment="Bottom"/>-->
                 </StackPanel>
                 <Label Content="LOGIN INTO PROJECT 1.1" HorizontalAlignment="center" Height="28"  VerticalAlignment="Top" Width="266" FontSize="18" Foreground="#FFD4D4D4" FontWeight="Bold"  Margin="122,0,112,0"/>
