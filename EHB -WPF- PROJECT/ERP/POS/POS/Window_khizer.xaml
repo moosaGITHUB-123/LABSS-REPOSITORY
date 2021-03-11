@@ -8,55 +8,24 @@
         mc:Ignorable="d"
         Title="Window_khizer" Height="768" Width="1366" ContentRendered="Window_khizar_ContentRendered">
     <Grid>
-
-        <dx:DropDownButton Content="DropDownButton" HorizontalAlignment="Left" VerticalAlignment="Top" Width="224" Margin="98,77,0,0" Height="70"/>
-       <Menu HorizontalAlignment="Left" Height="61" VerticalAlignment="Top" Width="1267" Padding="0 10" Margin="33,0,0,0" >
-            <MenuItem Header="HR">
-                <MenuItem Header="SubMenu1"></MenuItem>
-                <MenuItem Header="SubMenu2"></MenuItem>
-            </MenuItem>
-
-            <MenuItem Header="Inventory">
-                <MenuItem Header="SubMenu1"></MenuItem>
-                <MenuItem Header="SubMenu2"></MenuItem>
-            </MenuItem>
-
-            <MenuItem Header="Sales">
-            <MenuItem Header="SubMenu1"></MenuItem>
-            <MenuItem Header="SubMenu2"></MenuItem>
-            </MenuItem>
-                
-            <MenuItem Header="Purchase">
-                <MenuItem Header="SubMenu1"></MenuItem>
-                <MenuItem Header="SubMenu2"></MenuItem>
-            </MenuItem>
-                
-            <MenuItem Header="Account">
-                <MenuItem Header="SubMenu1"></MenuItem>
-                <MenuItem Header="SubMenu2"></MenuItem>
-            </MenuItem>
-                
-            <MenuItem Header="CRM">
-                <MenuItem Header="SubMenu1"></MenuItem>
-                <MenuItem Header="SubMenu2"></MenuItem>
-               </MenuItem>
-                
-            <MenuItem Header="SCM">
-                <MenuItem Header="SubMenu1"></MenuItem>
-                <MenuItem Header="SubMenu2"></MenuItem>
-            </MenuItem>
-
-            <MenuItem Header="Production">
-                <MenuItem Header="SubMenu1"></MenuItem>
-                <MenuItem Header="SubMenu2"></MenuItem>
-            </MenuItem> 
-
-       
-
-
-
-        </Menu>
-
-
+        <Button x:Name="button_selct" Content="Select" HorizontalAlignment="Left" FontSize="30" VerticalAlignment="Top" Width="108" Margin="71,462,0,0" Height="57" RenderTransformOrigin="1.912,0.724" Click="button_Click"/>
+        <Label x:Name="label" Content="Product ID" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" FontFamily="calibri" Height="47" Width="161" Margin="71,74,0,0"/>
+        <Label x:Name="label_Copy" Content="Item Name" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Height="47" Width="161" Margin="71,121,0,0" RenderTransformOrigin="0.376,0.504"/>
+        <Label x:Name="label_Copy1" Content="Color" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Height="47" Width="161" Margin="71,173,0,0"/>
+        <Label x:Name="label_Copy2" Content="Status" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Height="47" Width="113" Margin="71,225,0,0"/>
+        <Label x:Name="label_Copy3" Content="Product Category" HorizontalAlignment="Left" VerticalAlignment="Top" Height="47" FontSize="35" Width="281" Margin="232,10,0,0"/>
+        <Label x:Name="label_Copy4" Content="Products" HorizontalAlignment="Left" VerticalAlignment="Top" FontSize="25" Height="47" Width="161" Margin="71,277,0,0"/>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="211" Margin="232,74,0,0" TextChanged="textBox_TextChanged_1"/>
+        <TextBox x:Name="textBox_Copy" HorizontalAlignment="Left" Height="23" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146" Margin="237,121,0,0" TextChanged="textBox_Copy_TextChanged_1"/>
+        <TextBox x:Name="textBox_Copy1" HorizontalAlignment="Left" Height="25" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="146" Margin="237,173,0,0" TextChanged="textBox_Copy1_TextChanged"/>
+        <dx:DropDownButton x:Name="dropDownButton" Content="" HorizontalAlignment="Left" VerticalAlignment="Top" Click="dropDownButton_Click" Margin="232,277,0,0" Height="47" Width="249"/>
+        <RadioButton x:Name="radioButton" Content="Active" HorizontalAlignment="Left" Background="Aqua" VerticalAlignment="Top" Margin="237,225,0,0"/>
+        <RadioButton x:Name="radioButton1" Content="In Active" HorizontalAlignment="Left" Margin="319,225,0,0" VerticalAlignment="Top"/>
+        <DatePicker HorizontalAlignment="Left" VerticalAlignment="Top" Margin="237,367,0,0" Height="50" Width="244"/>
+        <Label x:Name="label1" Content="Expiry Date" HorizontalAlignment="Left" FontSize="25" VerticalAlignment="Top" Margin="71,367,0,0" Height="50" Width="113"/>
+        <Button x:Name="button_insrt" Content="Insert" HorizontalAlignment="Left" FontSize="30" Margin="210,473,0,0" VerticalAlignment="Top" Width="115" Click="button1_Click"/>
+        <Button x:Name="button_Update" Content="Update" HorizontalAlignment="Left" FontSize="30" VerticalAlignment="Top" Width="145" Margin="368,473,0,0"/>
+        <DataGrid x:Name="dataGridView" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="682,0,0,172" Height="555" Width="666" SelectionChanged="dataGrid_SelectionChanged"/>
+        <Button x:Name="button_delete" Content="Delete" HorizontalAlignment="Left" FontSize="30" VerticalAlignment="Top" Width="113" Margin="539,473,0,0"/>
     </Grid>
 </Window>
