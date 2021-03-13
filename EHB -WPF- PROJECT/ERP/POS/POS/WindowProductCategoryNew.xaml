@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:POS"
-        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" x:Class="POS.WindowProductCategoryNew"
+        xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" Loaded="Window_Loaded" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" x:Class="POS.WindowProductCategoryNew"
         mc:Ignorable="d"
         Title="WindowProductCategoryNew" Height="768" Width="1024">
     <Grid>
@@ -16,16 +16,32 @@
                 <dxdo:LayoutPanel Caption="Categoreis" MinWidth="200" MaxWidth="350">
                         <DockPanel Width="345" HorizontalAlignment="Left" Background="#fafafa">
 
-                            <dxb:MainMenuControl Caption="File" DockPanel.Dock="Top"/>
-                            <dxb:ToolBarControl Caption="Edit" DockPanel.Dock="Top"/>
+                        <dxb:MainMenuControl Caption="File" DockPanel.Dock="Top" Margin="0 5 0 0">
+                                <dxb:BarButtonItem Content="NEW"/>
+                                <dxb:BarButtonItem Content="EDIT"/>
+                                <dxb:BarButtonItem Content="REMOVE"/>
+                                
+                        </dxb:MainMenuControl>
+                        <dxb:ToolBarControl Caption="Edit" DockPanel.Dock="Top"/>
                             <dxb:StatusBarControl Caption="StatusBar" DockPanel.Dock="Bottom" ShowSizeGrip="True"/>
                             <Grid>
 
-                                <dxa:AccordionControl ShowSearchControl="True" >
+                                <dxa:AccordionControl ShowSearchControl="True" Name="CategoryTree" >
                                     <dxa:AccordionItem  Header="Category Level 1" IsExpanded="True">
                                         <dxa:AccordionItem  Header="Category Level 1.1" IsExpanded="True">
-                                            <dxa:AccordionItem Header="Category Level 1.1.1"/>
+                                        <dxa:AccordionItem Header="Category Level 1.1.1">
+                                            <dxa:AccordionItem Header="Category Level 1.1.1.1">
+                                                
+                                            </dxa:AccordionItem>
+                                            <dxa:AccordionItem Header="Category Level 1.1.1.2">
+
+                                            </dxa:AccordionItem>
+                                            <dxa:AccordionItem Header="Category Level 1.1.1.3">
+
+                                            </dxa:AccordionItem>
+
                                         </dxa:AccordionItem>
+                                    </dxa:AccordionItem>
                                         <dxa:AccordionItem Header="Category Level 1.2"/>
                                     </dxa:AccordionItem>
                                     <dxa:AccordionItem  Header="Category Level 2"/>
@@ -34,18 +50,72 @@
 
                         </DockPanel>
                 </dxdo:LayoutPanel>
-                <dxdo:LayoutPanel Caption="Products">
-                    
-                    <DockPanel>
-                    <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
-                        <dxg:GridControl.View >
-                            <dxg:TableView ShowTotalSummary="True" >
-                                
-                            </dxg:TableView>
-                        </dxg:GridControl.View>
-                    </dxg:GridControl>
-                    </DockPanel>
-                </dxdo:LayoutPanel>
+                <dxdo:LayoutGroup Grid.Column="2" ItemWidth="*" ItemHeight="*" Orientation="Vertical">
+
+                    <dxdo:LayoutPanel MaxHeight="100">
+                        
+                        <StackPanel Name="StpCrudOperators" Orientation="Horizontal">
+                            
+                            <!--<dx:DropDownButton x:Name="dropDownButton" Content="* NEW"  Padding="10" HorizontalAlignment="Left" Height="52"  VerticalAlignment="Top" Width="96" BorderThickness="2" BorderBrush="#c2c7cd" CornerRadius="5" >
+                                <dx:DropDownButton.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFBBBBB9" Offset="1"/>
+                                        <GradientStop Color="#FFFFFEFF"/>
+                                    </LinearGradientBrush>
+                                </dx:DropDownButton.Background>
+                            </dx:DropDownButton>-->
+                            
+                            <!--  New  -->
+                            <dx:SimpleButton x:Name="BtnNew" Content="NEW * "  Padding="11" Margin="10 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="40"  VerticalAlignment="Top" Width="60" BorderThickness="1" BorderBrush="#c2c7cd" CornerRadius="3"  Click="BtnNew_Click">
+                                <dx:SimpleButton.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFBBBBB9" Offset="1"/>
+                                        <GradientStop Color="#FFFFFEFF" Offset="0.300"/>
+                                    </LinearGradientBrush>
+                                </dx:SimpleButton.Background>
+                            </dx:SimpleButton>
+                            <!--   Edit  -->
+                            <dx:SimpleButton x:Name="BtnEdit" Content=" EDIT  "  Padding="11" Margin="4 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="40"  VerticalAlignment="Top" Width="60" BorderThickness="1" BorderBrush="#c2c7cd" CornerRadius="3" >
+                                <dx:SimpleButton.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFBBBBB9" Offset="1"/>
+                                        <GradientStop Color="#FFFFFEFF" Offset="0.300"/>
+                                    </LinearGradientBrush>
+                                </dx:SimpleButton.Background>
+                            </dx:SimpleButton>
+                            <!--   Save  -->
+                            <dx:SimpleButton x:Name="BtnSave" Content=" SAVE  "  Padding="11" Margin="4 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="40"  VerticalAlignment="Top" Width="60" BorderThickness="1" BorderBrush="#c2c7cd" CornerRadius="3" >
+                                <dx:SimpleButton.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFBBBBB9" Offset="1"/>
+                                        <GradientStop Color="#FFFFFEFF" Offset="0.300"/>
+                                    </LinearGradientBrush>
+                                </dx:SimpleButton.Background>
+                            </dx:SimpleButton>
+                            <!--   DELETE  -->
+                            <dx:SimpleButton x:Name="BtnDelete" Content=" DELETE  "  Padding="11" Margin="4 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="40"  VerticalAlignment="Top" Width="70" BorderThickness="1" BorderBrush="#c2c7cd" CornerRadius="3" >
+                                <dx:SimpleButton.Background>
+                                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                                        <GradientStop Color="#FFBBBBB9" Offset="1"/>
+                                        <GradientStop Color="#FFFFFEFF" Offset="0.300"/>
+                                    </LinearGradientBrush>
+                                </dx:SimpleButton.Background>
+                            </dx:SimpleButton>
+
+                        </StackPanel>
+                    </dxdo:LayoutPanel>
+
+                    <dxdo:LayoutPanel Caption="Products">
+
+                        <DockPanel>
+                            <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
+                                <dxg:GridControl.View >
+                                    <dxg:TableView ShowTotalSummary="True" />
+                                </dxg:GridControl.View>
+                            </dxg:GridControl>
+                        </DockPanel>
+                    </dxdo:LayoutPanel>
+                </dxdo:LayoutGroup>
             </dxdo:LayoutGroup>
         </dxdo:DockLayoutManager>
 
