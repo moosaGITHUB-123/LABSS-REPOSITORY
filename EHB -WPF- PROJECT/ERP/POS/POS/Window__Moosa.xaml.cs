@@ -23,10 +23,7 @@ namespace POS
         {
             InitializeComponent();
 
-
-
-
-
+            
         }
 
         private void Window_ContentRendered(object sender, EventArgs e) 
@@ -49,7 +46,7 @@ namespace POS
                      MenuItem MenuUI = new MenuItem();
                      MenuUI.Header = "POS TOUCH FOR TAB";
                      MenuUI.Height = 50;
-                     this.HomeMenu.Items.Add(MenuUI);
+                   //  this.HomeMenu.Items.Add(MenuUI);
                      int UserTypeId = 1;
 
              if (UserTypeId == 1)

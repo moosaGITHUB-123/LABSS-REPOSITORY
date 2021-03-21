@@ -67,11 +67,11 @@
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine8" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
-                                <dx:SimpleButton x:Name="btnQuickAccess8" Padding="4 " Glyph="images/icons/233-stopwatch.png" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <dx:SimpleButton x:Name="btnQuickAccess8" Padding="4 " Glyph="images/icons/233-stopwatch.png" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1" Click="btnQuickAccess8_Click"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine9" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
-                                <dx:SimpleButton x:Name="btnQuickAccess9" Padding="4 " Glyph="images/icons/233-stopwatch.png" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1"/>
+                                <dx:SimpleButton x:Name="btnQuickAccess9" Padding="4 " Glyph="images/icons/233-stopwatch.png" Background="Transparent" Foreground="#C0C0C0" Height="30" Margin="0 0" BorderBrush="Transparent" MouseEnter="BtnQuickAccess5_MouseEnter" Content="RECENT WINDOW 1" Click="btnQuickAccess9_Click"/>
                             </StackPanel>
                             <StackPanel Orientation="Horizontal" Margin="10 0">
                                 <StackPanel x:Name="btnEdgeLine10" Width="2" Height="30" Background="#FF007EF9" HorizontalAlignment="Left"/>
