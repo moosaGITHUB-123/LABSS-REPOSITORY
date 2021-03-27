@@ -147,35 +147,6 @@ namespace POS
 
             }
         } 
-
-        
-          
-
-
-                    ///=================================================
-                    ////////  Module  /////////
-
-                    //Menu MenuWords = test.Where(x => x.MenuWords == "Button").FirstOrDefault();
-                    //var converter = new System.Windows.Media.BrushConverter();
-                    //if (ButtonColors != null)
-                    //{
-                    //    var brushFore = (Brush)converter.ConvertFromString(ButtonColors.ForegroundColor.ToString());
-                    //    var brushBack = (Brush)converter.ConvertFromString(ButtonColors.BackgroundColor.ToString());
-                    //    //var brushShade = (Brush)converter.ConvertFromString(ButtonColors.ShadowColor.ToString());
-                    //    foreach (Button tb in FindVisualChildren<Button>(this))
-                    //    {
-                    //        tb.Foreground = brushFore;
-                    //        tb.Background = brushBack;
-
-                    //    }
-                    //}
-                    
-                    
-                
-            
-
-
-
         
 
         private void Window_ContentRendered(object sender, EventArgs e)
@@ -261,25 +232,7 @@ namespace POS
 
                         }
                     }
-
-                    ///=================================================
-                    /////////  DockPanel Color  ////////// not in use
-     //               ThemeControl DockPanelColor = test.Where(x => x.ThemecontrolTypeName == "DockPanel").FirstOrDefault();
-     //
-     //               if (DockPanelColor != null)
-     //               {
-     //                   var brushFore = (Brush)converter.ConvertFromString(DockPanelColor.ForegroundColor.ToString());
-     //                   var brushBack = (Brush)converter.ConvertFromString(DockPanelColor.BackgroundColor.ToString());
-     //                   //var brushShade = (Brush)converter.ConvertFromString(DockPanelColor.ShadowColor.ToString());
-     //                   foreach (DockPanel tb in FindVisualChildren<DockPanel>(this))
-     //                   {
-     //
-     //                       tb.Background = brushBack;
-     //
-     //                   }
-     //               }
-                    ///=================================================
-                  /////////  Menu Colors  //////////  
+                    
                     ThemeControl MenuColors = test.Where(x => x.ThemecontrolTypeName == "Menu").FirstOrDefault();
           
                     if (MenuColors != null)
@@ -345,40 +298,7 @@ namespace POS
 
                         }
                     }
-                    ///=================================================
-                    /////////  Chart 3D Control  //////////    ------> NOT In Use
-     //               ThemeControl Chart3DControlColors = test.Where(x => x.ThemecontrolTypeName == "Chart3DControl").FirstOrDefault();
-     //
-     //               if (Chart3DControlColors != null)
-     //               {
-     //                   //var brushFore = (Brush)converter.ConvertFromString(Chart3DControlColors.ForegroundColor.ToString());
-     //                   var brushBack = (Brush)converter.ConvertFromString(Chart3DControlColors.BackgroundColor.ToString());
-     //                   //var brushShade = (Brush)converter.ConvertFromString(LabelColor.ShadowColor.ToString());
-     //                   foreach (Chart3DControl tb in FindVisualChildren<Chart3DControl>(this))
-     //                   {
-     //
-     //                            tb.Background = brushBack;
-     //
-     //                   }
-     //               }
-                    ///=================================================
-                    ////////////  Chart Control Colors  //////////   ------> NOT In Use
-
-     //               ThemeControl ChartControlColors = test.Where(x => x.ThemecontrolTypeName == "ChartControl").FirstOrDefault();
-     //               if (ChartControlColors != null)
-     //               {
-     //                   //var brushFore = (Brush)converter.ConvertFromString(ChartControlColors.ForegroundColor.ToString());
-     //                   var brushBack = (Brush)converter.ConvertFromString(ChartControlColors.BackgroundColor.ToString());
-     //                   //var brushShade = (Brush)converter.ConvertFromString(ChartControlColors.ShadowColor.ToString());
-     //                   foreach (ChartControl tb in FindVisualChildren<ChartControl>(this))
-     //                   {
-     //     
-     //                       tb.Background = brushBack;
-     //
-     //                   }
-     //               }
-
-                    ///=================================================
+                    //////=====================================================
                     /////////  Layout Panel Colors  ////////// making some issue in this
                     ThemeControl LayoutPanelColors = test.Where(x => x.ThemecontrolTypeName == "LayoutPanel").FirstOrDefault();
 
@@ -477,7 +397,7 @@ namespace POS
                     for (int i = 0; i < VisualTreeHelper.GetChildrenCount(depObj); i++)
                     {
                         DependencyObject
- child = VisualTreeHelper.GetChild(depObj, i);
+                        child = VisualTreeHelper.GetChild(depObj, i);
                         if (child != null && child is T)
                         {
                             yield return (T)child;

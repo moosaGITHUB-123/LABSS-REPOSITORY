@@ -6,7 +6,7 @@
        xmlns:control="clr-namespace:POS.UserControls"
         xmlns:local="clr-namespace:POS"
         xmlns:dxg="http://schemas.devexpress.com/winfx/2008/xaml/grid" Loaded="Window_Loaded" xmlns:dxb="http://schemas.devexpress.com/winfx/2008/xaml/bars" xmlns:dxa="http://schemas.devexpress.com/winfx/2008/xaml/accordion" xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core" xmlns:dxdo="http://schemas.devexpress.com/winfx/2008/xaml/docking" x:Class="POS.WindowProductCategoryNew"
-        mc:Ignorable="d"
+        mc:Ignorable="d" KeyDown="Window_KeyDown"
         Title="WindowProductCategoryNew" Height="768" Width="1024">
     <Grid>
 
@@ -54,7 +54,7 @@
                 <dxdo:LayoutGroup Grid.Column="2" ItemWidth="*" ItemHeight="*" Orientation="Vertical">
 
                     <dxdo:LayoutPanel MaxHeight="100" Background="#292929">
-                        <control:MainCrudButtons/>
+                        <control:MainCrudButtons x:Name="MainCrudButtons"  />
                     
                     </dxdo:LayoutPanel>
 
@@ -63,7 +63,7 @@
                         <DockPanel>
                             <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
                                 <dxg:GridControl.View >
-                                    <dxg:TableView ShowTotalSummary="True" />
+                                    <dxg:TableView ShowTotalSummary="True" Name="ProductGridView"/>
                                 </dxg:GridControl.View>
                             </dxg:GridControl>
                         </DockPanel>

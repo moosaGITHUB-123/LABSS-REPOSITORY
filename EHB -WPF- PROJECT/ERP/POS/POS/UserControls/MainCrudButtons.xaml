@@ -20,7 +20,7 @@
                             </dx:DropDownButton>-->
 
             <!--  New  -->
-            <dx:SimpleButton x:Name="BtnNew" Content="NEW * "   Padding="11" Margin="10 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="40"  VerticalAlignment="Top" Width="60" BorderThickness="1" BorderBrush="#d7d4d7" CornerRadius="3" >
+            <dx:SimpleButton x:Name="BtnNew" Content="NEW * " Click="BtnNew_Click" Padding="11" Margin="10 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="40"  VerticalAlignment="Top" Width="60" BorderThickness="1" BorderBrush="#d7d4d7" CornerRadius="3" >
                 <dx:SimpleButton.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFBBBBB9" Offset="1"/>
@@ -29,7 +29,7 @@
                 </dx:SimpleButton.Background>
             </dx:SimpleButton>
             <!--   Edit  -->
-            <dx:SimpleButton x:Name="BtnEdit" Content=" EDIT  "  Padding="11" Margin="5 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="40"  VerticalAlignment="Top" Width="60" BorderThickness="1" BorderBrush="#d7d4d7" CornerRadius="3" >
+            <dx:SimpleButton x:Name="BtnEdit" Click="BtnEdit_Click" Content=" EDIT  "  Padding="11" Margin="5 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="40"  VerticalAlignment="Top" Width="60" BorderThickness="1" BorderBrush="#d7d4d7" CornerRadius="3" >
                 <dx:SimpleButton.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FFBBBBB9" Offset="1"/>
@@ -47,7 +47,7 @@
                 </dx:SimpleButton.Background>
             </dx:SimpleButton>
             <!--   DELETE  -->
-            <dx:SimpleButton x:Name="BtnDelete" Content=" DELETE  " Foreground="White" Padding="11" Margin="5 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="41"  VerticalAlignment="Top" Width="70" BorderThickness="1" BorderBrush="Black" CornerRadius="3" >
+            <dx:SimpleButton x:Name="BtnDelete" Content=" DELETE  " Click="BtnDelete_Click" Foreground="White" Padding="11" Margin="5 10 0 0" FontSize="11" HorizontalAlignment="Left" Height="41"  VerticalAlignment="Top" Width="70" BorderThickness="1" BorderBrush="Black" CornerRadius="3" >
                 <dx:SimpleButton.Background>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#FF0B0B0B" Offset="1"/>

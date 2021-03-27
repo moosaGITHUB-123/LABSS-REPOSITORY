@@ -57,7 +57,10 @@
                     </dxdo:DocumentGroup>
                 </dxdo:LayoutGroup>
                 <dxdo:TabbedGroup>
-                    <dxdo:LayoutPanel Caption="Solution Explorer"/>
+                    <dxdo:LayoutPanel Caption="Solution Explorer">
+                        <dxe:ToggleSwitch x:Name="toggleSwitch" Content="ToggleSwitch" Height="40" Width="80" UncheckedStateContent="NO" CheckedStateContent="YeS"/>
+                        
+                    </dxdo:LayoutPanel>
                     <dxdo:LayoutPanel Caption="Properties"/>
                 </dxdo:TabbedGroup>
             </dxdo:LayoutGroup>

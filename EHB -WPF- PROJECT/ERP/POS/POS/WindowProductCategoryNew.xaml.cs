@@ -33,6 +33,11 @@ namespace POS
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            MainCrudButtons.IsShowNew = true;
+            MainCrudButtons.IsShowEdit = true;
+            MainCrudButtons.IsShowSave = true;
+            MainCrudButtons.IsShowDelete = true;
+
             DataTable dt = EntityDBClass.Select("spProductCategory", new string[] { "@Type" }, new string[] { "9" });
 
             ObservableCollection<ProductCategory> test = new ObservableCollection<ProductCategory>();
@@ -101,5 +106,33 @@ namespace POS
 
 
         }
-    }
+
+ 
+
+
+        private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)
+        {
+            
+                if (MainCrudButtons.Edit)
+                {
+                    //Edit
+                }
+                else if (MainCrudButtons.New)
+                {
+                    WindowProductModifier i = new WindowProductModifier();
+                    i.ShowDialog();
+                }
+                else if (MainCrudButtons.Save)
+                {
+                    //save
+
+                }
+                else if (MainCrudButtons.Delete)
+                {
+                    //Delete
+                }
+            }
+
+        }
+    
 }
