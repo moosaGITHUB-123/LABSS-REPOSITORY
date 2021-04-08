@@ -38,6 +38,7 @@ namespace POS
             MainCrudButtons.IsShowSave = true;
             MainCrudButtons.IsShowDelete = true;
 
+
             DataTable dt = EntityDBClass.Select("spProductCategory", new string[] { "@Type" }, new string[] { "9" });
 
             ObservableCollection<ProductCategory> test = new ObservableCollection<ProductCategory>();
@@ -46,7 +47,7 @@ namespace POS
                 var obj = new ProductCategory()
                 {
                     CategoryID = (int)row["CategoryID"],
-                    CategoryParentID = row["CategoryParentID"] ==DBNull.Value? "": (string)row["CategoryParentID"],
+                    CategoryParentID = row["CategoryParentID"] == DBNull.Value ? "" : (string)row["CategoryParentID"],
                     CategoryFullName = row["CategoryFullName"] == DBNull.Value ? "" : (string)row["CategoryFullName"],
                     CategoryShortName = row["CategoryShortName"] == DBNull.Value ? "" : (string)row["CategoryShortName"],
                     CategoryDescription = row["CategoryDescription"] == DBNull.Value ? "" : (string)row["CategoryDescription"],
@@ -62,8 +63,8 @@ namespace POS
                 test.Add(obj);
 
             }
-            
-           var ParentCategory = test.Where(x => x.CategoryParentID == "").ToList<ProductCategory>();
+
+            var ParentCategory = test.Where(x => x.CategoryParentID == "").ToList<ProductCategory>();
 
             foreach (var pcat in ParentCategory)
             {
@@ -107,7 +108,7 @@ namespace POS
 
         }
 
- 
+
 
 
         private void Window_KeyDown(object sender, System.Windows.Input.KeyEventArgs e)

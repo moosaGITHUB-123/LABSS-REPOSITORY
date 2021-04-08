@@ -62,19 +62,12 @@ namespace POS
 
                 con.Open();
                 MessageBox.Show("APPLICATION Menu Making Process Is Working");
-
-
-                // string Module = "White";
                 SqlCommand cmd = new SqlCommand("spMenuGenerator", con);
                 cmd.CommandType = CommandType.StoredProcedure;
-                //cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
                 SqlDataAdapter sqlDa = new SqlDataAdapter("EXEC spMenuGenerator" , con);
 
                 DataTable dtbl = new DataTable();
                 sqlDa.Fill(dtbl);
-
-              
-               
 
 
                 if (dtbl != null && dtbl.Rows.Count > 0)
@@ -83,25 +76,8 @@ namespace POS
                     int i = 0;
                     foreach (var row in dtbl.Rows)
                     {
-                        //string parent = ;
-                        //string child = "";
-                        //string grandchild = "";
 
-                        //MenuItem HomeWindowMod = new MenuItem();
-                        //HomeWindowMod.Header = "";
-                        //HomeWindowMod.Height = 30;
-                        //this.HomeWindowMenu.Items.Add(HomeWindowMod);
-                        //int CheckUserType = 1;
-                        //if (CheckUserType == 1)
-
-                        //{
-                        //    MenuItem HomeWindowModMenu = new MenuItem();
-                        //    HomeWindowModMenu.Header = "Employe info";
-                        //    HomeWindowModMenu.Height = 30;
-                        //    HomeWindowMod.Items.Add(HomeWindowModMenu);
-
-                        //}
-
+                       
 
                         var obj = new MenuGenerator()
                         {
@@ -112,30 +88,28 @@ namespace POS
                             ModuleSubMenuID = Convert.ToInt32(dtbl.Rows[i]["ModuleSubMenuID"]),
                             GrandChild = (string)dtbl.Rows[i]["GrandChild"]
                         };
-                         
-                            
-                            //******  Module DropDown Making Started  *****//
-                             MenuItem HomeWindowMod = new MenuItem();
-                             HomeWindowMod.Header ="";
-                             HomeWindowMod.Height = 30;
-                             this.HomeWindowMenu.Items.Add(HomeWindowMod);
-                             int CheckUserType = 1;
-                             if (CheckUserType == 1)
-                                {
-                                    MenuItem HomeWindowModMenu = new MenuItem();
-                                    HomeWindowModMenu.Header = "";
-                                    HomeWindowModMenu.Height = 30;
-                                    HomeWindowMod.Items.Add(HomeWindowModMenu);
-
-                                }
-                            //******  Module DropDown Making End  *********//
 
                         test.Add(obj);
+                        test.ToList().Distinct();
 
-                        
+
+                        //    Module DropDown Making Started    //
+                        HomeWindowMenu.Items.Add(obj.Parent);
+
+                        //     Module DropDown Making End      //
+
 
                         i++;
                     }
+                    ObservableCollection<MenuGenerator> parents = new ObservableCollection<MenuGenerator>();
+               
+
+                    foreach (var a in test)
+                    {
+                        MenuItem m = new MenuItem();
+                        m.Name = a.Parent.to
+                    }
+
                 }
                 con.Close();
 

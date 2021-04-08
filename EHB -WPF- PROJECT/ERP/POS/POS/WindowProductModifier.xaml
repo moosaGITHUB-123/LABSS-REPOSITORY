@@ -40,7 +40,7 @@
                                         
                                         <dxlc:LayoutItem IsRequired="True" Label="PRODUCT NAME (COMPLETE) *" LabelPosition="Top" FontFamily="Nirmala UI" Foreground="Navy" >
 
-                                            <dxe:TextEdit MinWidth="200" NullText="NULL" BorderBrush="#b0b0b0" BorderThickness="0" Padding="4"  >
+                                            <dxe:TextEdit MinWidth="200" Name="txtPodtCompleteName" NullText="NULL" BorderBrush="#b0b0b0" BorderThickness="0" Padding="4"  >
                                                 <dxe:TextEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                 </dxe:TextEdit.Effect>
@@ -49,7 +49,7 @@
 
                                         </dxlc:LayoutItem>
                                         <dxlc:LayoutItem IsRequired="True" Label="PRODUCT NAME (SHORT)" LabelPosition="Top" Foreground="Navy">
-                                            <dxe:TextEdit MinWidth="200" NullText="NULL" BorderBrush="#b0b0b0" BorderThickness="0" Padding="4"  >
+                                            <dxe:TextEdit MinWidth="200" Name="txtProductShortName" NullText="NULL" BorderBrush="#b0b0b0" BorderThickness="0" Padding="4"  >
                                                 <dxe:TextEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                 </dxe:TextEdit.Effect>
@@ -100,7 +100,7 @@
                                     <DockPanel  Height="30" HorizontalAlignment="Stretch">
                                         <dxlc:LayoutItem Label="Barcode *" >
 
-                                            <dxe:TextEdit MinWidth="75" NullText="" BorderBrush="#b0b0b0" BorderThickness="0" Padding="4" Margin="0 0 5 0">
+                                            <dxe:TextEdit MinWidth="75" NullText="" Name="txtProductBarcode" BorderBrush="#b0b0b0" BorderThickness="0" Padding="4" Margin="0 0 5 0">
                                                 <dxe:TextEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                 </dxe:TextEdit.Effect>
@@ -110,7 +110,7 @@
                                         </dxlc:LayoutItem>
                                         <dxlc:LayoutItem Label=" Alt. Barcode.">
                                             <!--<dxe:TextEdit EditValue="9999999999" MaskType="Simple" Mask="(999) 000-0000"/>-->
-                                            <dxe:TextEdit MinWidth="50" NullText="NULL" BorderBrush="Transparent" Padding="4">
+                                            <dxe:TextEdit MinWidth="50" NullText="NULL" Name="txtProductAltBarcode" BorderBrush="Transparent" Padding="4">
                                                 <dxe:TextEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                 </dxe:TextEdit.Effect>
@@ -122,7 +122,7 @@
                                 <dxlc:LayoutGroup Header="SALE  CRITERIA *" Orientation="Vertical" UseLayoutRounding="True" View="GroupBox" >
                                     <dxlc:LayoutItem Label="Unit Sale Rate">
                                         <!--<dxe:TextEdit EditValue="support@devexpress.com" MaskType="RegEx" Mask="[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,4}"/>-->
-                                        <dxe:TextEdit MinWidth="200" NullText="NULL" BorderBrush="#b0b0b0" BorderThickness="0" Padding="4"  MaskType= "Numeric" >
+                                        <dxe:TextEdit MinWidth="200" NullText="NULL" Name="txtProductSaleRate" BorderBrush="#b0b0b0" BorderThickness="0" Padding="4"  MaskType= "Numeric" >
                                             <dxe:TextEdit.Effect>
                                                 <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                             </dxe:TextEdit.Effect>
@@ -131,7 +131,7 @@
                                     </dxlc:LayoutItem>
                                     <dxlc:LayoutItem Label="Cost Rate">
                                         <!--<dxe:TextEdit EditValue="support@devexpress.com" MaskType="RegEx" Mask="[a-z0-9._%-]+@[a-z0-9.-]+\.[a-z]{2,4}"/>-->
-                                        <dxe:TextEdit MinWidth="200" NullText="NULL" BorderBrush="Transparent"  Padding="4" MaskType= "Numeric" >
+                                        <dxe:TextEdit MinWidth="200" Name="txtProductCostRate" NullText="NULL" BorderBrush="Transparent"  Padding="4" MaskType= "Numeric" >
                                             <dxe:TextEdit.Effect>
                                                 <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                             </dxe:TextEdit.Effect>
@@ -139,7 +139,7 @@
                                         <!--=== Text Edit End ====-->
                                     </dxlc:LayoutItem>
                                     <dxlc:LayoutItem Label="Decimal Sale : " Margin="0 4 0 2">
-                                        <dxe:ToggleSwitch x:Name="toggleSwitch" Content="ToggleSwitch" Height="30" Width="80" UncheckedStateContent="NO" CheckedStateContent="YES" HorizontalAlignment="Left" FontWeight="Bold" Foreground="Navy"/>
+                                        <dxe:ToggleSwitch  Name="ToglDecimalSale" Content="ToggleSwitch" Height="30" Width="80" UncheckedStateContent="NO" CheckedStateContent="YES" HorizontalAlignment="Left" FontWeight="Bold" Foreground="Navy"/>
 
 
                                     </dxlc:LayoutItem>
@@ -157,7 +157,7 @@
                                             <dxlc:LayoutGroup x:Name="layoutGroup3" Orientation="Vertical" View="GroupBox" Header="ADDITIONAL RATES" VerticalAlignment="Top"  >
                                                 <dxlc:LayoutItem IsRequired="True" Label="M.R.P" LabelPosition="Top">
 
-                                                    <dxe:TextEdit MinWidth="200" NullText="NULL" BorderBrush="Transparent" Padding="4">
+                                                    <dxe:TextEdit MinWidth="200" Name="txtProductMRP" NullText="NULL" BorderBrush="Transparent" Padding="4" >
                                                         <dxe:TextEdit.Effect>
                                                             <DropShadowEffect ShadowDepth="1" Direction="320" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                         </dxe:TextEdit.Effect>
@@ -166,7 +166,7 @@
 
                                                 </dxlc:LayoutItem>
                                                 <dxlc:LayoutItem IsRequired="True" Label="Whole Sale Rate" LabelPosition="Top"  >
-                                                    <dxe:TextEdit MinWidth="200" NullText="NULL" BorderBrush="Transparent" Padding="4">
+                                                    <dxe:TextEdit MinWidth="200" Name="txtProductWSRate" NullText="NULL" BorderBrush="Transparent" Padding="4">
                                                         <dxe:TextEdit.Effect>
                                                             <DropShadowEffect ShadowDepth="1" Direction="320" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                         </dxe:TextEdit.Effect>
@@ -176,7 +176,7 @@
 
 
                                                 <dxlc:LayoutItem IsRequired="True" Label="Extra GSM Amount" LabelPosition="Top"  >
-                                                    <dxe:TextEdit MinWidth="200" NullText="NULL" BorderBrush="Transparent" Padding="4">
+                                                    <dxe:TextEdit MinWidth="200" Name="txtProductExtraGSM" NullText="NULL" BorderBrush="Transparent" Padding="4">
                                                         <dxe:TextEdit.Effect>
                                                             <DropShadowEffect ShadowDepth="1" Direction="320" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                         </dxe:TextEdit.Effect>
@@ -185,7 +185,7 @@
                                                 </dxlc:LayoutItem>
                                                 <dxlc:LayoutItem IsRequired="True" Label="Additional Charges " LabelPosition="Top">
                                                     <DockPanel HorizontalAlignment="Stretch">
-                                                        <dxe:ComboBoxEdit  NullText="CHARGES TYPE" MinWidth="150" BorderBrush="Transparent"  Padding="4" MaskType="Numeric">
+                                                        <dxe:ComboBoxEdit  Name="CboAddChrgs" DisplayMember="ComboValue" ValueMember="ID" NullText="CHARGES TYPE" MinWidth="150" BorderBrush="Transparent"  Padding="4" MaskType="Numeric">
                                                             <dxe:ComboBoxEdit.Effect>
                                                                 <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4" />
                                                             </dxe:ComboBoxEdit.Effect>
@@ -259,7 +259,7 @@
                                             <!--
                                             </dxlc:LayoutItem>-->
                                             <dxlc:LayoutItem IsRequired="True" Label="Tax Category" LabelPosition="Top">
-                                                <dxe:ComboBoxEdit MinWidth="200" NullText="NULL"  Padding="4" MaskType="Numeric" BorderBrush="Silver" BorderThickness="1">
+                                                <dxe:ComboBoxEdit Name="CboTaxCategory" DisplayMember="ComboValue" ValueMember="ID" MinWidth="200" NullText="NULL"  Padding="4" MaskType="Numeric" BorderBrush="Silver" BorderThickness="1">
                                                     <dxe:ComboBoxEdit.Effect>
                                                         <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="2" />
                                                     </dxe:ComboBoxEdit.Effect>
@@ -295,7 +295,7 @@
                                             </dxlc:LayoutItem>
                                             <dxlc:LayoutItem IsRequired="True" Label="Additional Tax Charges " LabelPosition="Top">
                                                 <DockPanel HorizontalAlignment="Stretch">
-                                                    <dxe:ComboBoxEdit  NullText="CHARGES TYPE" MinWidth="150" BorderBrush="Transparent"  Padding="4" MaskType="Numeric">
+                                                    <dxe:ComboBoxEdit  Name="CboAddTaxChrgs" DisplayMember="ComboValue" ValueMember="ID" NullText="CHARGES TYPE" MinWidth="150" BorderBrush="Transparent"  Padding="4" MaskType="Numeric">
                                                         <dxe:ComboBoxEdit.Effect>
                                                             <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4" />
                                                         </dxe:ComboBoxEdit.Effect>
@@ -327,7 +327,7 @@
 
                         </dxdo:DocumentGroup>
                     </dxdo:LayoutGroup>
-                    <dxdo:TabbedGroup MaxHeight="300">
+                    <dxdo:TabbedGroup MaxHeight="100">
                         <dxdo:LayoutPanel Caption="Solution Explorer" Padding="10">
                             <dxg:GridControl AutoGenerateColumns="AddNew" EnableSmartColumnsGeneration="True">
                                 <dxg:GridControl.View>
@@ -345,7 +345,7 @@
                                 <dxlc:LayoutGroup x:Name="layoutGroxup" Orientation="Vertical" VerticalAlignment="Top">
                                     <dxlc:LayoutItem IsRequired="True" Label="Brand / Manufacturer" LabelPosition="Top"  >
                                         <DockPanel HorizontalAlignment="Stretch">
-                                            <dxe:ComboBoxEdit  NullText="-- SELECT --" BorderBrush="Transparent"  Padding="4" MaskType="Numeric">
+                                            <dxe:ComboBoxEdit IncrementalSearch="True" IncrementalFiltering="True" Name="CboBrand" DisplayMember="ComboValue" ValueMember="ID"  NullText="-- SELECT --" BorderBrush="Transparent"  Padding="4" >
                                                 <dxe:ComboBoxEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4" />
                                                 </dxe:ComboBoxEdit.Effect>
@@ -354,9 +354,9 @@
                                         </DockPanel>
                                         <!--=== Text Edit End ====-->
                                     </dxlc:LayoutItem>
-                                    <dxlc:LayoutItem IsRequired="True" Label="Flavour / Varient" LabelPosition="Top"  >
+                                    <dxlc:LayoutItem IsRequired="True" Label="Flavour" LabelPosition="Top"  >
                                         <DockPanel HorizontalAlignment="Stretch">
-                                            <dxe:ComboBoxEdit  NullText="-- SELECT --"  BorderBrush="Transparent"  Padding="4" MaskType="Numeric">
+                                            <dxe:ComboBoxEdit Name="CboFlavour" DisplayMember="ComboValue" ValueMember="ID"  NullText="-- SELECT --" BorderBrush="Transparent"  Padding="4" >
                                                 <dxe:ComboBoxEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4" />
                                                 </dxe:ComboBoxEdit.Effect>
@@ -367,7 +367,7 @@
                                     </dxlc:LayoutItem>
                                     <dxlc:LayoutItem IsRequired="True" Label="Size" LabelPosition="Top"  >
                                         <DockPanel HorizontalAlignment="Stretch">
-                                            <dxe:ComboBoxEdit  NullText="-- SELECT --" MinWidth="200" BorderBrush="Transparent"  Padding="4" MaskType="Numeric">
+                                            <dxe:ComboBoxEdit Name="CboSize" DisplayMember="ComboValue" ValueMember="ID"  NullText="-- SELECT --" BorderBrush="Transparent"  Padding="4" >
                                                 <dxe:ComboBoxEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4" />
                                                 </dxe:ComboBoxEdit.Effect>
@@ -379,7 +379,7 @@
                                     </dxlc:LayoutItem>
                                     <dxlc:LayoutItem IsRequired="True" Label="Shape" LabelPosition="Top"  >
                                         <DockPanel HorizontalAlignment="Stretch">
-                                            <dxe:ComboBoxEdit  NullText="-- SELECT --" MinWidth="200" BorderBrush="Transparent"  Padding="4" MaskType="Numeric">
+                                            <dxe:ComboBoxEdit Name="CboShape" DisplayMember="ComboValue" ValueMember="ID"  NullText="-- SELECT --" BorderBrush="Transparent"  Padding="4" >
                                                 <dxe:ComboBoxEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4" />
                                                 </dxe:ComboBoxEdit.Effect>
@@ -496,7 +496,7 @@
 
                                         <dxlc:LayoutItem Label="Series">
                                             <!--<dxe:TextEdit EditValue="9999999999" MaskType="Simple" Mask="(999) 000-0000"/>-->
-                                            <dxe:ComboBoxEdit   NullText="NULL" BorderBrush="Transparent" Padding="4">
+                                            <dxe:ComboBoxEdit  Name="CboSeries" DisplayMember="ComboValue" ValueMember="ID"  NullText="NULL" BorderBrush="Transparent"  Padding="4" >
                                                 <dxe:ComboBoxEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                 </dxe:ComboBoxEdit.Effect>
@@ -506,7 +506,7 @@
 
                                         <dxlc:LayoutItem Label="Region / Area">
                                             <!--<dxe:TextEdit EditValue="9999999999" MaskType="Simple" Mask="(999) 000-0000"/>-->
-                                            <dxe:ComboBoxEdit   NullText="NULL" BorderBrush="Transparent" Padding="4">
+                                            <dxe:ComboBoxEdit   Name="CboArea" DisplayMember="ComboValue" ValueMember="ID"  NullText="NULL" BorderBrush="Transparent"  Padding="4" >
                                                 <dxe:ComboBoxEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                 </dxe:ComboBoxEdit.Effect>
@@ -515,7 +515,7 @@
                                         </dxlc:LayoutItem>
                                         <dxlc:LayoutItem Label="Packaging">
                                             <!--<dxe:TextEdit EditValue="9999999999" MaskType="Simple" Mask="(999) 000-0000"/>-->
-                                            <dxe:ComboBoxEdit   NullText="NULL" BorderBrush="Transparent" Padding="4">
+                                            <dxe:ComboBoxEdit Name="CboPackaging" DisplayMember="ComboValue" ValueMember="ID"  NullText="NULL" BorderBrush="Transparent"  Padding="4" >
                                                 <dxe:ComboBoxEdit.Effect>
                                                     <DropShadowEffect ShadowDepth="1" Direction="330" Color="Silver" Opacity="0.9"  BlurRadius="4"/>
                                                 </dxe:ComboBoxEdit.Effect>
