@@ -10,12 +10,25 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Data;
+using System.Configuration;
 using System.Data.SqlClient;
+using System.Data;
+using DevExpress.Xpf.Layout;
+using DevExpress.Xpf.LayoutControl;
 using POS.DBClasses;
 using System.Collections.ObjectModel;
-using System.Windows.Forms;
+using DevExpress;
+using DevExpress.Xpf.Charts;
+using DevExpress.Xpf;
+using DevExpress.Xpf.Docking;
+using DevExpress.Xpf.Core;
+using System.Xaml;
+using DevExpress.Xpf.Editors;
+using DevExpress.XtraEditors;
+
+
 
 namespace POS
 {
@@ -80,7 +93,7 @@ namespace POS
                 }
                 if (SpTypeChanger == 10)
                 {
-                    CboAddChrgs.ItemsSource = dt;
+                    CboAddtChrgsType.ItemsSource = dt;
                 }
                 if (SpTypeChanger == 11)
                 {
@@ -88,7 +101,7 @@ namespace POS
                 }
                 if (SpTypeChanger == 12)
                 {
-                    CboAddTaxChrgs.ItemsSource = dt;
+                    CboAddtTaxChrgsType.ItemsSource = dt;
                 }
                 if (SpTypeChanger == 13)
                 {
@@ -100,5 +113,135 @@ namespace POS
             }
 
         }
+
+        private void BtnProductSave_Click(object sender, RoutedEventArgs e)
+        {
+            //////   Product Data Saving Process   //////////
+            try
+            {
+
+                DataTable dt = EntityDBClass.Select("spProduct", new string[]
+                                                    {
+                                                            "@Type" ,
+                                                            "ProductCategoryID" ,
+                                                            "ProductFullName" ,
+                                                            "ProductShortName" ,
+                                                            "ProductImage1Path" ,
+                                                            "ProductBarcode" ,
+                                                            "ProductAlternateBarcode" ,
+                                                            "ProductSaleRate" ,
+                                                            "ProductCostRate" ,
+                                                            "ProductIsAllowDecimalSale" ,
+                                                            "ProductMRP" ,
+                                                            "ProductWholeSaleRate" ,
+                                                            "ProductGSMamount" ,
+                                                            "ProductAdditionalChargesID" ,
+                                                            "ProductAdditionalChargesAmount" ,
+                                                            "ProductMaxDiscPercentage" ,
+                                                            "ProductMaxDiscAmount" ,
+                                                            "ProductIsOrderAble" ,
+                                                            "ProductProductionRate" ,
+                                                            "ProductTaxCategoryID" ,
+                                                            "ProductTaxPercentage" ,
+                                                            "ProductTaxAmount" ,
+                                                            "ProductAdditionalTaxID" ,
+                                                            "ProductAdditionalTaxAmount" ,
+                                                            "ProductHSCode" ,
+                                                            "ProductBrandID" ,
+                                                            "ProductBrandName" ,
+                                                            "ProductFlavourID" ,
+                                                            "ProductFlavourName" ,
+                                                            "ProductSizeID" ,
+                                                            "ProductSizeName" ,
+                                                            "ProductShapeID" ,
+                                                            "ProductShapeName" ,
+                                                            "ProductArticleName" ,
+                                                            "ProductIsInventoriable" ,
+                                                            "ProductRegularDiscardAble" ,
+                                                            "ProductIsReturnAble" ,
+                                                            "ProductIsExchangeAble" ,
+                                                            "ProductExpiryDays" ,
+                                                            "ProductDefaultWeight" ,
+                                                            "ProductSizeInNumber" ,
+                                                            "ProductDesignID" ,
+                                                            "ProductRelatedIds" ,
+                                                            "ProductSeriesID" ,
+                                                            "RegionID" ,
+                                                            "ProductPackagingID" ,
+                                                            "ProductDescrpition" ,
+                                                            "recordStatusID" ,
+                                                            "recordStatusCause" ,
+                                                            "recordLastModifiedBy" ,
+                                                            "recordLastModifiedDate" ,
+                                                            "recordEntryBy" ,
+                                                            "recordEntryDate"
+                                                    }, new string[] {
+
+                                                    "1",
+                                                    "1",
+                                                    txtFullName.Text,
+                                                    txtShortName.Text,
+                                                    "Path not exist", ///---> need to send product image path
+                                                    txtBarcode.Text,
+                                                    txtAltBarcode.Text,
+                                                    txtSaleRate.Text,
+                                                    txtCostRate.Text,
+                                                    ToggDecimalSale.ActualCheckedStateContent.ToString(),
+                                                    txtMRP.Text,
+                                                    txtWSRate.Text,
+                                                    txtExtraGSM.Text,
+                                                    CboAddtChrgsType.SelectedItemValue.ToString(),
+                                                    txtAddtChrgsAmount.Text,
+                                                    txtMaxDiscPercentage.Text.ToString(),
+                                                    txtMaxDiscAmount.Text,
+                                                    ToggOrderAble.ActualCheckedStateContent.ToString(),
+                                                    txtProductionChrgs.Text,
+                                                    CboTaxCategory.SelectedItemValue.ToString(),
+                                                    txtTaxPercentage.Text,
+                                                    txtTaxAmount.Text,
+                                                    CboAddtTaxChrgsType.SelectedItemValue.ToString(),
+                                                    txtAddtTaxChrgsAmount.Text,
+                                                    txtHSCode.Text,
+                                                    CboBrand.SelectedItemValue.ToString(),
+                                                    CboBrand.Text,
+                                                    CboFlavour.SelectedItemValue.ToString(),
+                                                    CboFlavour.Text,
+                                                    CboSize.SelectedItemValue.ToString(),
+                                                    CboSize.Text,
+                                                    CboShape.SelectedItemValue.ToString(),
+                                                    CboShape.Text,
+                                                    txtArticleNum.Text,
+                                                    toggInventoriable.ActualCheckedStateContent.ToString(),
+                                                    toggRegularDiscard.ActualCheckedStateContent.ToString(),
+                                                    toggReturnAble.ActualCheckedStateContent.ToString(),
+                                                    toggExchangeAble.ActualCheckedStateContent.ToString(),
+                                                    txtExpiryPeriod.Text,
+                                                    txtDefaultWeight.Text,
+                                                    txtSizeNum.Text,
+                                                    CboDesign.SelectedItemValue.ToString(),
+                                                    txtRelativeID.Text,
+                                                    CboSeries.SelectedItemValue.ToString(),
+                                                    CboRegion.SelectedItemValue.ToString(),
+                                                    CboPackaging.SelectedItemValue.ToString(),
+                                                    txtProductDetails.Text,
+                                                    CboRecordStatus.SelectedItemValue.ToString(),
+                                                    txtRecordStatus.Text,
+                                                    null,
+                                                    null,
+                                                    "1" ,  ///---- User id will sent here
+                                                     DateTime.Now.ToString()
+                                                    }
+                                                    
+                                                    );
+
+            }
+
+
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.ToString());
+            }
+        }
+
     }
 }
