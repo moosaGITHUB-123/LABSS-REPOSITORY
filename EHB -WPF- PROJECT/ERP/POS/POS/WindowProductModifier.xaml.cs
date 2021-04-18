@@ -27,6 +27,7 @@ using DevExpress.Xpf.Core;
 using System.Xaml;
 using DevExpress.Xpf.Editors;
 using DevExpress.XtraEditors;
+using DevExpress.Xpf.DocumentViewer;
 
 
 
@@ -247,5 +248,24 @@ namespace POS
             }
         }
 
+        private void BtnImgBrowse_Click(object sender, RoutedEventArgs e)
+        {
+
+            Microsoft.Win32.OpenFileDialog openFileDlg = new Microsoft.Win32.OpenFileDialog();
+
+            Nullable<bool> result = openFileDlg.ShowDialog();
+
+            if (result == true)
+            {
+
+                string SelectedProductImgPath = openFileDlg.FileName;
+                // TextBlock1.Text = System.IO.File.ReadAllText(openFileDlg.FileName);
+                //  ProductImage.Source = open.FileName;
+                string ImageName = openFileDlg.FileName;
+                ProductImage.Source = (ImageSource)new ImageSourceConverter().ConvertFrom(ImageName);
+
+            }
+
+        }
     }
 }

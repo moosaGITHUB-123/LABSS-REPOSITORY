@@ -59,7 +59,7 @@
                                         <dxlc:LayoutItem IsRequired="True" Label="Product Image" LabelPosition="Top" Padding="0 3 0 0">
                                             <StackPanel Orientation="Horizontal" >
                                                 <!--///// Button Browsse Below  ////-->
-                                                <dx:SimpleButton x:Name="BtnImgBrowse" Content="BROWSE"  Padding="5"  FontSize="11" HorizontalAlignment="Left" Height="35"  VerticalAlignment="Top" Width="60" BorderThickness="0" BorderBrush="Transparent" CornerRadius="3"  Foreground="White">
+                                                <dx:SimpleButton x:Name="BtnImgBrowse" Content="BROWSE"  Padding="5"  FontSize="11" HorizontalAlignment="Left" Height="35"  VerticalAlignment="Top" Width="60" BorderThickness="0" BorderBrush="Transparent" CornerRadius="3"  Foreground="White" Click="BtnImgBrowse_Click">
                                                     <dx:SimpleButton.Background>
                                                         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                                                             <GradientStop Color="#FF0B0B0B" Offset="1"/>
