@@ -230,9 +230,9 @@ namespace POS
                                                     txtProductDetails.Text,
                                                     (CboRecordStatus.SelectedItemValue??0).ToString(),
                                                     txtRecordStatus.Text,
-                                                    null,
-                                                    null,
-                                                    "1" ,  ///---- User id will sent here
+                                                    "0",
+                                                    DateTime.Now.ToString() ,
+                                                    "0" ,  ///---- User id will sent here
                                                      DateTime.Now.ToString()
                                                     }
                                                     
