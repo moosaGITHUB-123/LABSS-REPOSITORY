@@ -68,41 +68,7 @@ namespace POS
 
             foreach (var pcat in ParentCategory)
             {
-
-                //if (!Page.IsPostBack)
-                //{
-                //    AccordionPane ap1 = new AccordionPane();
-                //    ap1.HeaderContainer.Controls.Add(new LiteralControl("Using Markup"));
-                //    ap1.ContentContainer.Controls.Add(new
-                //    LiteralControl("Adding panes using markup is really simple."));
-                //    AccordionPane ap2 = new AccordionPane();
-                //    ap2.HeaderContainer.Controls.Add(new LiteralControl("Using Code"));
-                //    ap2.ContentContainer.Controls.Add(new
-                //    LiteralControl("Adding panes using code is really flexible."));
-                //    acc1.Panes.Add(ap1);
-                //    acc1.Panes.Add(ap2);
-                //}
-
-                //
-                //NewNode n = new NewNode();
-                //n.ShowDialog();
-                //TreeNode nod = new TreeNode();
-                //nod.Name = n.NewNodeName.ToString();
-                //nod.Text = n.NewNodeText.ToString();
-                //nod.Tag = n.NewNodeTag.ToString();
-                //n.Close();
-                //treeView1.SelectedNode.Nodes.Add(nod);
-                //treeView1.SelectedNode.ExpandAll();
-
-                //MyTreeView.Items.Add();
-
-                //var totalCategories = 20;
-                //foreach (var categoryChilds in ParentCategory)
-                //{
-                //    CategoryTree.Items.Add();
-                //}
-
-                CategoryTree.Items.Add(pcat.CategoryFullName);
+               CategoryTree.Items.Add(pcat.CategoryFullName);
             }
 
 
