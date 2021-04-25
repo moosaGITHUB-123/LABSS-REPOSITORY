@@ -82,7 +82,7 @@ namespace POS
                         var obj = new MenuGenerator()
                         {
                             ModuleID = Convert.ToInt32(dtbl.Rows[i]["ModuleID"]),
-                            Parent = (string)dtbl.Rows[i]["Parent"],
+                            parents = (string)dtbl.Rows[i]["Parent"],
                             ModuleMenuID = Convert.ToInt32(dtbl.Rows[i]["ModuleMenuID"]),
                             Child = (string)dtbl.Rows[i]["Child"],
                             ModuleSubMenuID = Convert.ToInt32(dtbl.Rows[i]["ModuleSubMenuID"]),
@@ -94,7 +94,7 @@ namespace POS
 
 
                         //    Module DropDown Making Started    //
-                        HomeWindowMenu.Items.Add(obj.Parent);
+                        HomeWindowMenu.Items.Add(obj.parents);
 
                         //     Module DropDown Making End      //
 
@@ -107,7 +107,7 @@ namespace POS
                     foreach (var a in test)
                     {
                         MenuItem m = new MenuItem();
-                        m.Name = a.Parent.to
+                        m.Name = a.Parent;
                     }
 
                 }
@@ -463,6 +463,7 @@ namespace POS
 
         private void btnQuickAccess9_Click(object sender, RoutedEventArgs e)
         {
+           
 
         }
     }

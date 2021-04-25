@@ -68,64 +68,8 @@ namespace POS
 
                 MessageBox.Show("------ 404 CONNECTION ERROR --------" .ToString());
             }
-
-            //////////   sp Thme Calling Below  ///////////
-            //try
-            //{
-            //    if (SwitchTheme.IsChecked == true)
-            //    {
-
-            //        con.Open();
-            //        MessageBox.Show("Theme Changing Process Is Working");
-
-
-            //        string changeThemeColor = "White";
-            //        SqlCommand cmd = new SqlCommand("spThemeControl", con);
-            //        cmd.CommandType = CommandType.StoredProcedure;
-            //        cmd.Parameters.AddWithValue("@ThemeName", SqlDbType.Char).Value = changeThemeColor; ////////idhar text box ya 
-            //        SqlDataAdapter sqlDa = new SqlDataAdapter("EXEC spThemeControl @ThemeName='" + changeThemeColor + "'", con);
-
-            //        DataTable dtbl = new DataTable();
-            //        sqlDa.Fill(dtbl);
-
-            //        if (dtbl != null && dtbl.Rows.Count > 0)
-            //        {
-            //            ObservableCollection<ThemeControl> test = new ObservableCollection<ThemeControl>();
-            //            int i = 0;
-            //            foreach (var row in dtbl.Rows)
-            //            {
-
-            //                var obj = new ThemeControl()
-            //                {
-            //                    ThemeControlTypeID = Convert.ToInt32(dtbl.Rows[i]["ThemeControlTypeId"]),
-            //                    ThemecontrolTypeName = (string)dtbl.Rows[i]["ThemeControlName"],
-            //                    ThemeName = (string)dtbl.Rows[i]["ThemeName"],
-            //                    ForegroundColor = (string)dtbl.Rows[i]["ForeGroundColor"],
-            //                    BackgroundColor = (string)dtbl.Rows[i]["BackGroundColor"],
-            //                    ShadowColor = (string)dtbl.Rows[i]["ShadowColor"],
-
-            //                };
-            //                test.Add(obj);
-            //            }
-
-            //            con.Close();
-            //            var converter = new System.Windows.Media.BrushConverter();
-            //            var brush = (Brush)converter.ConvertFromString(dtbl.Rows[0]["ForeGroundColor"].ToString());
-            //            foreach (Button tb in FindVisualChildren<Button>(this))
-            //            {
-            //                tb.Foreground = brush;
-            //            }
-
-            //        }
-            //    }
-            //}
-            //catch (Exception exceptions)
-            //{
-            //    string exceptionss = exceptions.ToString();
-            //    MessageBox.Show("Theme Problem Found kindly Use Current theme".ToString());
-            //    con.Close();
-            //}
-
+             
+             
         }
         public static IEnumerable<T> FindVisualChildren<T>(DependencyObject depObj) where T : DependencyObject
         {
