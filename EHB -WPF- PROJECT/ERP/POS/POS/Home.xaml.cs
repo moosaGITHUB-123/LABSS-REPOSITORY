@@ -463,7 +463,8 @@ namespace POS
 
         private void btnQuickAccess9_Click(object sender, RoutedEventArgs e)
         {
-           
+            NewLogin fm = new NewLogin();
+            fm.Show();
 
         }
     }
